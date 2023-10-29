@@ -53,6 +53,7 @@
     <Compile Include="Model\MyRectangle.cs" />
     <Compile Include="Model\Shape.cs" />
     <Compile Include="Model\Shapes.cs" />
+    <Compile Include="Model\ShapeType.cs" />
     <Compile Include="PresentationModel\FormPresentationModel.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
