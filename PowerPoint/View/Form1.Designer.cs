@@ -45,7 +45,7 @@ namespace PowerPoint
             this._slidePanel = new System.Windows.Forms.Panel();
             this._slide1 = new System.Windows.Forms.Button();
             this._drawingPanel = new System.Windows.Forms.Panel();
-            this._deleteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._deleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this._shapeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._infomationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._dataGroup.SuspendLayout();
@@ -236,7 +236,7 @@ namespace PowerPoint
             this._deleteColumn.HeaderText = "刪除";
             this._deleteColumn.Name = "_deleteColumn";
             this._deleteColumn.ReadOnly = true;
-            this._deleteColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this._deleteColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this._deleteColumn.Width = 40;
             // 
             // _shapeColumn
@@ -297,7 +297,7 @@ namespace PowerPoint
         private System.Windows.Forms.Panel _slidePanel;
         private System.Windows.Forms.Panel _drawingPanel;
         private System.Windows.Forms.Button _slide1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _deleteColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn _deleteColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _shapeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _infomationColumn;
     }

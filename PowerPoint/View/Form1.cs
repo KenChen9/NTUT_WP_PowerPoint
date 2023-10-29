@@ -18,6 +18,7 @@ namespace PowerPoint
         {
             InitializeComponent();
             _formPresentationModel = new FormPresentationModel(model);
+            model.ModelChanged += UpdateDataGridView;
         }
 
         private void ClickLineTool(object sender, EventArgs e)
@@ -78,6 +79,12 @@ namespace PowerPoint
         private void DoPanelOnPanel(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void UpdateDataGridView(List<Shape> shapes)
+        {
+            _dataGridView.Rows.Clear();
+            shapes.ForEach(shape => _dataGridView.Rows.Add("", shape.GetName(), shape.GetInfo()));
         }
     }
 }

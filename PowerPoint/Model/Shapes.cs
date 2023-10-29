@@ -28,5 +28,10 @@ namespace PowerPoint
         {
             _shapes.ForEach(shape => shape.Draw(graphics));
         }
+
+        public List<Shape> GetShapes()
+        {
+            return _shapes;
+        }
     }
 }
