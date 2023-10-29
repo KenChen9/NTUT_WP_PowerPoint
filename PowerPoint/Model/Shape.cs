@@ -23,7 +23,7 @@ namespace PowerPoint
 
         public string GetInfo()
         {
-            return $"{_x1}, {_y1}, {_x2}, {_y2}";
+            return $"({_x1}, {_y1}), ({_x2}, {_y2})";
         }
 
         public abstract string GetName();

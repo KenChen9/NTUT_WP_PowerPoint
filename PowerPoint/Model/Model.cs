@@ -11,6 +11,7 @@ namespace PowerPoint
         public delegate void ModelChangedEventHandler(List<Shape> shapes);
         public event ModelChangedEventHandler ModelChanged;
         private Shapes _shapes = new Shapes();
+        private ShapeType _currentTool = ShapeType.Arrow;
 
         public void AddShape(string shapeType)
         {
@@ -25,6 +26,11 @@ namespace PowerPoint
                 _shapes.RemoveAt(rowIndex);
                 NotifyObserver();
             }
+        }
+
+        public void SelectTool(ShapeType shapeType)
+        {
+            _currentTool = shapeType;
         }
 
         private void NotifyObserver()

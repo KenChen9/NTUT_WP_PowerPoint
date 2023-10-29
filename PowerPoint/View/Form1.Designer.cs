@@ -62,16 +62,17 @@ namespace PowerPoint
             this._dataGroup.Controls.Add(this._shapeSelectionBox);
             this._dataGroup.Controls.Add(this._addShapeButton);
             this._dataGroup.Controls.Add(this._dataGridView);
-            this._dataGroup.Location = new System.Drawing.Point(772, 52);
+            this._dataGroup.Location = new System.Drawing.Point(722, 52);
             this._dataGroup.Name = "_dataGroup";
-            this._dataGroup.Size = new System.Drawing.Size(200, 397);
+            this._dataGroup.Size = new System.Drawing.Size(250, 397);
             this._dataGroup.TabIndex = 0;
             this._dataGroup.TabStop = false;
             this._dataGroup.Text = "資料顯示";
             // 
             // _shapeSelectionBox
             // 
-            this._shapeSelectionBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this._shapeSelectionBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._shapeSelectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._shapeSelectionBox.FormattingEnabled = true;
@@ -79,9 +80,9 @@ namespace PowerPoint
             "線",
             "矩形",
             "圓"});
-            this._shapeSelectionBox.Location = new System.Drawing.Point(73, 32);
+            this._shapeSelectionBox.Location = new System.Drawing.Point(72, 32);
             this._shapeSelectionBox.Name = "_shapeSelectionBox";
-            this._shapeSelectionBox.Size = new System.Drawing.Size(121, 20);
+            this._shapeSelectionBox.Size = new System.Drawing.Size(172, 20);
             this._shapeSelectionBox.TabIndex = 4;
             // 
             // _addShapeButton
@@ -115,7 +116,7 @@ namespace PowerPoint
             this._dataGridView.ReadOnly = true;
             this._dataGridView.RowHeadersVisible = false;
             this._dataGridView.RowTemplate.Height = 24;
-            this._dataGridView.Size = new System.Drawing.Size(188, 324);
+            this._dataGridView.Size = new System.Drawing.Size(238, 324);
             this._dataGridView.TabIndex = 3;
             this._dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickDataGridCell);
             // 
@@ -225,7 +226,7 @@ namespace PowerPoint
             this._drawingPanel.BackColor = System.Drawing.Color.White;
             this._drawingPanel.Location = new System.Drawing.Point(168, 52);
             this._drawingPanel.Name = "_drawingPanel";
-            this._drawingPanel.Size = new System.Drawing.Size(598, 397);
+            this._drawingPanel.Size = new System.Drawing.Size(548, 397);
             this._drawingPanel.TabIndex = 4;
             this._drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DoPanelOnPanel);
             this._drawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DoMouseDownOnPanel);

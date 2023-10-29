@@ -19,26 +19,27 @@ namespace PowerPoint
             InitializeComponent();
             _formPresentationModel = new FormPresentationModel(model);
             model.ModelChanged += UpdateDataGridView;
+            _formPresentationModel.FormPresentationModelChanged += UpdateToolStrip;
         }
 
         private void ClickLineTool(object sender, EventArgs e)
         {
-
+            _formPresentationModel.SelectTool(ShapeType.Line);
         }
 
         private void ClickRectangleTool(object sender, EventArgs e)
         {
-
+            _formPresentationModel.SelectTool(ShapeType.Rectangle);
         }
 
         private void ClickCircleTool(object sender, EventArgs e)
         {
-            
+            _formPresentationModel.SelectTool(ShapeType.Circle);
         }
 
         private void ClickArrowTool(object sender, EventArgs e)
         {
-
+            _formPresentationModel.SelectTool(ShapeType.Arrow);
         }
 
         private void ClickAddShapeButton(object sender, EventArgs e)
@@ -85,6 +86,14 @@ namespace PowerPoint
         {
             _dataGridView.Rows.Clear();
             shapes.ForEach(shape => _dataGridView.Rows.Add("刪除", shape.GetName(), shape.GetInfo()));
+        }
+
+        private void UpdateToolStrip(bool lineToolSelected, bool rectangleToolSelected, bool circleToolSelected, bool arrowToolSelected)
+        {
+            _lineTool.Checked = lineToolSelected;
+            _rectangleTool.Checked = rectangleToolSelected;
+            _circleTool.Checked = circleToolSelected;
+            _arrowTool.Checked = arrowToolSelected;
         }
     }
 }

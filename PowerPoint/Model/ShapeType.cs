@@ -8,7 +8,7 @@ namespace PowerPoint
 {
     public enum ShapeType
     {
-        None,
+        Arrow,
         Line,
         Rectangle,
         Circle
