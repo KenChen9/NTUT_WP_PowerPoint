@@ -48,7 +48,7 @@ namespace PowerPoint
 
         private void ClickDataGridCell(object sender, DataGridViewCellEventArgs e)
         {
-
+            _formPresentationModel.RemoveShapeAt(e.RowIndex, e.ColumnIndex);
         }
 
         private void DoMouseDownOnPanel(object sender, MouseEventArgs e)
@@ -84,7 +84,7 @@ namespace PowerPoint
         private void UpdateDataGridView(List<Shape> shapes)
         {
             _dataGridView.Rows.Clear();
-            shapes.ForEach(shape => _dataGridView.Rows.Add("", shape.GetName(), shape.GetInfo()));
+            shapes.ForEach(shape => _dataGridView.Rows.Add("刪除", shape.GetName(), shape.GetInfo()));
         }
     }
 }
