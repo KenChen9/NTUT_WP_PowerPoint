@@ -8,6 +8,21 @@ namespace PowerPoint
 {
     public static class Factory
     {
+        public static Shape CreateShape(string shapeType)
+        {
+            switch (shapeType)
+            {
+                case "線":
+                    return CreateShape(ShapeType.Line);
+                case "矩形":
+                    return CreateShape(ShapeType.Rectangle);
+                case "圓":
+                    return CreateShape(ShapeType.Circle);
+                default:
+                    return null;
+            }
+        }
+
         public static Shape CreateShape(ShapeType shapeType)
         {
             Random random = new Random();

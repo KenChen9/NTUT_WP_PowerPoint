@@ -42,7 +42,7 @@ namespace PowerPoint
 
         private void ClickAddShapeButton(object sender, EventArgs e)
         {
-
+            _formPresentationModel.AddShape(_shapeSelectionBox.Text);
         }
 
         private void ClickDataGridCell(object sender, DataGridViewCellEventArgs e)

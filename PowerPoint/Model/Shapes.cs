@@ -10,9 +10,13 @@ namespace PowerPoint
     {
         private List<Shape> _shapes = new List<Shape>();
 
-        public void Add(ShapeType shapeType)
+        public void Add(string shapeType)
         {
-            _shapes.Add(Factory.CreateShape(shapeType));
+            Shape shape = Factory.CreateShape(shapeType);
+            if (shape != null)
+            {
+                _shapes.Add(shape);
+            }
         }
 
         public void RemoveAt(int index)

@@ -14,5 +14,15 @@ namespace PowerPoint
         {
             _model = model;
         }
+
+        public void AddShape(string shapeType)
+        {
+            _model.AddShape(shapeType);
+        }
+
+        public void RemoveShapeAt(int rowIndex, int columnIndex)
+        {
+            _model.RemoveShapeAt(rowIndex, columnIndex);
+        }
     }
 }
