@@ -224,6 +224,12 @@ namespace PowerPoint
             this._drawingPanel.Name = "_drawingPanel";
             this._drawingPanel.Size = new System.Drawing.Size(598, 397);
             this._drawingPanel.TabIndex = 4;
+            this._drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DoPanelOnPanel);
+            this._drawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DoMouseDownOnPanel);
+            this._drawingPanel.MouseEnter += new System.EventHandler(this.DoMouseEnterOnPanel);
+            this._drawingPanel.MouseLeave += new System.EventHandler(this.DoMouseLeaveOnPanel);
+            this._drawingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DoMouseMoveOnPanel);
+            this._drawingPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DoMouseUpOnPanel);
             // 
             // _deleteColumn
             // 
