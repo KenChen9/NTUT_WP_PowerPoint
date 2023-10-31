@@ -69,17 +69,17 @@ namespace PowerPoint
 
         private void DoMouseEnterOnPanel(object sender, EventArgs e)
         {
-
+            _formPresentationModel.enterPanel();
         }
 
         private void DoMouseLeaveOnPanel(object sender, EventArgs e)
         {
-
+            _formPresentationModel.leavePanel();
         }
 
-        private void DoPanelOnPanel(object sender, PaintEventArgs e)
+        private void DoPaintOnPanel(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void UpdateDataGridView(List<Shape> shapes)
@@ -88,12 +88,13 @@ namespace PowerPoint
             shapes.ForEach(shape => _dataGridView.Rows.Add("刪除", shape.GetName(), shape.GetInfo()));
         }
 
-        private void UpdateToolStrip(bool lineToolSelected, bool rectangleToolSelected, bool circleToolSelected, bool arrowToolSelected)
+        private void UpdateToolStrip(bool lineToolSelected, bool rectangleToolSelected, bool circleToolSelected, bool arrowToolSelected, Cursor currentCursor)
         {
             _lineTool.Checked = lineToolSelected;
             _rectangleTool.Checked = rectangleToolSelected;
             _circleTool.Checked = circleToolSelected;
             _arrowTool.Checked = arrowToolSelected;
+            Cursor = currentCursor;
         }
     }
 }
