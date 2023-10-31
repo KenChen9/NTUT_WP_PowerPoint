@@ -54,27 +54,27 @@ namespace PowerPoint
 
         private void DoMouseDownOnPanel(object sender, MouseEventArgs e)
         {
-
+            _formPresentationModel.();
         }
 
         private void DoMouseUpOnPanel(object sender, MouseEventArgs e)
         {
-
+            _formPresentationModel.PressMouse();
         }
 
         private void DoMouseMoveOnPanel(object sender, MouseEventArgs e)
         {
-
+            _formPresentationModel.ReleaseMouse();
         }
 
         private void DoMouseEnterOnPanel(object sender, EventArgs e)
         {
-            _formPresentationModel.enterPanel();
+            _formPresentationModel.EnterPanel();
         }
 
         private void DoMouseLeaveOnPanel(object sender, EventArgs e)
         {
-            _formPresentationModel.leavePanel();
+            _formPresentationModel.LeavePanel();
         }
 
         private void DoPaintOnPanel(object sender, PaintEventArgs e)

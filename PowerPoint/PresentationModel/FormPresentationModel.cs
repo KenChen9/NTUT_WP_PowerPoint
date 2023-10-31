@@ -43,16 +43,39 @@ namespace PowerPoint
             NotifyObserver();
         }
 
-        public void enterPanel()
+        public void EnterPanel()
         {
             _currentCursor = _currentTool == ShapeType.Arrow ? Cursors.Arrow : Cursors.Cross;
+            if (_currentTool == ShapeType.Arrow)
+            {
+                _model.SetPointerMode();
+            }
+            else
+            {
+                _model.SetDrawingMode();
+            }
             NotifyObserver();
         }
 
-        public void leavePanel()
+        public void LeavePanel()
         {
             _currentCursor = Cursors.Arrow;
             NotifyObserver();
+        }
+
+        public void PressMouse()
+        {
+            _model.PressMouse();
+        }
+
+        public void MoveMouse()
+        {
+            _model.MoveMouse();
+        }
+
+        public void ReleaseMouse()
+        {
+            _model.ReleaseMouse();
         }
 
         private void NotifyObserver()

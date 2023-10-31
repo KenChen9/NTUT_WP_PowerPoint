@@ -12,6 +12,12 @@ namespace PowerPoint
         public event ModelChangedEventHandler ModelChanged;
         private Shapes _shapes = new Shapes();
         private ShapeType _currentTool = ShapeType.Arrow;
+        private IState _state;
+
+        public Model()
+        {
+            _state = new PointerState(this);
+        }
 
         public void AddShape(string shapeType)
         {
@@ -31,6 +37,31 @@ namespace PowerPoint
         public void SelectTool(ShapeType shapeType)
         {
             _currentTool = shapeType;
+        }
+
+        public void SetPointerMode()
+        {
+            _state = new PointerState(this);
+        }
+
+        public void SetDrawingMode()
+        {
+            _state = new DrawingMode(this);
+        }
+
+        public void PressMouse()
+        {
+            _state.PressMouse();
+        }
+
+        public void MoveMouse()
+        {
+            _state.MoveMouse();
+        }
+
+        public void ReleaseMouse()
+        {
+            _state.ReleaseMouse();
         }
 
         private void NotifyObserver()
