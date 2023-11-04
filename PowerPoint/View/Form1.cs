@@ -14,12 +14,25 @@ namespace PowerPoint
     {
         private FormPresentationModel _formPresentationModel;
         
-        public MainForm(Model model)
+        public MainForm(FormPresentationModel formPresentationModel)
         {
             InitializeComponent();
-            _formPresentationModel = new FormPresentationModel(model);
-            model.ModelChanged += UpdateDataGridView;
+            _formPresentationModel = formPresentationModel;
+        }
+
+        private void LoadForm(object sender, EventArgs e)
+        {
             _formPresentationModel.FormPresentationModelChanged += UpdateToolStrip;
+
+            _deleteColumn.Text = "刪除";
+            _deleteColumn.UseColumnTextForButtonValue = true;
+
+            _shapeColumn.DataPropertyName = "Name";
+
+            _infomationColumn.DataPropertyName = "Information";
+
+            _dataGridView.AutoGenerateColumns = false;
+            _dataGridView.DataSource = _formPresentationModel.ShapeList;
         }
 
         private void ClickLineTool(object sender, EventArgs e)
@@ -54,17 +67,17 @@ namespace PowerPoint
 
         private void DoMouseDownOnPanel(object sender, MouseEventArgs e)
         {
-            _formPresentationModel.();
+            _formPresentationModel.PressMouse();
         }
 
         private void DoMouseUpOnPanel(object sender, MouseEventArgs e)
         {
-            _formPresentationModel.PressMouse();
+            _formPresentationModel.ReleaseMouse();
         }
 
         private void DoMouseMoveOnPanel(object sender, MouseEventArgs e)
         {
-            _formPresentationModel.ReleaseMouse();
+            _formPresentationModel.MoveMouse();
         }
 
         private void DoMouseEnterOnPanel(object sender, EventArgs e)
@@ -79,21 +92,15 @@ namespace PowerPoint
 
         private void DoPaintOnPanel(object sender, PaintEventArgs e)
         {
-
+            _formPresentationModel.DrawShapes(new WindowsFormsGraphics(e.Graphics));
         }
 
-        private void UpdateDataGridView(List<Shape> shapes)
+        private void UpdateToolStrip(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor)
         {
-            _dataGridView.Rows.Clear();
-            shapes.ForEach(shape => _dataGridView.Rows.Add("刪除", shape.GetName(), shape.GetInfo()));
-        }
-
-        private void UpdateToolStrip(bool lineToolSelected, bool rectangleToolSelected, bool circleToolSelected, bool arrowToolSelected, Cursor currentCursor)
-        {
-            _lineTool.Checked = lineToolSelected;
-            _rectangleTool.Checked = rectangleToolSelected;
-            _circleTool.Checked = circleToolSelected;
-            _arrowTool.Checked = arrowToolSelected;
+            _lineTool.Checked = toolStatus[ShapeType.Line];
+            _rectangleTool.Checked = toolStatus[ShapeType.Rectangle];
+            _circleTool.Checked = toolStatus[ShapeType.Circle];
+            _arrowTool.Checked = toolStatus[ShapeType.Arrow];
             Cursor = currentCursor;
         }
     }

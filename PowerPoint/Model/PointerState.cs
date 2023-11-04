@@ -29,5 +29,15 @@ namespace PowerPoint
         {
 
         }
+
+        public void EnterPanel()
+        {
+
+        }
+
+        public void LeavePanel()
+        {
+
+        }
     }
 }

@@ -272,6 +272,7 @@ namespace PowerPoint
             this.MainMenuStrip = this._menuStrip;
             this.Name = "MainForm";
             this.Text = "PowerPoint";
+            this.Load += new System.EventHandler(this.LoadForm);
             this._dataGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView)).EndInit();
             this._menuStrip.ResumeLayout(false);

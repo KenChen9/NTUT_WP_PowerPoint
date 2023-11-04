@@ -3,16 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace PowerPoint
 {
     public class Model
     {
-        public delegate void ModelChangedEventHandler(List<Shape> shapes);
-        public event ModelChangedEventHandler ModelChanged;
         private Shapes _shapes = new Shapes();
-        private ShapeType _currentTool = ShapeType.Arrow;
         private IState _state;
+
+        public ShapeType CurrentTool { get; set; } = ShapeType.Arrow;
+        public int SelectedIndex { get; set; } = -1;
+
+        public BindingList<Shape> ShapeList
+        {
+            get
+            {
+                return _shapes.ShapeList;
+            }
+        }
 
         public Model()
         {
@@ -22,7 +31,6 @@ namespace PowerPoint
         public void AddShape(string shapeType)
         {
             _shapes.Add(shapeType);
-            NotifyObserver();
         }
 
         public void RemoveShapeAt(int rowIndex, int columnIndex)
@@ -30,13 +38,12 @@ namespace PowerPoint
             if (rowIndex >= 0 && columnIndex == 0)
             {
                 _shapes.RemoveAt(rowIndex);
-                NotifyObserver();
             }
         }
 
         public void SelectTool(ShapeType shapeType)
         {
-            _currentTool = shapeType;
+            CurrentTool = shapeType;
         }
 
         public void SetPointerMode()
@@ -64,9 +71,19 @@ namespace PowerPoint
             _state.ReleaseMouse();
         }
 
-        private void NotifyObserver()
+        public void EnterPanel()
         {
-            ModelChanged?.Invoke(_shapes.GetShapes());
+            _state.EnterPanel();
+        }
+
+        public void LeavePanel()
+        {
+            _state.LeavePanel();
+        }
+
+        public void DrawShapes(IGraphics graphics)
+        {
+            _shapes.Draw(graphics, SelectedIndex);
         }
     }
 }
