@@ -16,7 +16,7 @@ namespace PowerPoint
 
         private void LoadForm(object sender, EventArgs e)
         {
-            _formPresentationModel.FormPresentationModelChanged += UpdateToolStrip;
+            _formPresentationModel.ToolCursorChanged += UpdateToolCursor;
 
             _deleteColumn.Text = "刪除";
             _deleteColumn.UseColumnTextForButtonValue = true;
@@ -89,7 +89,7 @@ namespace PowerPoint
             _formPresentationModel.DrawShapes(new WindowsFormsGraphics(e.Graphics));
         }
 
-        private void UpdateToolStrip(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor)
+        private void UpdateToolCursor(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor)
         {
             _lineTool.Checked = toolStatus[ShapeType.Line];
             _rectangleTool.Checked = toolStatus[ShapeType.Rectangle];

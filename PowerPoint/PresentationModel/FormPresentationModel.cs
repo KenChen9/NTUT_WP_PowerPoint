@@ -6,8 +6,8 @@ namespace PowerPoint
 {
     public class FormPresentationModel
     {
-        public delegate void FormPresentationModelChangedHandler(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor);
-        public event FormPresentationModelChangedHandler FormPresentationModelChanged;
+        public delegate void ToolCursorChangedHandler(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor);
+        public event ToolCursorChangedHandler ToolCursorChanged;
         private Model _model;
         private ShapeType _currentTool = ShapeType.Arrow;
         private Cursor _currentCursor = Cursors.Arrow;
