@@ -4,10 +4,16 @@ namespace PowerPoint
 {
     public class Model
     {
-        private Shapes _shapes = new Shapes();
+        public delegate void ToolChangedHandler(ShapeType shapeType);
+        public ToolChangedHandler ToolChanged;
+        
         private IState _state;
+        private Shapes _shapes = new Shapes();
+
+        public Shape Preview { get; set; } = null;
 
         public ShapeType CurrentTool { get; set; } = ShapeType.Arrow;
+
         public int SelectedIndex { get; set; } = -1;
 
         public BindingList<Shape> ShapeList
@@ -28,6 +34,11 @@ namespace PowerPoint
             _shapes.Add(shapeType);
         }
 
+        public void AddShape(Shape shape)
+        {
+            _shapes.Add(shape);
+        }
+
         public void RemoveShapeAt(int rowIndex, int columnIndex)
         {
             if (rowIndex >= 0 && columnIndex == 0)
@@ -39,6 +50,8 @@ namespace PowerPoint
         public void SelectTool(ShapeType shapeType)
         {
             CurrentTool = shapeType;
+            Preview = null;
+            NotifyObserver();
         }
 
         public void SetPointerMode()
@@ -54,31 +67,33 @@ namespace PowerPoint
         public void PressMouse()
         {
             _state.PressMouse();
+            NotifyObserver();
         }
 
-        public void MoveMouse()
+        public void MoveMouse(int x, int y)
         {
-            _state.MoveMouse();
+            _state.MoveMouse(x, y);
+            NotifyObserver();
         }
 
         public void ReleaseMouse()
         {
             _state.ReleaseMouse();
-        }
-
-        public void EnterPanel()
-        {
-            _state.EnterPanel();
-        }
-
-        public void LeavePanel()
-        {
-            _state.LeavePanel();
+            NotifyObserver();
         }
 
         public void DrawShapes(IGraphics graphics)
         {
             _shapes.Draw(graphics, SelectedIndex);
+            if (Preview != null)
+            {
+                Preview.Draw(graphics, ShapeColor.Black);
+            }
+        }
+
+        private void NotifyObserver()
+        {
+            ToolChanged?.Invoke(CurrentTool);
         }
     }
 }

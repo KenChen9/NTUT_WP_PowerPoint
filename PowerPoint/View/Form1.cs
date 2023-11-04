@@ -71,7 +71,7 @@ namespace PowerPoint
 
         private void DoMouseMoveOnPanel(object sender, MouseEventArgs e)
         {
-            _formPresentationModel.MoveMouse();
+            _formPresentationModel.MoveMouse(e.X, e.Y);
         }
 
         private void DoMouseEnterOnPanel(object sender, EventArgs e)

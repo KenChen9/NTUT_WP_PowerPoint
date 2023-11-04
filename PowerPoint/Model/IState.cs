@@ -3,9 +3,7 @@
     public interface IState
     {
         void PressMouse();
-        void MoveMouse();
+        void MoveMouse(int x, int y);
         void ReleaseMouse();
-        void EnterPanel();
-        void LeavePanel();
     }
 }

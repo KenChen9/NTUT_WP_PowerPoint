@@ -24,16 +24,25 @@ namespace PowerPoint
             Random random = new Random();
             int x1 = random.Next(0, 500);
             int y1 = random.Next(0, 500);
-            int x2 = random.Next(x1, 500);
-            int y2 = random.Next(y1, 500);
+            int x2 = random.Next(0, 500);
+            int y2 = random.Next(0, 500);
+            return CreateShape(shapeType, x1, y1, x2, y2);
+        }
+
+        public static Shape CreateShape(ShapeType shapeType, int x1, int y1, int x2, int y2)
+        {
+            int topLeftX = Math.Min(x1, x2);
+            int topLeftY = Math.Min(y1, y2);
+            int bottomRightX = Math.Max(x1, x2);
+            int bottomRightY = Math.Max(y1, y2);
             switch (shapeType)
             {
                 case ShapeType.Line:
                     return new Line(x1, y1, x2, y2);
                 case ShapeType.Rectangle:
-                    return new MyRectangle(x1, y1, x2, y2);
+                    return new MyRectangle(topLeftX, topLeftY, bottomRightX, bottomRightY);
                 case ShapeType.Circle:
-                    return new Circle(x1, y1, x2, y2);
+                    return new Circle(topLeftX, topLeftY, bottomRightX, bottomRightY);
                 default:
                     return null;
             }

@@ -15,6 +15,11 @@ namespace PowerPoint
             }
         }
 
+        public void Add(Shape shape)
+        {
+            ShapeList.Add(shape);
+        }
+
         public void RemoveAt(int index)
         {
             ShapeList.RemoveAt(index);

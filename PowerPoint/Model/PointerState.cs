@@ -20,22 +20,12 @@ namespace PowerPoint
 
         }
 
-        public void MoveMouse()
+        public void MoveMouse(int x, int y)
         {
 
         }
 
         public void ReleaseMouse()
-        {
-
-        }
-
-        public void EnterPanel()
-        {
-
-        }
-
-        public void LeavePanel()
         {
 
         }

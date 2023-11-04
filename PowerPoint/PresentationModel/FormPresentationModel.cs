@@ -23,6 +23,7 @@ namespace PowerPoint
         public FormPresentationModel(Model model)
         {
             _model = model;
+            _model.ToolChanged += UpdateCurrentTool;
         }
 
         public void AddShape(string shapeType)
@@ -37,7 +38,6 @@ namespace PowerPoint
 
         public void SelectTool(ShapeType shapeType)
         {
-            _currentTool = shapeType;
             _model.SelectTool(shapeType);
             NotifyObserver();
         }
@@ -47,14 +47,16 @@ namespace PowerPoint
             _model.PressMouse();
         }
 
-        public void MoveMouse()
+        public void MoveMouse(int x, int y)
         {
-            _model.MoveMouse();
+            _model.MoveMouse(x, y);
         }
 
         public void ReleaseMouse()
         {
+            _currentCursor = Cursors.Arrow;
             _model.ReleaseMouse();
+            NotifyObserver();
         }
 
         public void EnterPanel()
@@ -74,6 +76,7 @@ namespace PowerPoint
         public void LeavePanel()
         {
             _currentCursor = Cursors.Arrow;
+            _model.SetPointerMode();
             NotifyObserver();
         }
 
@@ -90,6 +93,12 @@ namespace PowerPoint
             toolStatus.Add(ShapeType.Circle, _currentTool == ShapeType.Circle);
             toolStatus.Add(ShapeType.Arrow, _currentTool == ShapeType.Arrow);
             FormPresentationModelChanged?.Invoke(toolStatus, _currentCursor);
+        }
+
+        private void UpdateCurrentTool(ShapeType shapeType)
+        {
+            _currentTool = shapeType;
+            NotifyObserver();
         }
     }
 }
