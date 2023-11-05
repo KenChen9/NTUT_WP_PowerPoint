@@ -2,8 +2,16 @@
 
 namespace PowerPoint
 {
+    /// <summary>
+    /// Factory class responsible for creating different types of shapes in a PowerPoint presentation.
+    /// </summary>
     public static class Factory
     {
+        /// <summary>
+        /// Creates a shape based on the provided shape type string.
+        /// </summary>
+        /// <param name="shapeType">String representation of the shape type (線, 矩形, or 圓).</param>
+        /// <returns>A Shape object based on the specified shape type, or null if the type is not recognized.</returns>
         public static Shape CreateShape(string shapeType)
         {
             switch (shapeType)
@@ -19,6 +27,11 @@ namespace PowerPoint
             }
         }
 
+        /// <summary>
+        /// Creates a shape with random coordinates based on the specified shape type.
+        /// </summary>
+        /// <param name="shapeType">Type of the shape to create.</param>
+        /// <returns>A Shape object with random coordinates based on the specified shape type.</returns>
         public static Shape CreateShape(ShapeType shapeType)
         {
             int randomMin = 0;
@@ -31,6 +44,15 @@ namespace PowerPoint
             return CreateShape(shapeType, x1, y1, x2, y2);
         }
 
+        /// <summary>
+        /// Creates a shape with specified coordinates based on the specified shape type.
+        /// </summary>
+        /// <param name="shapeType">Type of the shape to create.</param>
+        /// <param name="x1">X-coordinate of the starting point.</param>
+        /// <param name="y1">Y-coordinate of the starting point.</param>
+        /// <param name="x2">X-coordinate of the ending point.</param>
+        /// <param name="y2">Y-coordinate of the ending point.</param>
+        /// <returns>A Shape object with specified coordinates based on the specified shape type.</returns>
         public static Shape CreateShape(ShapeType shapeType, int x1, int y1, int x2, int y2)
         {
             int topLeftX = Math.Min(x1, x2);

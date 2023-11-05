@@ -38,8 +38,8 @@ namespace PowerPoint
             this._shapeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._infomationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._menuStrip = new System.Windows.Forms.MenuStrip();
-            this.說明ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.關於ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._toolStrip = new System.Windows.Forms.ToolStrip();
             this._lineTool = new System.Windows.Forms.ToolStripButton();
             this._rectangleTool = new System.Windows.Forms.ToolStripButton();
@@ -146,26 +146,26 @@ namespace PowerPoint
             // _menuStrip
             // 
             this._menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.說明ToolStripMenuItem});
+            this._manualToolStripMenuItem});
             this._menuStrip.Location = new System.Drawing.Point(0, 0);
             this._menuStrip.Name = "_menuStrip";
             this._menuStrip.Size = new System.Drawing.Size(984, 24);
             this._menuStrip.TabIndex = 1;
             this._menuStrip.Text = "menuStrip1";
             // 
-            // 說明ToolStripMenuItem
+            // _manualToolStripMenuItem
             // 
-            this.說明ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.關於ToolStripMenuItem});
-            this.說明ToolStripMenuItem.Name = "說明ToolStripMenuItem";
-            this.說明ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.說明ToolStripMenuItem.Text = "說明";
+            this._manualToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._aboutToolStripMenuItem});
+            this._manualToolStripMenuItem.Name = "_manualToolStripMenuItem";
+            this._manualToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this._manualToolStripMenuItem.Text = "說明";
             // 
-            // 關於ToolStripMenuItem
+            // _aboutToolStripMenuItem
             // 
-            this.關於ToolStripMenuItem.Name = "關於ToolStripMenuItem";
-            this.關於ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
-            this.關於ToolStripMenuItem.Text = "關於";
+            this._aboutToolStripMenuItem.Name = "_aboutToolStripMenuItem";
+            this._aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this._aboutToolStripMenuItem.Text = "關於";
             // 
             // _toolStrip
             // 
@@ -271,8 +271,8 @@ namespace PowerPoint
         private System.Windows.Forms.MenuStrip _menuStrip;
         private System.Windows.Forms.ToolStrip _toolStrip;
         private System.Windows.Forms.ToolStripButton _lineTool;
-        private System.Windows.Forms.ToolStripMenuItem 說明ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 關於ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem _manualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem _aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton _rectangleTool;
         private System.Windows.Forms.ToolStripButton _circleTool;
         private System.Windows.Forms.ToolStripButton _arrowTool;
