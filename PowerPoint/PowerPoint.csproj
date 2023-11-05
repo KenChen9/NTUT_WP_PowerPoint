@@ -46,18 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Circle.cs" />
-    <Compile Include="Model\DrawingState.cs" />
-    <Compile Include="Model\Factory.cs" />
-    <Compile Include="Model\IState.cs" />
-    <Compile Include="Model\Line.cs" />
+    <Compile Include="Model\Shape\Circle.cs" />
+    <Compile Include="Model\State\DrawingState.cs" />
+    <Compile Include="Model\Shape\Factory.cs" />
+    <Compile Include="Model\State\IState.cs" />
+    <Compile Include="Model\Shape\Line.cs" />
     <Compile Include="Model\Model.cs" />
-    <Compile Include="Model\MyRectangle.cs" />
-    <Compile Include="Model\PointerState.cs" />
-    <Compile Include="Model\Shape.cs" />
-    <Compile Include="Model\ShapeColor.cs" />
-    <Compile Include="Model\Shapes.cs" />
-    <Compile Include="Model\ShapeType.cs" />
+    <Compile Include="Model\Shape\MyRectangle.cs" />
+    <Compile Include="Model\State\PointerState.cs" />
+    <Compile Include="Model\Shape\Shape.cs" />
+    <Compile Include="Model\Enum\ShapeColor.cs" />
+    <Compile Include="Model\Shape\Shapes.cs" />
+    <Compile Include="Model\Enum\ShapeType.cs" />
     <Compile Include="PresentationModel\FormPresentationModel.cs" />
     <Compile Include="View\DoubleBufferedPanel.cs">
       <SubType>Component</SubType>
