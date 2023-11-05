@@ -19,18 +19,14 @@
             _startX = _endX;
             _startY = _endY;
             _pressed = true;
-            _model.Preview = _pressed
-                ? Factory.CreateShape(_model.CurrentTool, _startX, _startY, _endX, _endY)
-                : null;
+            _model.Preview = _pressed ? Factory.CreateShape(_model.CurrentTool, _startX, _startY, _endX, _endY) : null;
         }
 
         public void MoveMouse(int x, int y)
         {
             _endX = x;
             _endY = y;
-            _model.Preview = _pressed
-                ? Factory.CreateShape(_model.CurrentTool, _startX, _startY, _endX, _endY)
-                : null;
+            _model.Preview = _pressed ? Factory.CreateShape(_model.CurrentTool, _startX, _startY, _endX, _endY) : null;
         }
 
         public void ReleaseMouse()

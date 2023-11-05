@@ -21,11 +21,13 @@ namespace PowerPoint
 
         public static Shape CreateShape(ShapeType shapeType)
         {
+            int randomMin = 0;
+            int randomMax = 500;
             Random random = new Random();
-            int x1 = random.Next(0, 500);
-            int y1 = random.Next(0, 500);
-            int x2 = random.Next(0, 500);
-            int y2 = random.Next(0, 500);
+            int x1 = random.Next(randomMin, randomMax);
+            int y1 = random.Next(randomMin, randomMax);
+            int x2 = random.Next(randomMin, randomMax);
+            int y2 = random.Next(randomMin, randomMax);
             return CreateShape(shapeType, x1, y1, x2, y2);
         }
 

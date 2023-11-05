@@ -185,20 +185,3049 @@
     <div class="data">
       <Data id="ReviewPalData">
         <CodeReview xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-          <Reviews />
+          <Reviews>
+            <Smell>
+              <Id>1</Id>
+              <SmellType>A syntax error has been discovered in file C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Model.cs on line 16.</SmellType>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>16</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>2</Id>
+              <SmellType>Literal constants(字面常數)-"圓"</SmellType>
+              <HashCode>LiteralConstants.get."圓"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Circle.cs</File>
+              <Line>9</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>3</Id>
+              <SmellType>Literal constants(字面常數)-"線"</SmellType>
+              <HashCode>LiteralConstants.CreateShape."線"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>11</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>4</Id>
+              <SmellType>Literal constants(字面常數)-"矩形"</SmellType>
+              <HashCode>LiteralConstants.CreateShape."矩形"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>13</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>5</Id>
+              <SmellType>Literal constants(字面常數)-"圓"</SmellType>
+              <HashCode>LiteralConstants.CreateShape."圓"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>6</Id>
+              <SmellType>Literal constants(字面常數)-500</SmellType>
+              <HashCode>LiteralConstants.CreateShape.500</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>25</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>7</Id>
+              <SmellType>Literal constants(字面常數)-500</SmellType>
+              <HashCode>LiteralConstants.CreateShape.500</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>26</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>8</Id>
+              <SmellType>Literal constants(字面常數)-500</SmellType>
+              <HashCode>LiteralConstants.CreateShape.500</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>27</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>9</Id>
+              <SmellType>Literal constants(字面常數)-500</SmellType>
+              <HashCode>LiteralConstants.CreateShape.500</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>10</Id>
+              <SmellType>Long parameter list(過長參數列)</SmellType>
+              <HashCode>LongParameterList.Factory.CreateShape.ShapeType shapeType;int x1;int y1;int x2;int y2;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>5</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>32</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>11</Id>
+              <SmellType>Literal constants(字面常數)-"線"</SmellType>
+              <HashCode>LiteralConstants.get."線"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Line.cs</File>
+              <Line>9</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>12</Id>
+              <SmellType>Literal constants(字面常數)-"矩形"</SmellType>
+              <HashCode>LiteralConstants.get."矩形"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>MyRectangle.cs</File>
+              <Line>9</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>13</Id>
+              <SmellType>ICS(縮排與換行-1)</SmellType>
+              <HashCode>IndentAndNewLine1.Name.        public abstract string Name { get; }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shape.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-1) 左大括號一律換行</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>14</Id>
+              <SmellType>ICS(縮排與換行-2)</SmellType>
+              <HashCode>IndentAndNewLine2.Name.        public abstract string Name { get; }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shape.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-2) 右大括號一律換行-並與左大括號對齊</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>15</Id>
+              <SmellType>ICS(縮排與換行-3)</SmellType>
+              <HashCode>IndentAndNewLine3.Name.        public abstract string Name { get; }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shape.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-3) 左大括號後，一律換行撰寫程式碼</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>16</Id>
+              <SmellType>Literal constants(字面常數)-"("</SmellType>
+              <HashCode>LiteralConstants.get."("</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shape.cs</File>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>17</Id>
+              <SmellType>Literal constants(字面常數)-", "</SmellType>
+              <HashCode>LiteralConstants.get.", "</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shape.cs</File>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>18</Id>
+              <SmellType>Literal constants(字面常數)-", "</SmellType>
+              <HashCode>LiteralConstants.get.", "</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shape.cs</File>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>19</Id>
+              <SmellType>Literal constants(字面常數)-"), ("</SmellType>
+              <HashCode>LiteralConstants.get."), ("</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shape.cs</File>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>20</Id>
+              <SmellType>Literal constants(字面常數)-")"</SmellType>
+              <HashCode>LiteralConstants.get.")"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shape.cs</File>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>21</Id>
+              <SmellType>A syntax error has been discovered in file C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Shapes.cs on line 7.</SmellType>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shapes.cs</File>
+              <Line>7</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>22</Id>
+              <SmellType>ICS(空白與空行-6)</SmellType>
+              <HashCode>SpacingAndNewLine6</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>DrawingState.cs</File>
+              <Line>24</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-6) 條件敘述(?)中，問號後面加一個空白，冒號前後各加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>23</Id>
+              <SmellType>ICS(空白與空行-6)</SmellType>
+              <HashCode>SpacingAndNewLine6</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>DrawingState.cs</File>
+              <Line>33</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-6) 條件敘述(?)中，問號後面加一個空白，冒號前後各加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>24</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.DrawingState.MoveMouse.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>DrawingState.cs</File>
+              <Line>27</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>25</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.DrawingState.MoveMouse.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>DrawingState.cs</File>
+              <Line>27</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>26</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.IState.MoveMouse.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>IState.cs</File>
+              <Line>6</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>27</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.IState.MoveMouse.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>IState.cs</File>
+              <Line>6</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>28</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.PointerState.MoveMouse.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>PointerState.cs</File>
+              <Line>17</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>29</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.PointerState.MoveMouse.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>PointerState.cs</File>
+              <Line>17</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>30</Id>
+              <SmellType>A syntax error has been discovered in file C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\PresentationModel\FormPresentationModel.cs on line 100.</SmellType>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>100</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>31</Id>
+              <SmellType>Literal constants(字面常數)-"刪除"</SmellType>
+              <HashCode>LiteralConstants.MainForm."刪除"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>20</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>32</Id>
+              <SmellType>Literal constants(字面常數)-"Name"</SmellType>
+              <HashCode>LiteralConstants.MainForm."Name"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>23</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>33</Id>
+              <SmellType>Literal constants(字面常數)-"Information"</SmellType>
+              <HashCode>LiteralConstants.MainForm."Information"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>25</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>34</Id>
+              <SmellType>Literal constants(字面常數)-168</SmellType>
+              <HashCode>LiteralConstants.MainForm.168</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>32</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>35</Id>
+              <SmellType>Literal constants(字面常數)-52</SmellType>
+              <HashCode>LiteralConstants.MainForm.52</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>32</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>36</Id>
+              <SmellType>Literal constants(字面常數)-"_drawingPanel"</SmellType>
+              <HashCode>LiteralConstants.MainForm."_drawingPanel"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>33</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>37</Id>
+              <SmellType>Literal constants(字面常數)-548</SmellType>
+              <HashCode>LiteralConstants.MainForm.548</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>34</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>38</Id>
+              <SmellType>Literal constants(字面常數)-397</SmellType>
+              <HashCode>LiteralConstants.MainForm.397</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>34</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>39</Id>
+              <SmellType>Literal constants(字面常數)-4</SmellType>
+              <HashCode>LiteralConstants.MainForm.4</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>35</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>40</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.MainForm.說明ToolStripMenuItem</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.Designer.cs</File>
+              <Line>291</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>41</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.MainForm.關於ToolStripMenuItem</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.Designer.cs</File>
+              <Line>292</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>42</Id>
+              <SmellType>Unsuitable naming(名不符實)-_infomationColumn(infomation)</SmellType>
+              <HashCode>UnsuitableNaming.MainForm._infomationColumn._infomationColumn</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.Designer.cs</File>
+              <Line>303</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>43</Id>
+              <SmellType>Unsuitable naming(名不符實)-debugToolStripMenuItem(debug)</SmellType>
+              <HashCode>UnsuitableNaming.MainForm.debugToolStripMenuItem.debugToolStripMenuItem</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.Designer.cs</File>
+              <Line>304</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>44</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.MainForm.debugToolStripMenuItem</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.Designer.cs</File>
+              <Line>304</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>45</Id>
+              <SmellType>Unsuitable naming(名不符實)-turnOnDebugModeToolStripMenuItem(debug)</SmellType>
+              <HashCode>UnsuitableNaming.MainForm.turnOnDebugModeToolStripMenuItem.turnOnDebugModeToolStripMenuItem</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.Designer.cs</File>
+              <Line>305</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>46</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.MainForm.turnOnDebugModeToolStripMenuItem</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.Designer.cs</File>
+              <Line>305</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>47</Id>
+              <SmellType>Long parameter list(過長參數列)</SmellType>
+              <HashCode>LongParameterList.IGraphics.DrawLine.ShapeColor shapeColor;int x1;int y1;int x2;int y2;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>5</Weight>
+              <Project>PowerPoint</Project>
+              <File>IGraphics.cs</File>
+              <Line>5</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>48</Id>
+              <SmellType>Long parameter list(過長參數列)</SmellType>
+              <HashCode>LongParameterList.IGraphics.DrawRectangle.ShapeColor shapeColor;int x1;int y1;int x2;int y2;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>5</Weight>
+              <Project>PowerPoint</Project>
+              <File>IGraphics.cs</File>
+              <Line>6</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>49</Id>
+              <SmellType>Long parameter list(過長參數列)</SmellType>
+              <HashCode>LongParameterList.IGraphics.DrawCircle.ShapeColor shapeColor;int x1;int y1;int x2;int y2;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>5</Weight>
+              <Project>PowerPoint</Project>
+              <File>IGraphics.cs</File>
+              <Line>7</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>50</Id>
+              <SmellType>Long parameter list(過長參數列)</SmellType>
+              <HashCode>LongParameterList.WindowsFormsGraphics.DrawLine.ShapeColor shapeColor;int x1;int y1;int x2;int y2;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>5</Weight>
+              <Project>PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>51</Id>
+              <SmellType>Long parameter list(過長參數列)</SmellType>
+              <HashCode>LongParameterList.WindowsFormsGraphics.DrawRectangle.ShapeColor shapeColor;int x1;int y1;int x2;int y2;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>5</Weight>
+              <Project>PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>37</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>52</Id>
+              <SmellType>Long parameter list(過長參數列)</SmellType>
+              <HashCode>LongParameterList.WindowsFormsGraphics.DrawCircle.ShapeColor shapeColor;int x1;int y1;int x2;int y2;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>5</Weight>
+              <Project>PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>53</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AddShape 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 AddShape 缺乏註解.35</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>35</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>54</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AddShape 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 AddShape 缺乏註解.41</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>41</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>55</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 RemoveShapeAt 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 RemoveShapeAt 缺乏註解.47</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>47</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>56</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SelectTool 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 SelectTool 缺乏註解.56</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>56</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>57</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SetPointerMode 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 SetPointerMode 缺乏註解.63</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>63</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>58</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SetDrawingMode 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 SetDrawingMode 缺乏註解.68</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>68</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>59</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 PressMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 PressMouse 缺乏註解.73</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>73</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>60</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 MoveMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 MoveMouse 缺乏註解.79</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>79</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>61</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ReleaseMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 ReleaseMouse 缺乏註解.86</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>86</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>62</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawShapes 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 DrawShapes 缺乏註解.92</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>92</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>63</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 NotifyCurrentToolChanged 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 NotifyCurrentToolChanged 缺乏註解.101</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>101</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>64</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 NotifyShapeListChanged 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-函式 NotifyShapeListChanged 缺乏註解.106</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>106</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>65</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Draw 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Circle.cs.Unresolved warnings(忽視警告)-函式 Draw 缺乏註解.18</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Circle.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>66</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 CreateShape 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Factory.cs.Unresolved warnings(忽視警告)-函式 CreateShape 缺乏註解.7</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>7</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>67</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 CreateShape 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Factory.cs.Unresolved warnings(忽視警告)-函式 CreateShape 缺乏註解.22</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>22</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>68</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 CreateShape 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Factory.cs.Unresolved warnings(忽視警告)-函式 CreateShape 缺乏註解.32</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>32</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>69</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Draw 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Line.cs.Unresolved warnings(忽視警告)-函式 Draw 缺乏註解.18</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Line.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>70</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Draw 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.MyRectangle.cs.Unresolved warnings(忽視警告)-函式 Draw 缺乏註解.18</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>MyRectangle.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>71</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Draw 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Shape.cs.Unresolved warnings(忽視警告)-函式 Draw 缺乏註解.28</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Shape.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>72</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Add 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Shapes.cs.Unresolved warnings(忽視警告)-函式 Add 缺乏註解.9</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Shapes.cs</File>
+              <Line>9</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>73</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Add 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Shapes.cs.Unresolved warnings(忽視警告)-函式 Add 缺乏註解.18</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Shapes.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>74</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 RemoveAt 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Shapes.cs.Unresolved warnings(忽視警告)-函式 RemoveAt 缺乏註解.23</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Shapes.cs</File>
+              <Line>23</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>75</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Draw 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Shapes.cs.Unresolved warnings(忽視警告)-函式 Draw 缺乏註解.28</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Shapes.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>76</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 PressMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.DrawingState.cs.Unresolved warnings(忽視警告)-函式 PressMouse 缺乏註解.17</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>DrawingState.cs</File>
+              <Line>17</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>77</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 MoveMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.DrawingState.cs.Unresolved warnings(忽視警告)-函式 MoveMouse 缺乏註解.27</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>DrawingState.cs</File>
+              <Line>27</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>78</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ReleaseMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.DrawingState.cs.Unresolved warnings(忽視警告)-函式 ReleaseMouse 缺乏註解.36</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>DrawingState.cs</File>
+              <Line>36</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>79</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 PressMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.IState.cs.Unresolved warnings(忽視警告)-函式 PressMouse 缺乏註解.5</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>IState.cs</File>
+              <Line>5</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>80</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 MoveMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.IState.cs.Unresolved warnings(忽視警告)-函式 MoveMouse 缺乏註解.6</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>IState.cs</File>
+              <Line>6</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>81</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ReleaseMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.IState.cs.Unresolved warnings(忽視警告)-函式 ReleaseMouse 缺乏註解.7</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>IState.cs</File>
+              <Line>7</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>82</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 PressMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.PointerState.cs.Unresolved warnings(忽視警告)-函式 PressMouse 缺乏註解.12</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>PointerState.cs</File>
+              <Line>12</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>83</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 MoveMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.PointerState.cs.Unresolved warnings(忽視警告)-函式 MoveMouse 缺乏註解.17</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>PointerState.cs</File>
+              <Line>17</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>84</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ReleaseMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.PointerState.cs.Unresolved warnings(忽視警告)-函式 ReleaseMouse 缺乏註解.22</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>PointerState.cs</File>
+              <Line>22</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>85</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AddShape 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 AddShape 缺乏註解.34</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>34</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>86</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 RemoveShapeAt 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 RemoveShapeAt 缺乏註解.39</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>39</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>87</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 SelectTool 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 SelectTool 缺乏註解.44</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>44</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>88</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 PressMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 PressMouse 缺乏註解.50</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>89</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 MoveMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 MoveMouse 缺乏註解.55</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>55</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>90</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ReleaseMouse 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 ReleaseMouse 缺乏註解.60</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>60</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>91</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 EnterPanel 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 EnterPanel 缺乏註解.67</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>67</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>92</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 LeavePanel 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 LeavePanel 缺乏註解.81</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>81</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>93</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawShapes 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 DrawShapes 缺乏註解.88</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>88</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>94</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 NotifyToolCursorChanged 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 NotifyToolCursorChanged 缺乏註解.93</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>93</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>95</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 NotifyShapeListChanged 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 NotifyShapeListChanged 缺乏註解.103</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>103</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>96</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 UpdateCurrentTool 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 UpdateCurrentTool 缺乏註解.108</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>108</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>97</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 UpdateDrawingPanel 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-函式 UpdateDrawingPanel 缺乏註解.114</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>114</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>98</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickLineTool 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 ClickLineTool 缺乏註解.45</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>45</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>99</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickRectangleTool 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 ClickRectangleTool 缺乏註解.50</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>100</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickCircleTool 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 ClickCircleTool 缺乏註解.55</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>55</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>101</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickArrowTool 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 ClickArrowTool 缺乏註解.60</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>60</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>102</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickAddShapeButton 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 ClickAddShapeButton 缺乏註解.65</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>65</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>103</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 ClickDataGridCell 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 ClickDataGridCell 缺乏註解.70</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>70</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>104</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DoMouseDownOnPanel 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 DoMouseDownOnPanel 缺乏註解.75</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>75</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>105</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DoMouseUpOnPanel 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 DoMouseUpOnPanel 缺乏註解.80</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>80</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>106</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DoMouseMoveOnPanel 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 DoMouseMoveOnPanel 缺乏註解.85</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>85</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>107</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DoMouseEnterOnPanel 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 DoMouseEnterOnPanel 缺乏註解.90</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>90</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>108</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DoMouseLeaveOnPanel 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 DoMouseLeaveOnPanel 缺乏註解.95</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>95</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>109</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DoPaintOnPanel 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 DoPaintOnPanel 缺乏註解.100</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>100</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>110</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 UpdateToolCursor 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 UpdateToolCursor 缺乏註解.105</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>105</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>111</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 UpdateDrawingPanel 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-函式 UpdateDrawingPanel 缺乏註解.114</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>114</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>112</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawLine 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.IGraphics.cs.Unresolved warnings(忽視警告)-函式 DrawLine 缺乏註解.5</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>IGraphics.cs</File>
+              <Line>5</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>113</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawRectangle 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.IGraphics.cs.Unresolved warnings(忽視警告)-函式 DrawRectangle 缺乏註解.6</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>IGraphics.cs</File>
+              <Line>6</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>114</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawCircle 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.IGraphics.cs.Unresolved warnings(忽視警告)-函式 DrawCircle 缺乏註解.7</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>IGraphics.cs</File>
+              <Line>7</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>115</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 GetPen 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.WindowsFormsGraphics.cs.Unresolved warnings(忽視警告)-函式 GetPen 缺乏註解.15</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>116</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawLine 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.WindowsFormsGraphics.cs.Unresolved warnings(忽視警告)-函式 DrawLine 缺乏註解.28</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>117</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawRectangle 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.WindowsFormsGraphics.cs.Unresolved warnings(忽視警告)-函式 DrawRectangle 缺乏註解.37</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>37</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>118</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 DrawCircle 缺乏註解</SmellType>
+              <HashCode>PowerPoint\PowerPoint.WindowsFormsGraphics.cs.Unresolved warnings(忽視警告)-函式 DrawCircle 缺乏註解.50</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>119</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>34 PowerPoint.FormPresentationModel.AddShape(string)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>34</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.AddShape(string)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>120</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>39 PowerPoint.FormPresentationModel.RemoveShapeAt(int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>39</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.RemoveShapeAt(int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>121</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>44 PowerPoint.FormPresentationModel.SelectTool(PowerPoint.ShapeType)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>44</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.SelectTool(PowerPoint.ShapeType)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>122</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>50 PowerPoint.FormPresentationModel.PressMouse()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.PressMouse()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>123</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>55 PowerPoint.FormPresentationModel.MoveMouse(int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>55</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.MoveMouse(int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>124</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>60 PowerPoint.FormPresentationModel.ReleaseMouse()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>60</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.ReleaseMouse()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>125</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>67 PowerPoint.FormPresentationModel.EnterPanel()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>67</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.EnterPanel()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>126</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>81 PowerPoint.FormPresentationModel.LeavePanel()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>81</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.LeavePanel()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>127</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>88 PowerPoint.FormPresentationModel.DrawShapes(PowerPoint.IGraphics)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>88</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.DrawShapes(PowerPoint.IGraphics)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>128</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>93 PowerPoint.FormPresentationModel.NotifyToolCursorChanged()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>93</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.NotifyToolCursorChanged()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>129</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>103 PowerPoint.FormPresentationModel.NotifyShapeListChanged()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>103</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.NotifyShapeListChanged()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>130</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>108 PowerPoint.FormPresentationModel.UpdateCurrentTool(PowerPoint.ShapeType)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>108</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.UpdateCurrentTool(PowerPoint.ShapeType)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>131</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>114 PowerPoint.FormPresentationModel.UpdateDrawingPanel()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>114</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.FormPresentationModel.UpdateDrawingPanel()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>132</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>15 PowerPoint.WindowsFormsGraphics.GetPen(PowerPoint.ShapeColor)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.WindowsFormsGraphics.GetPen(PowerPoint.ShapeColor)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>133</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>28 PowerPoint.WindowsFormsGraphics.DrawLine(PowerPoint.ShapeColor, int, int, int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.WindowsFormsGraphics.DrawLine(PowerPoint.ShapeColor, int, int, int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>134</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>37 PowerPoint.WindowsFormsGraphics.DrawRectangle(PowerPoint.ShapeColor, int, int, int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>37</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.WindowsFormsGraphics.DrawRectangle(PowerPoint.ShapeColor, int, int, int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>135</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>50 PowerPoint.WindowsFormsGraphics.DrawCircle(PowerPoint.ShapeColor, int, int, int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>WindowsFormsGraphics.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.WindowsFormsGraphics.DrawCircle(PowerPoint.ShapeColor, int, int, int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>136</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>5 PowerPoint.IGraphics.DrawLine(PowerPoint.ShapeColor, int, int, int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>IGraphics.cs</File>
+              <Line>5</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.IGraphics.DrawLine(PowerPoint.ShapeColor, int, int, int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>137</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>6 PowerPoint.IGraphics.DrawRectangle(PowerPoint.ShapeColor, int, int, int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>IGraphics.cs</File>
+              <Line>6</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.IGraphics.DrawRectangle(PowerPoint.ShapeColor, int, int, int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>138</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>7 PowerPoint.IGraphics.DrawCircle(PowerPoint.ShapeColor, int, int, int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>IGraphics.cs</File>
+              <Line>7</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.IGraphics.DrawCircle(PowerPoint.ShapeColor, int, int, int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>139</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>35 PowerPoint.Model.AddShape(string)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>35</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.AddShape(string)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>140</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>41 PowerPoint.Model.AddShape(PowerPoint.Shape)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>41</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.AddShape(PowerPoint.Shape)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>141</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>47 PowerPoint.Model.RemoveShapeAt(int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>47</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.RemoveShapeAt(int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>142</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>56 PowerPoint.Model.SelectTool(PowerPoint.ShapeType)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>56</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.SelectTool(PowerPoint.ShapeType)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>143</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>63 PowerPoint.Model.SetPointerMode()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>63</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.SetPointerMode()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>144</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>68 PowerPoint.Model.SetDrawingMode()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>68</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.SetDrawingMode()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>145</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>73 PowerPoint.Model.PressMouse()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>73</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.PressMouse()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>146</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>79 PowerPoint.Model.MoveMouse(int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>79</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.MoveMouse(int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>147</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>86 PowerPoint.Model.ReleaseMouse()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>86</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.ReleaseMouse()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>148</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>92 PowerPoint.Model.DrawShapes(PowerPoint.IGraphics)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>92</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.DrawShapes(PowerPoint.IGraphics)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>149</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>101 PowerPoint.Model.NotifyCurrentToolChanged()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>101</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.NotifyCurrentToolChanged()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>150</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>106 PowerPoint.Model.NotifyShapeListChanged()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>106</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Model.NotifyShapeListChanged()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>151</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>45 PowerPoint.MainForm.ClickLineTool(object, System.EventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>45</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.ClickLineTool(object, System.EventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>152</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>50 PowerPoint.MainForm.ClickRectangleTool(object, System.EventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.ClickRectangleTool(object, System.EventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>153</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>55 PowerPoint.MainForm.ClickCircleTool(object, System.EventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>55</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.ClickCircleTool(object, System.EventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>154</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>60 PowerPoint.MainForm.ClickArrowTool(object, System.EventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>60</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.ClickArrowTool(object, System.EventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>155</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>65 PowerPoint.MainForm.ClickAddShapeButton(object, System.EventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>65</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.ClickAddShapeButton(object, System.EventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>156</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>70 PowerPoint.MainForm.ClickDataGridCell(object, System.Windows.Forms.DataGridViewCellEventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>70</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.ClickDataGridCell(object, System.Windows.Forms.DataGridViewCellEventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>157</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>75 PowerPoint.MainForm.DoMouseDownOnPanel(object, System.Windows.Forms.MouseEventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>75</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.DoMouseDownOnPanel(object, System.Windows.Forms.MouseEventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>158</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>80 PowerPoint.MainForm.DoMouseUpOnPanel(object, System.Windows.Forms.MouseEventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>80</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.DoMouseUpOnPanel(object, System.Windows.Forms.MouseEventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>159</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>85 PowerPoint.MainForm.DoMouseMoveOnPanel(object, System.Windows.Forms.MouseEventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>85</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.DoMouseMoveOnPanel(object, System.Windows.Forms.MouseEventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>160</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>90 PowerPoint.MainForm.DoMouseEnterOnPanel(object, System.EventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>90</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.DoMouseEnterOnPanel(object, System.EventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>161</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>95 PowerPoint.MainForm.DoMouseLeaveOnPanel(object, System.EventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>95</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.DoMouseLeaveOnPanel(object, System.EventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>162</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>100 PowerPoint.MainForm.DoPaintOnPanel(object, System.Windows.Forms.PaintEventArgs)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>100</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.DoPaintOnPanel(object, System.Windows.Forms.PaintEventArgs)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>163</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>105 PowerPoint.MainForm.UpdateToolCursor(System.Collections.Generic.Dictionary&lt;PowerPoint.ShapeType, bool&gt;, System.Windows.Forms.Cursor)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>105</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.UpdateToolCursor(System.Collections.Generic.Dictionary&lt;PowerPoint.ShapeType, bool&gt;, System.Windows.Forms.Cursor)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>164</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>114 PowerPoint.MainForm.UpdateDrawingPanel()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>114</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MainForm.UpdateDrawingPanel()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>165</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>5 PowerPoint.IState.PressMouse()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>IState.cs</File>
+              <Line>5</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.IState.PressMouse()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>166</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>6 PowerPoint.IState.MoveMouse(int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>IState.cs</File>
+              <Line>6</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.IState.MoveMouse(int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>167</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>7 PowerPoint.IState.ReleaseMouse()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>IState.cs</File>
+              <Line>7</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.IState.ReleaseMouse()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>168</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>18 PowerPoint.Line.Draw(PowerPoint.IGraphics, PowerPoint.ShapeColor)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Line.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Line.Draw(PowerPoint.IGraphics, PowerPoint.ShapeColor)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>169</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>17 PowerPoint.DrawingState.PressMouse()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>DrawingState.cs</File>
+              <Line>17</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.DrawingState.PressMouse()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>170</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>27 PowerPoint.DrawingState.MoveMouse(int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>DrawingState.cs</File>
+              <Line>27</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.DrawingState.MoveMouse(int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>171</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>36 PowerPoint.DrawingState.ReleaseMouse()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>DrawingState.cs</File>
+              <Line>36</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.DrawingState.ReleaseMouse()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>172</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>18 PowerPoint.Circle.Draw(PowerPoint.IGraphics, PowerPoint.ShapeColor)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Circle.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Circle.Draw(PowerPoint.IGraphics, PowerPoint.ShapeColor)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>173</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>7 PowerPoint.Factory.CreateShape(string)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>7</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Factory.CreateShape(string)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>174</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>22 PowerPoint.Factory.CreateShape(PowerPoint.ShapeType)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>22</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Factory.CreateShape(PowerPoint.ShapeType)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>175</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>32 PowerPoint.Factory.CreateShape(PowerPoint.ShapeType, int, int, int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Factory.cs</File>
+              <Line>32</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Factory.CreateShape(PowerPoint.ShapeType, int, int, int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>176</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>18 PowerPoint.MyRectangle.Draw(PowerPoint.IGraphics, PowerPoint.ShapeColor)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>MyRectangle.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.MyRectangle.Draw(PowerPoint.IGraphics, PowerPoint.ShapeColor)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>177</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>12 PowerPoint.PointerState.PressMouse()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>PointerState.cs</File>
+              <Line>12</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.PointerState.PressMouse()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>178</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>17 PowerPoint.PointerState.MoveMouse(int, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>PointerState.cs</File>
+              <Line>17</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.PointerState.MoveMouse(int, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>179</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>22 PowerPoint.PointerState.ReleaseMouse()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>PointerState.cs</File>
+              <Line>22</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.PointerState.ReleaseMouse()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>180</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>28 PowerPoint.Shape.Draw(PowerPoint.IGraphics, PowerPoint.ShapeColor)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shape.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Shape.Draw(PowerPoint.IGraphics, PowerPoint.ShapeColor)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>181</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>9 PowerPoint.Shapes.Add(string)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shapes.cs</File>
+              <Line>9</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Shapes.Add(string)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>182</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>18 PowerPoint.Shapes.Add(PowerPoint.Shape)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shapes.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Shapes.Add(PowerPoint.Shape)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>183</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>23 PowerPoint.Shapes.RemoveAt(int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shapes.cs</File>
+              <Line>23</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Shapes.RemoveAt(int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>184</Id>
+              <SmellType>Lack of comments(缺乏註解)</SmellType>
+              <HashCode>28 PowerPoint.Shapes.Draw(PowerPoint.IGraphics, int)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Shapes.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>PowerPoint.Shapes.Draw(PowerPoint.IGraphics, int)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>185</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>43 目前物件 PowerPoint.DrawingState，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：PowerPoint.Model.Preview 以及 PowerPoint.Model.AddShape(PowerPoint.Shape) 以及 PowerPoint.Model.Preview</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\State\DrawingState.cs</File>
+              <Line>43</Line>
+              <StartLine>42</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>43</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.DrawingState，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：PowerPoint.Model.Preview 以及 PowerPoint.Model.AddShape(PowerPoint.Shape) 以及 PowerPoint.Model.Preview</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>186</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>14 目前物件 PowerPoint.Shapes，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.Factory，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Factory.CreateShape(string) 以及 PowerPoint.Factory.CreateShape(string)</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Shapes.cs</File>
+              <Line>14</Line>
+              <StartLine>13</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>14</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.Shapes，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.Factory，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Factory.CreateShape(string) 以及 PowerPoint.Factory.CreateShape(string)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+          </Reviews>
           <HashCodeIgnoreList />
           <HashCodeRequestIgnoreList />
           <AnalysisFileManager>
             <AnalysisFiles>
               <AnalysisFile>
-                <RelativePath>Form1.cs</RelativePath>
+                <RelativePath>Model\Enum\ShapeColor.cs</RelativePath>
                 <ProjectName>PowerPoint</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
-                <RelativePath>Form1.Designer.cs</RelativePath>
+                <RelativePath>Model\Enum\ShapeType.cs</RelativePath>
                 <ProjectName>PowerPoint</ProjectName>
-                <AnalysisFileType>Designer</AnalysisFileType>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\Model.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\Shape\Circle.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\Shape\Factory.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\Shape\Line.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\Shape\MyRectangle.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\Shape\Shape.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\Shape\Shapes.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\State\DrawingState.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\State\IState.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\State\PointerState.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>PresentationModel\FormPresentationModel.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Program.cs</RelativePath>
@@ -220,9 +3249,34 @@
                 <ProjectName>PowerPoint</ProjectName>
                 <AnalysisFileType>Designer</AnalysisFileType>
               </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>View\DoubleBufferedPanel.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>View\Form1.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>View\Form1.Designer.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Designer</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>View\IGraphics.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>View\WindowsFormsGraphics.cs</RelativePath>
+                <ProjectName>PowerPoint</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>0</ProductionLoc>
+          <ProductionLoc>823</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>
