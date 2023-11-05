@@ -1,6 +1,6 @@
 ﻿namespace PowerPoint
 {
-    public class DrawingMode : IState
+    public class DrawingState : IState
     {
         private Model _model;
         private int _startX = 0;
@@ -9,7 +9,7 @@
         private int _endY = 0;
         private bool _pressed = false;
         
-        public DrawingMode(Model model)
+        public DrawingState(Model model)
         {
             _model = model;
         }
@@ -19,7 +19,7 @@
             _startX = _endX;
             _startY = _endY;
             _pressed = true;
-            _model.Preview = _pressed && _model.CurrentTool != ShapeType.Arrow
+            _model.Preview = _pressed
                 ? Factory.CreateShape(_model.CurrentTool, _startX, _startY, _endX, _endY)
                 : null;
         }
@@ -28,7 +28,7 @@
         {
             _endX = x;
             _endY = y;
-            _model.Preview = _pressed && _model.CurrentTool != ShapeType.Arrow
+            _model.Preview = _pressed
                 ? Factory.CreateShape(_model.CurrentTool, _startX, _startY, _endX, _endY)
                 : null;
         }

@@ -47,6 +47,8 @@ namespace PowerPoint
             this._arrowTool = new System.Windows.Forms.ToolStripButton();
             this._slidePanel = new System.Windows.Forms.Panel();
             this._slide1 = new System.Windows.Forms.Button();
+            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.turnOnDebugModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._dataGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView)).BeginInit();
             this._menuStrip.SuspendLayout();
@@ -146,7 +148,8 @@ namespace PowerPoint
             // _menuStrip
             // 
             this._menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.說明ToolStripMenuItem});
+            this.說明ToolStripMenuItem,
+            this.debugToolStripMenuItem});
             this._menuStrip.Location = new System.Drawing.Point(0, 0);
             this._menuStrip.Name = "_menuStrip";
             this._menuStrip.Size = new System.Drawing.Size(984, 24);
@@ -241,6 +244,20 @@ namespace PowerPoint
             this._slide1.TabIndex = 0;
             this._slide1.UseVisualStyleBackColor = false;
             // 
+            // debugToolStripMenuItem
+            // 
+            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.turnOnDebugModeToolStripMenuItem});
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.debugToolStripMenuItem.Text = "Debug";
+            // 
+            // turnOnDebugModeToolStripMenuItem
+            // 
+            this.turnOnDebugModeToolStripMenuItem.Name = "turnOnDebugModeToolStripMenuItem";
+            this.turnOnDebugModeToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.turnOnDebugModeToolStripMenuItem.Text = "Turn on debug mode";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -284,6 +301,8 @@ namespace PowerPoint
         private System.Windows.Forms.DataGridViewButtonColumn _deleteColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _shapeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _infomationColumn;
+        private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem turnOnDebugModeToolStripMenuItem;
     }
 }
 

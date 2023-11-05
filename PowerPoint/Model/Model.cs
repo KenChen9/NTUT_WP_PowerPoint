@@ -67,7 +67,7 @@ namespace PowerPoint
 
         public void SetDrawingMode()
         {
-            _state = new DrawingMode(this);
+            _state = new DrawingState(this);
         }
 
         public void PressMouse()

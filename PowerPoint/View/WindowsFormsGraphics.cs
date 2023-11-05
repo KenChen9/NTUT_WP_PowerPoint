@@ -39,11 +39,11 @@ namespace PowerPoint
             Pen pen = GetPen(shapeColor);
             int topLeftX = Math.Min(x1, x2);
             int topLeftY = Math.Min(y1, y2);
-            int bottomRightX = Math.Max(x1, x2);
-            int bottomRightY = Math.Max(y1, y2);
+            int width = Math.Abs(x1 - x2);
+            int height = Math.Abs(y1 - y2);
             if (pen != null)
             {
-                _graphics.DrawRectangle(pen, topLeftX, topLeftY, bottomRightX, bottomRightY);
+                _graphics.DrawRectangle(pen, topLeftX, topLeftY, width, height);
             }
         }
 
@@ -52,11 +52,11 @@ namespace PowerPoint
             Pen pen = GetPen(shapeColor);
             int topLeftX = Math.Min(x1, x2);
             int topLeftY = Math.Min(y1, y2);
-            int bottomRightX = Math.Max(x1, x2);
-            int bottomRightY = Math.Max(y1, y2);
+            int width = Math.Abs(x1 - x2);
+            int height = Math.Abs(y1 - y2);
             if (pen != null)
             {
-                _graphics.DrawEllipse(pen, topLeftX, topLeftY, bottomRightX, bottomRightY);
+                _graphics.DrawEllipse(pen, topLeftX, topLeftY, width, height);
             }
         }
     }

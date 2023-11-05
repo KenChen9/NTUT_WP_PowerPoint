@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Circle.cs" />
-    <Compile Include="Model\DrawingMode.cs" />
+    <Compile Include="Model\DrawingState.cs" />
     <Compile Include="Model\Factory.cs" />
     <Compile Include="Model\IState.cs" />
     <Compile Include="Model\Line.cs" />
