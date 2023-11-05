@@ -47,7 +47,6 @@ namespace PowerPoint
             this._arrowTool = new System.Windows.Forms.ToolStripButton();
             this._slidePanel = new System.Windows.Forms.Panel();
             this._slide1 = new System.Windows.Forms.Button();
-            this._drawingPanel = new System.Windows.Forms.Panel();
             this._dataGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView)).BeginInit();
             this._menuStrip.SuspendLayout();
@@ -242,29 +241,11 @@ namespace PowerPoint
             this._slide1.TabIndex = 0;
             this._slide1.UseVisualStyleBackColor = false;
             // 
-            // _drawingPanel
-            // 
-            this._drawingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._drawingPanel.BackColor = System.Drawing.Color.White;
-            this._drawingPanel.Location = new System.Drawing.Point(168, 52);
-            this._drawingPanel.Name = "_drawingPanel";
-            this._drawingPanel.Size = new System.Drawing.Size(548, 397);
-            this._drawingPanel.TabIndex = 4;
-            this._drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DoPaintOnPanel);
-            this._drawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DoMouseDownOnPanel);
-            this._drawingPanel.MouseEnter += new System.EventHandler(this.DoMouseEnterOnPanel);
-            this._drawingPanel.MouseLeave += new System.EventHandler(this.DoMouseLeaveOnPanel);
-            this._drawingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DoMouseMoveOnPanel);
-            this._drawingPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DoMouseUpOnPanel);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 461);
-            this.Controls.Add(this._drawingPanel);
             this.Controls.Add(this._slidePanel);
             this.Controls.Add(this._toolStrip);
             this.Controls.Add(this._dataGroup);
@@ -272,7 +253,6 @@ namespace PowerPoint
             this.MainMenuStrip = this._menuStrip;
             this.Name = "MainForm";
             this.Text = "PowerPoint";
-            this.Load += new System.EventHandler(this.LoadForm);
             this._dataGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView)).EndInit();
             this._menuStrip.ResumeLayout(false);
@@ -300,7 +280,6 @@ namespace PowerPoint
         private System.Windows.Forms.Button _addShapeButton;
         private System.Windows.Forms.DataGridView _dataGridView;
         private System.Windows.Forms.Panel _slidePanel;
-        private System.Windows.Forms.Panel _drawingPanel;
         private System.Windows.Forms.Button _slide1;
         private System.Windows.Forms.DataGridViewButtonColumn _deleteColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _shapeColumn;

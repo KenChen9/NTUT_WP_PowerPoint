@@ -4,8 +4,11 @@ namespace PowerPoint
 {
     public class Model
     {
-        public delegate void ToolChangedHandler(ShapeType shapeType);
-        public ToolChangedHandler ToolChanged;
+        public delegate void CurrentToolChangedHandler(ShapeType shapeType);
+        public CurrentToolChangedHandler CurrentToolChanged;
+
+        public delegate void ShapeListChangedHandler();
+        public ShapeListChangedHandler ShapeListChanged;
         
         private IState _state;
         private Shapes _shapes = new Shapes();
@@ -32,11 +35,13 @@ namespace PowerPoint
         public void AddShape(string shapeType)
         {
             _shapes.Add(shapeType);
+            NotifyShapeListChanged();
         }
 
         public void AddShape(Shape shape)
         {
             _shapes.Add(shape);
+            NotifyShapeListChanged();
         }
 
         public void RemoveShapeAt(int rowIndex, int columnIndex)
@@ -45,13 +50,14 @@ namespace PowerPoint
             {
                 _shapes.RemoveAt(rowIndex);
             }
+            NotifyShapeListChanged();
         }
 
         public void SelectTool(ShapeType shapeType)
         {
             CurrentTool = shapeType;
             Preview = null;
-            NotifyObserver();
+            NotifyCurrentToolChanged();
         }
 
         public void SetPointerMode()
@@ -67,19 +73,20 @@ namespace PowerPoint
         public void PressMouse()
         {
             _state.PressMouse();
-            NotifyObserver();
+            NotifyCurrentToolChanged();
         }
 
         public void MoveMouse(int x, int y)
         {
             _state.MoveMouse(x, y);
-            NotifyObserver();
+            NotifyCurrentToolChanged();
+            NotifyShapeListChanged();
         }
 
         public void ReleaseMouse()
         {
             _state.ReleaseMouse();
-            NotifyObserver();
+            NotifyCurrentToolChanged();
         }
 
         public void DrawShapes(IGraphics graphics)
@@ -91,9 +98,14 @@ namespace PowerPoint
             }
         }
 
-        private void NotifyObserver()
+        private void NotifyCurrentToolChanged()
         {
-            ToolChanged?.Invoke(CurrentTool);
+            CurrentToolChanged?.Invoke(CurrentTool);
+        }
+
+        private void NotifyShapeListChanged()
+        {
+            ShapeListChanged?.Invoke();
         }
     }
 }

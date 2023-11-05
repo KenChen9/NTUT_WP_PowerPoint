@@ -59,6 +59,9 @@
     <Compile Include="Model\Shapes.cs" />
     <Compile Include="Model\ShapeType.cs" />
     <Compile Include="PresentationModel\FormPresentationModel.cs" />
+    <Compile Include="View\DoubleBufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

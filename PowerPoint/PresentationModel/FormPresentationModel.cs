@@ -8,6 +8,10 @@ namespace PowerPoint
     {
         public delegate void ToolCursorChangedHandler(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor);
         public event ToolCursorChangedHandler ToolCursorChanged;
+
+        public delegate void ShapeListChangedHandler();
+        public event ShapeListChangedHandler ShapeListChanged;
+
         private Model _model;
         private ShapeType _currentTool = ShapeType.Arrow;
         private Cursor _currentCursor = Cursors.Arrow;
@@ -23,7 +27,8 @@ namespace PowerPoint
         public FormPresentationModel(Model model)
         {
             _model = model;
-            _model.ToolChanged += UpdateCurrentTool;
+            _model.CurrentToolChanged += UpdateCurrentTool;
+            _model.ShapeListChanged += UpdateDrawingPanel;
         }
 
         public void AddShape(string shapeType)
@@ -39,7 +44,7 @@ namespace PowerPoint
         public void SelectTool(ShapeType shapeType)
         {
             _model.SelectTool(shapeType);
-            NotifyObserver();
+            NotifyToolCursorChanged();
         }
 
         public void PressMouse()
@@ -56,7 +61,7 @@ namespace PowerPoint
         {
             _currentCursor = Cursors.Arrow;
             _model.ReleaseMouse();
-            NotifyObserver();
+            NotifyToolCursorChanged();
         }
 
         public void EnterPanel()
@@ -70,14 +75,14 @@ namespace PowerPoint
             {
                 _model.SetDrawingMode();
             }
-            NotifyObserver();
+            NotifyToolCursorChanged();
         }
 
         public void LeavePanel()
         {
             _currentCursor = Cursors.Arrow;
             _model.SetPointerMode();
-            NotifyObserver();
+            NotifyToolCursorChanged();
         }
 
         public void DrawShapes(IGraphics graphics)
@@ -85,20 +90,30 @@ namespace PowerPoint
             _model.DrawShapes(graphics);
         }
 
-        private void NotifyObserver()
+        private void NotifyToolCursorChanged()
         {
             Dictionary<ShapeType, bool> toolStatus = new Dictionary<ShapeType, bool>();
             toolStatus.Add(ShapeType.Line, _currentTool == ShapeType.Line);
             toolStatus.Add(ShapeType.Rectangle, _currentTool == ShapeType.Rectangle);
             toolStatus.Add(ShapeType.Circle, _currentTool == ShapeType.Circle);
             toolStatus.Add(ShapeType.Arrow, _currentTool == ShapeType.Arrow);
-            FormPresentationModelChanged?.Invoke(toolStatus, _currentCursor);
+            ToolCursorChanged?.Invoke(toolStatus, _currentCursor);
+        }
+
+        private void NotifyShapeListChanged()
+        {
+            ShapeListChanged?.Invoke();
         }
 
         private void UpdateCurrentTool(ShapeType shapeType)
         {
             _currentTool = shapeType;
-            NotifyObserver();
+            NotifyToolCursorChanged();
+        }
+
+        private void UpdateDrawingPanel()
+        {
+            NotifyShapeListChanged();
         }
     }
 }
