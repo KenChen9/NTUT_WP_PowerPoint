@@ -60,10 +60,26 @@
         }
 
         /// <summary>
+        /// MoveDelta
+        /// </summary>
+        public void MoveDelta(int dx, int dy)
+        {
+            _x1 += dx;
+            _y1 += dy;
+            _x2 += dx;
+            _y2 += dy;
+        }
+
+        /// <summary>
         /// Draws the shape using the specified graphics object and shape color.
         /// </summary>
         /// <param name="graphics">The IGraphics object used for drawing.</param>
         /// <param name="shapeColor">The color of the shape.</param>
-        public abstract void Draw(IGraphics graphics, ShapeColor shapeColor);
+        public abstract void Draw(IGraphics graphics, bool selected);
+
+        /// <summary>
+        /// IsOverlap
+        /// </summary>
+        public abstract bool IsOverlap(int x, int y);
     }
 }

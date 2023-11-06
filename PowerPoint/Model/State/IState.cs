@@ -20,6 +20,11 @@
         /// <summary>
         /// Handles the mouse release event.
         /// </summary>
-        void ReleaseMouse();
+        void ReleaseMouse(int x, int y);
+
+        /// <summary>
+        /// Draw
+        /// </summary>
+        void Draw(IGraphics graphics, Shapes shapes);
     }
 }

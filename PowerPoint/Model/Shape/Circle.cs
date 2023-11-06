@@ -1,4 +1,6 @@
-﻿namespace PowerPoint
+﻿using System;
+
+namespace PowerPoint
 {
     /// <summary>
     /// Represents a circle shape in a PowerPoint presentation.
@@ -29,13 +31,39 @@
         }
 
         /// <summary>
-        /// Draws the circle shape using the specified graphics object and shape color.
+        /// Draws the circle shape.
         /// </summary>
-        /// <param name="graphics">The IGraphics object used for drawing.</param>
-        /// <param name="shapeColor">The color of the circle shape.</param>
-        public override void Draw(IGraphics graphics, ShapeColor shapeColor)
+        public override void Draw(IGraphics graphics, bool selected)
         {
-            graphics.DrawCircle(shapeColor, _x1, _y1, _x2, _y2);
+            if (selected)
+            {
+                int penWidth = 2;
+                graphics.DrawCircle(ShapeColor.Red, penWidth, _x1, _y1, _x2, _y2);
+                int smallCircleRadius = 4;
+                int centerX = (_x1 + _x2) / 2;
+                int centerY = (_y1 + _y2) / 2;
+                graphics.DrawCircle(ShapeColor.Red, penWidth, centerX - smallCircleRadius, _y1 - smallCircleRadius, centerX + smallCircleRadius, _y1 + smallCircleRadius);
+                graphics.DrawCircle(ShapeColor.Red, penWidth, centerX - smallCircleRadius, _y2 - smallCircleRadius, centerX + smallCircleRadius, _y2 + smallCircleRadius);
+                graphics.DrawCircle(ShapeColor.Red, penWidth, _x1 - smallCircleRadius, centerY - smallCircleRadius, _x1 + smallCircleRadius, centerY + smallCircleRadius);
+                graphics.DrawCircle(ShapeColor.Red, penWidth, _x2 - smallCircleRadius, centerY - smallCircleRadius, _x2 + smallCircleRadius, centerY + smallCircleRadius);
+            }
+            else
+            {
+                int penWidth = 1;
+                graphics.DrawCircle(ShapeColor.Black, penWidth, _x1, _y1, _x2, _y2);
+            }
+        }
+
+        /// <summary>
+        /// IsOverlap
+        /// </summary>
+        public override bool IsOverlap(int x, int y)
+        {
+            double h = (_x1 + _x2) / 2;
+            double k = (_y1 + _y2) / 2;
+            double a = Math.Abs(_x1 - _x2) / 2;
+            double b = Math.Abs(_y1 - _y2) / 2;
+            return Math.Pow((x - h) / a, 2) + Math.Pow((y - k) / b, 2) <= 1;
         }
     }
 }

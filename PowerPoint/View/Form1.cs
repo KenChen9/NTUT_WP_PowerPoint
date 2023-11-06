@@ -119,7 +119,7 @@ namespace PowerPoint
         /// <param name="e">The event argument.</param>
         private void DoMouseUpOnPanel(object sender, MouseEventArgs e)
         {
-            _formPresentationModel.ReleaseMouse();
+            _formPresentationModel.ReleaseMouse(e.X, e.Y);
         }
 
         /// <summary>
@@ -160,6 +160,14 @@ namespace PowerPoint
         private void DoPaintOnPanel(object sender, PaintEventArgs e)
         {
             _formPresentationModel.DrawShapes(new WindowsFormsGraphics(e.Graphics));
+        }
+
+        private void DoKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                _formPresentationModel.RemoveSelectedShape();
+            }
         }
 
         /// <summary>

@@ -7,55 +7,22 @@ namespace PowerPoint
     /// </summary>
     public class Model
     {
-        /// <summary>
-        /// Delegate for handling changes in the current selected tool.
-        /// </summary>
         public delegate void CurrentToolChangedHandler(ShapeType shapeType);
-
-        /// <summary>
-        /// Delegate for handling changes in the shape list.
-        /// </summary>
         public delegate void ShapeListChangedHandler();
-
-        /// <summary>
-        /// Event triggered when the current tool is changed.
-        /// </summary>
         public event CurrentToolChangedHandler CurrentToolChanged;
-
-        /// <summary>
-        /// Event triggered when the shape list is changed.
-        /// </summary>
         public event ShapeListChangedHandler ShapeListChanged;
-
         private IState _state;
         private Shapes _shapes = new Shapes();
 
-        /// <summary>
-        /// Gets or sets the preview shape for drawing.
-        /// </summary>
-        public Shape Preview { get; set; } = null;
-
-        /// <summary>
-        /// Gets or sets the current selected tool.
-        /// </summary>
         public ShapeType CurrentTool { get; set; } = ShapeType.Arrow;
 
-        /// <summary>
-        /// Gets or sets the index of the selected shape in the shape list.
-        /// </summary>
         public int SelectedIndex { get; set; } = -1;
 
-        /// <summary>
-        /// Gets the binding list of shapes in the model.
-        /// </summary>
         public BindingList<Shape> ShapeList
         {
             get { return _shapes.ShapeList; }
         }
 
-        /// <summary>
-        /// Initializes a new instance of the Model class.
-        /// </summary>
         public Model()
         {
             _state = new PointerState(this);
@@ -96,13 +63,23 @@ namespace PowerPoint
         }
 
         /// <summary>
+        /// RemoveSelectedShape
+        /// </summary>
+        public void RemoveSelectedShape()
+        {
+            if (SelectedIndex != -1)
+            {
+                _shapes.RemoveAt(SelectedIndex);
+            }
+        }
+
+        /// <summary>
         /// Selects the specified shape type as the current drawing tool.
         /// </summary>
         /// <param name="shapeType">The type of the shape to select.</param>
         public void SelectTool(ShapeType shapeType)
         {
             CurrentTool = shapeType;
-            Preview = null;
             NotifyCurrentToolChanged();
         }
 
@@ -146,9 +123,9 @@ namespace PowerPoint
         /// <summary>
         /// Handles the release mouse event based on the current state and updates the shape list.
         /// </summary>
-        public void ReleaseMouse()
+        public void ReleaseMouse(int x, int y)
         {
-            _state.ReleaseMouse();
+            _state.ReleaseMouse(x, y);
             NotifyCurrentToolChanged();
         }
 
@@ -158,11 +135,7 @@ namespace PowerPoint
         /// <param name="graphics">The IGraphics object used for drawing.</param>
         public void DrawShapes(IGraphics graphics)
         {
-            _shapes.Draw(graphics, SelectedIndex);
-            if (Preview != null)
-            {
-                Preview.Draw(graphics, ShapeColor.Black);
-            }
+            _state.Draw(graphics, _shapes);
         }
 
         /// <summary>

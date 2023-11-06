@@ -52,7 +52,7 @@ namespace PowerPoint
         {
             for (int i = 0; i < ShapeList.Count; i++)
             {
-                ShapeList[i].Draw(graphics, i == selectedIndex ? ShapeColor.Red : ShapeColor.Black);
+                ShapeList[i].Draw(graphics, i == selectedIndex);
             }
         }
     }

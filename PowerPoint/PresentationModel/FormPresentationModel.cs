@@ -77,6 +77,14 @@ namespace PowerPoint
         }
 
         /// <summary>
+        /// RemoveSelectedShape
+        /// </summary>
+        public void RemoveSelectedShape()
+        {
+            _model.RemoveSelectedShape();
+        }
+
+        /// <summary>
         /// Selects a drawing tool based on the specified shape type.
         /// </summary>
         /// <param name="shapeType">Type of the selected drawing tool (Line, Rectangle, Circle, Arrow).</param>
@@ -107,10 +115,10 @@ namespace PowerPoint
         /// <summary>
         /// Handles the mouse release event.
         /// </summary>
-        public void ReleaseMouse()
+        public void ReleaseMouse(int x, int y)
         {
             _currentCursor = Cursors.Arrow;
-            _model.ReleaseMouse();
+            _model.ReleaseMouse(x, y);
             NotifyToolCursorChanged();
         }
 

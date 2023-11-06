@@ -11,6 +11,7 @@
         private int _endX = 0;
         private int _endY = 0;
         private bool _pressed = false;
+        private Shape _preview = null;
 
         /// <summary>
         /// Initializes a new instance of the DrawingState class with the specified model.
@@ -26,10 +27,7 @@
         /// </summary>
         public void PressMouse()
         {
-            _startX = _endX;
-            _startY = _endY;
             _pressed = true;
-            _model.Preview = _pressed ? Factory.CreateShape(_model.CurrentTool, _startX, _startY, _endX, _endY) : null;
         }
 
         /// <summary>
@@ -39,26 +37,38 @@
         /// <param name="y">Y-coordinate of the mouse position.</param>
         public void MoveMouse(int x, int y)
         {
+            _startX = _pressed ? _startX : x;
+            _startY = _pressed ? _startY : y;
             _endX = x;
             _endY = y;
-            _model.Preview = _pressed ? Factory.CreateShape(_model.CurrentTool, _startX, _startY, _endX, _endY) : null;
+            _preview = _pressed ? Factory.CreateShape(_model.CurrentTool, _startX, _startY, _endX, _endY) : null;
         }
 
         /// <summary>
         /// Handles the mouse release event.
         /// </summary>
-        public void ReleaseMouse()
+        public void ReleaseMouse(int x, int y)
         {
-            _startX = _endX;
-            _startY = _endY;
             _pressed = false;
-            if (_model.Preview != null)
+            if (_preview != null)
             {
-                _model.AddShape(_model.Preview);
+                _model.AddShape(_preview);
+                _preview = null;
             }
-            _model.Preview = null;
-            _model.CurrentTool = ShapeType.Arrow;
+            _model.SelectTool(ShapeType.Arrow);
             _model.SetPointerMode();
+        }
+
+        /// <summary>
+        /// Draw
+        /// </summary>
+        public void Draw(IGraphics graphics, Shapes shapes)
+        {
+            shapes.Draw(graphics, -1);
+            if (_preview != null)
+            {
+                _preview.Draw(graphics, false);
+            }
         }
     }
 }

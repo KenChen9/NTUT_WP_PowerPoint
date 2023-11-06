@@ -253,6 +253,7 @@ namespace PowerPoint
             this.MainMenuStrip = this._menuStrip;
             this.Name = "MainForm";
             this.Text = "PowerPoint";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DoKeyDown);
             this._dataGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView)).EndInit();
             this._menuStrip.ResumeLayout(false);

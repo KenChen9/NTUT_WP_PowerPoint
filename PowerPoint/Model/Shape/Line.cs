@@ -1,4 +1,6 @@
-﻿namespace PowerPoint
+﻿using System;
+
+namespace PowerPoint
 {
     /// <summary>
     /// Represents a line shape in a PowerPoint presentation.
@@ -29,13 +31,47 @@
         }
 
         /// <summary>
-        /// Draws the line shape using the specified graphics object and shape color.
+        /// Draws the line shape.
         /// </summary>
-        /// <param name="graphics">The IGraphics object used for drawing.</param>
-        /// <param name="shapeColor">The color of the line shape.</param>
-        public override void Draw(IGraphics graphics, ShapeColor shapeColor)
+        public override void Draw(IGraphics graphics, bool selected)
         {
-            graphics.DrawLine(shapeColor, _x1, _y1, _x2, _y2);
+            if (selected)
+            {
+                int penWidth = 2;
+                graphics.DrawLine(ShapeColor.Red, penWidth, _x1, _y1, _x2, _y2);
+                int smallCircleRadius = 4;
+                int centerX = (_x1 + _x2) / 2;
+                int centerY = (_y1 + _y2) / 2;
+                graphics.DrawCircle(ShapeColor.Red, penWidth, _x1 - smallCircleRadius, _y1 - smallCircleRadius, _x1 + smallCircleRadius, _y1 + smallCircleRadius);
+                graphics.DrawCircle(ShapeColor.Red, penWidth, _x2 - smallCircleRadius, _y2 - smallCircleRadius, _x2 + smallCircleRadius, _y2 + smallCircleRadius);
+                graphics.DrawCircle(ShapeColor.Red, penWidth, centerX - smallCircleRadius, centerY - smallCircleRadius, centerX + smallCircleRadius, centerY + smallCircleRadius);
+            }
+            else
+            {
+                int penWidth = 1;
+                graphics.DrawLine(ShapeColor.Black, penWidth, _x1, _y1, _x2, _y2);
+            }
+        }
+
+        /// <summary>
+        /// IsOverlap
+        /// </summary>
+        public override bool IsOverlap(int x, int y)
+        {
+            if (_x1 == _x2)
+            {
+                return Math.Min(_y1, _y2) <= y && y <= Math.Max(_y1, _y2);
+            }
+            if (_y1 == _y2)
+            {
+                return Math.Min(_x1, _x2) <= x && x <= Math.Max(_x1, _x2);
+            }
+            double m1 = (double)(_y2 - _y1) / (_x2 - _x1);
+            double m2 = -1 / m1;
+            double d = Math.Abs(x - _x1 - (y - _y1) / m1);
+            double y3 = _y1 + m2 * (x - _x1);
+            double y4 = _y2 + m2 * (x - _x2);
+            return d <= 10 && Math.Min(y3, y4) <= y && y <= Math.Max(y3, y4);
         }
     }
 }
