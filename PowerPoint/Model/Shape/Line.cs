@@ -58,20 +58,21 @@ namespace PowerPoint
         /// </summary>
         public override bool IsOverlap(int x, int y)
         {
+            double w = 6;
             if (_x1 == _x2)
             {
-                return Math.Min(_y1, _y2) <= y && y <= Math.Max(_y1, _y2);
+                return _x1 - w <= x && x <= _x2 + w && Math.Min(_y1, _y2) <= y && y <= Math.Max(_y1, _y2);
             }
             if (_y1 == _y2)
             {
-                return Math.Min(_x1, _x2) <= x && x <= Math.Max(_x1, _x2);
+                return _y1 - w <= y && y <= _y2 + w && Math.Min(_x1, _x2) <= x && x <= Math.Max(_x1, _x2);
             }
-            double m1 = (double)(_y2 - _y1) / (_x2 - _x1);
-            double m2 = -1 / m1;
-            double d = Math.Abs(x - _x1 - (y - _y1) / m1);
-            double y3 = _y1 + m2 * (x - _x1);
-            double y4 = _y2 + m2 * (x - _x2);
-            return d <= 10 && Math.Min(y3, y4) <= y && y <= Math.Max(y3, y4);
+            double m = (double)(_y2 - _y1) / (_x2 - _x1);
+            w /= Math.Cos(Math.Atan(m));
+            double yLine = _y1 + m * (x - _x1);
+            double yEdgeLine1 = _y1 - (x - _x1) / m;
+            double yEdgeLine2 = _y2 - (x - _x2) / m;
+            return yLine - w <= y && y <= yLine + w && Math.Min(yEdgeLine1, yEdgeLine2) <= y && y <= Math.Max(yEdgeLine1, yEdgeLine2);
         }
     }
 }

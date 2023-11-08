@@ -70,6 +70,8 @@ namespace PowerPoint
             if (SelectedIndex != -1)
             {
                 _shapes.RemoveAt(SelectedIndex);
+                SelectedIndex = -1;
+                NotifyShapeListChanged();
             }
         }
 

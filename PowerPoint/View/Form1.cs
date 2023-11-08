@@ -40,6 +40,8 @@ namespace PowerPoint
             _drawingPanel.MouseMove += new MouseEventHandler(DoMouseMoveOnPanel);
             _drawingPanel.MouseUp += new MouseEventHandler(DoMouseUpOnPanel);
             Controls.Add(_drawingPanel);
+
+            KeyPreview = true;
         }
 
         /// <summary>
