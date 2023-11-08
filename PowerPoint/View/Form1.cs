@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace PowerPoint
 {
@@ -92,6 +93,7 @@ namespace PowerPoint
         private void ClickAddShapeButton(object sender, EventArgs e)
         {
             _formPresentationModel.AddShape(_shapeSelectionBox.Text);
+            UpdateSlide();
         }
 
         /// <summary>
@@ -102,6 +104,7 @@ namespace PowerPoint
         private void ClickDataGridCell(object sender, DataGridViewCellEventArgs e)
         {
             _formPresentationModel.RemoveShapeAt(e.RowIndex, e.ColumnIndex);
+            UpdateSlide();
         }
 
         /// <summary>
@@ -122,6 +125,7 @@ namespace PowerPoint
         private void DoMouseUpOnPanel(object sender, MouseEventArgs e)
         {
             _formPresentationModel.ReleaseMouse(e.X, e.Y);
+            UpdateSlide();
         }
 
         /// <summary>
@@ -164,11 +168,15 @@ namespace PowerPoint
             _formPresentationModel.DrawShapes(new WindowsFormsGraphics(e.Graphics));
         }
 
+        /// <summary>
+        /// DoKeyDown
+        /// </summary>
         private void DoKeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
             {
                 _formPresentationModel.RemoveSelectedShape();
+                UpdateSlide();
             }
         }
 
@@ -192,6 +200,17 @@ namespace PowerPoint
         private void UpdateDrawingPanel()
         {
             _drawingPanel.Invalidate();
+        }
+
+        /// <summary>
+        /// UpdateSlide
+        /// </summary>
+        private void UpdateSlide()
+        {
+            Bitmap bitmap = new Bitmap(_drawingPanel.Width, _drawingPanel.Height);
+            _drawingPanel.DrawToBitmap(bitmap, new Rectangle(0, 0, _drawingPanel.Width, _drawingPanel.Height));
+            _slide1.BackgroundImage = bitmap;
+            _slide1.BackgroundImageLayout = ImageLayout.Zoom;
         }
     }
 }

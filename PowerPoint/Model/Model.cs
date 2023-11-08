@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
 
 namespace PowerPoint
 {
@@ -8,8 +9,8 @@ namespace PowerPoint
     public class Model
     {
         public delegate void CurrentToolChangedHandler(ShapeType shapeType);
-        public delegate void ShapeListChangedHandler();
         public event CurrentToolChangedHandler CurrentToolChanged;
+        public delegate void ShapeListChangedHandler();
         public event ShapeListChangedHandler ShapeListChanged;
         private IState _state;
         private Shapes _shapes = new Shapes();

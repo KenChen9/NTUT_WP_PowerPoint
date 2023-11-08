@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using System.ComponentModel;
+using System.Drawing;
 
 namespace PowerPoint
 {
@@ -9,35 +10,14 @@ namespace PowerPoint
     /// </summary>
     public class FormPresentationModel
     {
-        /// <summary>
-        /// Delegate for handling tool cursor changes.
-        /// </summary>
-        /// <param name="toolStatus">Dictionary representing the status of each drawing tool (Line, Rectangle, Circle, Arrow).</param>
-        /// <param name="currentCursor">Current cursor being displayed.</param>
         public delegate void ToolCursorChangedHandler(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor);
-
-        /// <summary>
-        /// Event triggered when tool cursor changes.
-        /// </summary>
         public event ToolCursorChangedHandler ToolCursorChanged;
-
-        /// <summary>
-        /// Delegate for handling shape list changes.
-        /// </summary>
         public delegate void ShapeListChangedHandler();
-
-        /// <summary>
-        /// Event triggered when the shape list changes.
-        /// </summary>
         public event ShapeListChangedHandler ShapeListChanged;
-
         private Model _model;
         private ShapeType _currentTool = ShapeType.Arrow;
         private Cursor _currentCursor = Cursors.Arrow;
 
-        /// <summary>
-        /// Gets the list of shapes.
-        /// </summary>
         public BindingList<Shape> ShapeList
         {
             get
