@@ -11,9 +11,9 @@ namespace PowerPoint
     public class FormPresentationModel
     {
         public delegate void ToolCursorChangedEventHandler(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor);
-        public event ToolCursorChangedEventHandler ToolCursorChangedHandler;
+        public event ToolCursorChangedEventHandler ToolCursorChanged;
         public delegate void ShapeListChangedEventHandler();
-        public event ShapeListChangedEventHandler ShapeListChangedHandler;
+        public event ShapeListChangedEventHandler ShapeListChanged;
         private Model _model;
         private ShapeType _currentTool = ShapeType.Arrow;
         private Cursor _currentCursor = Cursors.Arrow;
@@ -33,8 +33,8 @@ namespace PowerPoint
         public FormPresentationModel(Model model)
         {
             _model = model;
-            _model.CurrentToolChangedHandler += UpdateCurrentTool;
-            _model.ShapeListChangedHandler += UpdateDrawingPanel;
+            _model.CurrentToolChanged += UpdateCurrentTool;
+            _model.ShapeListChanged += UpdateDrawingPanel;
         }
 
         /// <summary>
@@ -148,9 +148,9 @@ namespace PowerPoint
             toolStatus.Add(ShapeType.Rectangle, _currentTool == ShapeType.Rectangle);
             toolStatus.Add(ShapeType.Circle, _currentTool == ShapeType.Circle);
             toolStatus.Add(ShapeType.Arrow, _currentTool == ShapeType.Arrow);
-            if (ToolCursorChangedHandler != null)
+            if (ToolCursorChanged != null)
             {
-                ToolCursorChangedHandler(toolStatus, _currentCursor);
+                ToolCursorChanged(toolStatus, _currentCursor);
             }
         }
 
@@ -159,9 +159,9 @@ namespace PowerPoint
         /// </summary>
         private void NotifyShapeListChanged()
         {
-            if (ShapeListChangedHandler != null)
+            if (ShapeListChanged != null)
             {
-                ShapeListChangedHandler();
+                ShapeListChanged();
             }
             
         }

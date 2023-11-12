@@ -189,7 +189,7 @@
             <Smell>
               <Id>1</Id>
               <SmellType>ICS(Delegate與Event-3)</SmellType>
-              <HashCode>DelegateAndEvent3.Model.a</HashCode>
+              <HashCode>DelegateAndEvent3.Model.CurrentToolChanged</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -205,7 +205,7 @@
             <Smell>
               <Id>2</Id>
               <SmellType>ICS(Delegate與Event-3)</SmellType>
-              <HashCode>DelegateAndEvent3.Model.ShapeListChangedHandler</HashCode>
+              <HashCode>DelegateAndEvent3.Model.ShapeListChanged</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -861,7 +861,7 @@
             <Smell>
               <Id>43</Id>
               <SmellType>ICS(Delegate與Event-3)</SmellType>
-              <HashCode>DelegateAndEvent3.FormPresentationModel.ToolCursorChangedHandler</HashCode>
+              <HashCode>DelegateAndEvent3.FormPresentationModel.ToolCursorChanged</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -877,7 +877,7 @@
             <Smell>
               <Id>44</Id>
               <SmellType>ICS(Delegate與Event-3)</SmellType>
-              <HashCode>DelegateAndEvent3.FormPresentationModel.ShapeListChangedHandler</HashCode>
+              <HashCode>DelegateAndEvent3.FormPresentationModel.ShapeListChanged</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>

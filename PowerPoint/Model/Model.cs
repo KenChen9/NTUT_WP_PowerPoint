@@ -9,9 +9,9 @@ namespace PowerPoint
     public class Model
     {
         public delegate void CurrentToolChangedEventHandler(ShapeType shapeType);
-        public event CurrentToolChangedEventHandler CurrentToolChangedHandler;
+        public event CurrentToolChangedEventHandler CurrentToolChanged;
         public delegate void ShapeListChangedEventHandler();
-        public event ShapeListChangedEventHandler ShapeListChangedHandler;
+        public event ShapeListChangedEventHandler ShapeListChanged;
         private IState _state;
         private Shapes _shapes = new Shapes();
         private ShapeType _currentTool = ShapeType.Arrow;
@@ -192,9 +192,9 @@ namespace PowerPoint
         /// </summary>
         private void NotifyCurrentToolChanged()
         {
-            if (CurrentToolChangedHandler != null)
+            if (CurrentToolChanged != null)
             {
-                CurrentToolChangedHandler(_currentTool);
+                CurrentToolChanged(_currentTool);
             }
         }
 
@@ -203,9 +203,9 @@ namespace PowerPoint
         /// </summary>
         private void NotifyShapeListChanged()
         {
-            if (ShapeListChangedHandler != null)
+            if (ShapeListChanged != null)
             {
-                ShapeListChangedHandler();
+                ShapeListChanged();
             }
         }
     }

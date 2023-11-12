@@ -15,8 +15,8 @@ namespace PowerPoint
             InitializeComponent();
             _formPresentationModel = formPresentationModel;
 
-            _formPresentationModel.ToolCursorChangedHandler += UpdateToolCursor;
-            _formPresentationModel.ShapeListChangedHandler += UpdateDrawingPanel;
+            _formPresentationModel.ToolCursorChanged += UpdateToolCursor;
+            _formPresentationModel.ShapeListChanged += UpdateDrawingPanel;
 
             _deleteColumn.Text = "刪除";
             _deleteColumn.UseColumnTextForButtonValue = true;
