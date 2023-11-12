@@ -35,19 +35,19 @@
         /// </summary>
         /// <param name="x">X-coordinate of the mouse position.</param>
         /// <param name="y">Y-coordinate of the mouse position.</param>
-        public void MoveMouse(int x, int y)
+        public void MoveMouse(int cursorX, int cursorY)
         {
-            _startX = _pressed ? _startX : x;
-            _startY = _pressed ? _startY : y;
-            _endX = x;
-            _endY = y;
+            _startX = _pressed ? _startX : cursorX;
+            _startY = _pressed ? _startY : cursorY;
+            _endX = cursorX;
+            _endY = cursorY;
             _preview = _pressed ? _model.CreatePreview(_startX, _startY, _endX, _endY) : null;
         }
 
         /// <summary>
         /// Handles the mouse release event.
         /// </summary>
-        public void ReleaseMouse(int x, int y)
+        public void ReleaseMouse(int cursorX, int cursorY)
         {
             _pressed = false;
             if (_preview != null)

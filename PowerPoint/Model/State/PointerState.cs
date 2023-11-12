@@ -23,23 +23,23 @@
         /// <summary>
         /// MoveMouse
         /// </summary>
-        public void MoveMouse(int x, int y)
+        public void MoveMouse(int cursorX, int cursorY)
         {
-            if (_pressed && _model.IsSelectedShapeOverlap(x, y))
+            if (_pressed && _model.IsSelectedShapeOverlap(cursorX, cursorY))
             {
-                _model.MoveSelectedShapeDelta(x - _lastMouseX, y - _lastMouseY);
+                _model.MoveSelectedShapeDelta(cursorX - _lastMouseX, cursorY - _lastMouseY);
             }
-            _lastMouseX = x;
-            _lastMouseY = y;
+            _lastMouseX = cursorX;
+            _lastMouseY = cursorY;
         }
 
         /// <summary>
         /// ReleaseMouse
         /// </summary>
-        public void ReleaseMouse(int x, int y)
+        public void ReleaseMouse(int cursorX, int cursorY)
         {
             _pressed = false;
-            _model.TrySelectShapeIndex(x, y);
+            _model.TrySelectShapeIndex(cursorX, cursorY);
         }
 
         /// <summary>

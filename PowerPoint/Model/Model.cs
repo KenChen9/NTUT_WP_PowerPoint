@@ -118,9 +118,9 @@ namespace PowerPoint
         /// </summary>
         /// <param name="x">The X-coordinate of the mouse position.</param>
         /// <param name="y">The Y-coordinate of the mouse position.</param>
-        public void MoveMouse(int x, int y)
+        public void MoveMouse(int cursorX, int cursorY)
         {
-            _state.MoveMouse(x, y);
+            _state.MoveMouse(cursorX, cursorY);
             NotifyCurrentToolChanged();
             NotifyShapeListChanged();
         }
@@ -128,9 +128,9 @@ namespace PowerPoint
         /// <summary>
         /// Handles the release mouse event based on the current state and updates the shape list.
         /// </summary>
-        public void ReleaseMouse(int x, int y)
+        public void ReleaseMouse(int cursorX, int cursorY)
         {
-            _state.ReleaseMouse(x, y);
+            _state.ReleaseMouse(cursorX, cursorY);
             NotifyCurrentToolChanged();
         }
 
@@ -148,29 +148,29 @@ namespace PowerPoint
         /// </summary>
         public Shape CreatePreview(int startX, int startY, int endX, int endY)
         {
-            return Factory.CreateShape(_currentTool, startX, startY, endX, endY);
+            return Factory.CreateShape(_currentTool, new Point(startX, startY), new Point(endX, endY));
         }
 
         /// <summary>
         /// IsSelectedShapeOverlap
         /// </summary>
-        public bool IsSelectedShapeOverlap(int x, int y)
+        public bool IsSelectedShapeOverlap(int cursorX, int cursorY)
         {
-            return _selectedIndex != -1 && ShapeList[_selectedIndex].IsOverlap(x, y);
+            return _selectedIndex != -1 && ShapeList[_selectedIndex].IsOverlap(cursorX, cursorY);
         }
 
         /// <summary>
         /// MoveSelectedShapeDelta
         /// </summary>
-        public void MoveSelectedShapeDelta(int dx, int dy)
+        public void MoveSelectedShapeDelta(int deltaX, int deltaY)
         {
-            ShapeList[_selectedIndex].MoveDelta(dx, dy);
+            ShapeList[_selectedIndex].MoveDelta(deltaX, deltaY);
         }
 
         /// <summary>
         /// TrySelectShapeIndex
         /// </summary>
-        public void TrySelectShapeIndex(int x, int y)
+        public void TrySelectShapeIndex(int cursorX, int cursorY)
         {
             if (_selectedIndex != -1)
             {
@@ -179,7 +179,7 @@ namespace PowerPoint
             }
             for (int i = ShapeList.Count - 1; i >= 0; i--)
             {
-                if (ShapeList[i].IsOverlap(x, y))
+                if (ShapeList[i].IsOverlap(cursorX, cursorY))
                 {
                     _selectedIndex = i;
                     return;

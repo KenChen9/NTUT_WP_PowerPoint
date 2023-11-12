@@ -87,18 +87,18 @@ namespace PowerPoint
         /// </summary>
         /// <param name="x">X-coordinate of the mouse position.</param>
         /// <param name="y">Y-coordinate of the mouse position.</param>
-        public void MoveMouse(int x, int y)
+        public void MoveMouse(int cursorX, int cursorY)
         {
-            _model.MoveMouse(x, y);
+            _model.MoveMouse(cursorX, cursorY);
         }
 
         /// <summary>
         /// Handles the mouse release event.
         /// </summary>
-        public void ReleaseMouse(int x, int y)
+        public void ReleaseMouse(int cursorX, int cursorY)
         {
             _currentCursor = Cursors.Arrow;
-            _model.ReleaseMouse(x, y);
+            _model.ReleaseMouse(cursorX, cursorY);
             NotifyToolCursorChanged();
         }
 

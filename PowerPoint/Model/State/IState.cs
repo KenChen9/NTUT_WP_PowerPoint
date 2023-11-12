@@ -15,12 +15,12 @@
         /// </summary>
         /// <param name="x">X-coordinate of the mouse position.</param>
         /// <param name="y">Y-coordinate of the mouse position.</param>
-        void MoveMouse(int x, int y);
+        void MoveMouse(int cursorX, int cursorY);
 
         /// <summary>
         /// Handles the mouse release event.
         /// </summary>
-        void ReleaseMouse(int x, int y);
+        void ReleaseMouse(int cursorX, int cursorY);
 
         /// <summary>
         /// Draw

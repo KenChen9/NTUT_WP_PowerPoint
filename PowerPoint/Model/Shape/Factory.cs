@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace PowerPoint
 {
@@ -44,7 +45,7 @@ namespace PowerPoint
             int y1 = random.Next(RANDOM_MIN, RANDOM_MAX);
             int x2 = random.Next(RANDOM_MIN, RANDOM_MAX);
             int y2 = random.Next(RANDOM_MIN, RANDOM_MAX);
-            return CreateShape(shapeType, x1, y1, x2, y2);
+            return CreateShape(shapeType, new Point(x1, y1), new Point(x2, y2));
         }
 
         /// <summary>
@@ -56,16 +57,16 @@ namespace PowerPoint
         /// <param name="x2">X-coordinate of the ending point.</param>
         /// <param name="y2">Y-coordinate of the ending point.</param>
         /// <returns>A Shape object with specified coordinates based on the specified shape type.</returns>
-        public static Shape CreateShape(ShapeType shapeType, int x1, int y1, int x2, int y2)
+        public static Shape CreateShape(ShapeType shapeType, Point point1, Point point2)
         {
-            int topLeftX = Math.Min(x1, x2);
-            int topLeftY = Math.Min(y1, y2);
-            int bottomRightX = Math.Max(x1, x2);
-            int bottomRightY = Math.Max(y1, y2);
+            int topLeftX = Math.Min(point1.X, point2.X);
+            int topLeftY = Math.Min(point1.Y, point2.Y);
+            int bottomRightX = Math.Max(point1.X, point2.X);
+            int bottomRightY = Math.Max(point1.Y, point2.Y);
             switch (shapeType)
             {
                 case ShapeType.Line:
-                    return new Line(x1, y1, x2, y2);
+                    return new Line(point1.X, point1.Y, point2.X, point2.Y);
                 case ShapeType.Rectangle:
                     return new MyRectangle(topLeftX, topLeftY, bottomRightX, bottomRightY);
                 case ShapeType.Circle:

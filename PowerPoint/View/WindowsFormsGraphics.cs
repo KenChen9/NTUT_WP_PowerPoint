@@ -40,13 +40,13 @@ namespace PowerPoint
         /// <summary>
         /// Draws a line with the specified shape color and coordinates.
         /// </summary>
-        public void DrawLine(ShapeColor shapeColor, int penWidth, int x1, int y1, int x2, int y2)
+        public void DrawLine(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
         {
             using (Pen pen = GetPen(shapeColor, penWidth))
             {
                 if (pen != null)
                 {
-                    _graphics.DrawLine(pen, x1, y1, x2, y2);
+                    _graphics.DrawLine(pen, point1.X, point1.Y, point2.X, point2.Y);
                 }
             }
         }
@@ -54,16 +54,16 @@ namespace PowerPoint
         /// <summary>
         /// Draws a rectangle with the specified shape color and coordinates.
         /// </summary>
-        public void DrawRectangle(ShapeColor shapeColor, int penWidth, int x1, int y1, int x2, int y2)
+        public void DrawRectangle(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
         {
             using (Pen pen = GetPen(shapeColor, penWidth))
             {
                 if (pen != null)
                 {
-                    int topLeftX = Math.Min(x1, x2);
-                    int topLeftY = Math.Min(y1, y2);
-                    int shapeWidth = Math.Abs(x1 - x2);
-                    int shapeHeight = Math.Abs(y1 - y2);
+                    int topLeftX = Math.Min(point1.X, point2.X);
+                    int topLeftY = Math.Min(point1.Y, point2.Y);
+                    int shapeWidth = Math.Abs(point1.X - point2.X);
+                    int shapeHeight = Math.Abs(point1.Y - point2.Y);
                     _graphics.DrawRectangle(pen, topLeftX, topLeftY, shapeWidth, shapeHeight);
                 }
             }
@@ -72,16 +72,16 @@ namespace PowerPoint
         /// <summary>
         /// Draws a circle with the specified shape color and coordinates.
         /// </summary>
-        public void DrawCircle(ShapeColor shapeColor, int penWidth, int x1, int y1, int x2, int y2)
+        public void DrawCircle(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
         {
             using (Pen pen = GetPen(shapeColor, penWidth))
             {
                 if (pen != null)
                 {
-                    int topLeftX = Math.Min(x1, x2);
-                    int topLeftY = Math.Min(y1, y2);
-                    int shapeWidth = Math.Abs(x1 - x2);
-                    int shapeHeight = Math.Abs(y1 - y2);
+                    int topLeftX = Math.Min(point1.X, point2.X);
+                    int topLeftY = Math.Min(point1.Y, point2.Y);
+                    int shapeWidth = Math.Abs(point1.X - point2.X);
+                    int shapeHeight = Math.Abs(point1.Y - point2.Y);
                     _graphics.DrawEllipse(pen, topLeftX, topLeftY, shapeWidth, shapeHeight);
                 }
             }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace PowerPoint
 {
@@ -39,35 +40,44 @@ namespace PowerPoint
             if (selected)
             {
                 const int PEN_WIDTH = 2;
-                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x1, _y1, _x2, _y2);
-                const int SMALL_CIRCLE_RADIUS = 4;
-                const int TWO = 2;
-                int centerX = (_x1 + _x2) / TWO;
-                int centerY = (_y1 + _y2) / TWO;
-                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, centerX - SMALL_CIRCLE_RADIUS, _y1 - SMALL_CIRCLE_RADIUS, centerX + SMALL_CIRCLE_RADIUS, _y1 + SMALL_CIRCLE_RADIUS);
-                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, centerX - SMALL_CIRCLE_RADIUS, _y2 - SMALL_CIRCLE_RADIUS, centerX + SMALL_CIRCLE_RADIUS, _y2 + SMALL_CIRCLE_RADIUS);
-                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x1 - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS, _x1 + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS);
-                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x2 - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS, _x2 + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS);
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
+                DrawSurroundingCircles(graphics);
             }
             else
             {
                 const int PEN_WIDTH = 1;
-                graphics.DrawCircle(ShapeColor.Black, PEN_WIDTH, _x1, _y1, _x2, _y2);
+                graphics.DrawCircle(ShapeColor.Black, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
             }
+        }
+
+        /// <summary>
+        /// DrawSurroundingCircles
+        /// </summary>
+        private void DrawSurroundingCircles(IGraphics graphics)
+        {
+            const int PEN_WIDTH = 2;
+            const int SMALL_CIRCLE_RADIUS = 4;
+            const int TWO = 2;
+            int centerX = (_x1 + _x2) / TWO;
+            int centerY = (_y1 + _y2) / TWO;
+            graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, _y1 - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, _y1 + SMALL_CIRCLE_RADIUS));
+            graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, _y2 - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, _y2 + SMALL_CIRCLE_RADIUS));
+            graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(_x1 - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(_x1 + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
+            graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(_x2 - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(_x2 + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
         }
 
         /// <summary>
         /// IsOverlap
         /// </summary>
-        public override bool IsOverlap(int x, int y)
+        public override bool IsOverlap(int cursorX, int cursorY)
         {
             const int ONE = 1;
             const int TWO = 2;
-            double h = (_x1 + _x2) / TWO;
-            double k = (_y1 + _y2) / TWO;
-            double a = Math.Abs(_x1 - _x2) / TWO;
-            double b = Math.Abs(_y1 - _y2) / TWO;
-            return Math.Pow((x - h) / a, TWO) + Math.Pow((y - k) / b, TWO) <= ONE;
+            double centerX = (_x1 + _x2) / TWO;
+            double centerY = (_y1 + _y2) / TWO;
+            double horizontalRadius = Math.Abs(_x1 - _x2) / TWO;
+            double verticalRadius = Math.Abs(_y1 - _y2) / TWO;
+            return Math.Pow((cursorX - centerX) / horizontalRadius, TWO) + Math.Pow((cursorY - centerY) / verticalRadius, TWO) <= ONE;
         }
     }
 }

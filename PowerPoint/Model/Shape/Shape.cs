@@ -67,12 +67,12 @@
         /// <summary>
         /// MoveDelta
         /// </summary>
-        public void MoveDelta(int dx, int dy)
+        public void MoveDelta(int deltaX, int deltaY)
         {
-            _x1 += dx;
-            _y1 += dy;
-            _x2 += dx;
-            _y2 += dy;
+            _x1 += deltaX;
+            _y1 += deltaY;
+            _x2 += deltaX;
+            _y2 += deltaY;
         }
 
         /// <summary>
@@ -85,6 +85,6 @@
         /// <summary>
         /// IsOverlap
         /// </summary>
-        public abstract bool IsOverlap(int x, int y);
+        public abstract bool IsOverlap(int cursorX, int cursorY);
     }
 }

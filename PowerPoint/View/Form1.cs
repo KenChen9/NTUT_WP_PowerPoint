@@ -23,7 +23,7 @@ namespace PowerPoint
 
             _shapeColumn.DataPropertyName = "Name";
 
-            _infomationColumn.DataPropertyName = "Information";
+            _locationColumn.DataPropertyName = "Information";
 
             _dataGridView.AutoGenerateColumns = false;
             _dataGridView.DataSource = _formPresentationModel.ShapeList;
