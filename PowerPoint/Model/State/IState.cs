@@ -25,6 +25,6 @@
         /// <summary>
         /// Draw
         /// </summary>
-        void Draw(IGraphics graphics, Shapes shapes);
+        void Draw(IGraphics graphics, Shapes shapes, int selectedIndex);
     }
 }

@@ -8,20 +8,22 @@ namespace PowerPoint
     /// </summary>
     public class Model
     {
-        public delegate void CurrentToolChangedHandler(ShapeType shapeType);
-        public event CurrentToolChangedHandler CurrentToolChanged;
-        public delegate void ShapeListChangedHandler();
-        public event ShapeListChangedHandler ShapeListChanged;
+        public delegate void CurrentToolChangedEventHandler(ShapeType shapeType);
+        public event CurrentToolChangedEventHandler CurrentToolChangedHandler;
+        public delegate void ShapeListChangedEventHandler();
+        public event ShapeListChangedEventHandler ShapeListChangedHandler;
         private IState _state;
         private Shapes _shapes = new Shapes();
+        private ShapeType _currentTool = ShapeType.Arrow;
+        private int _selectedIndex = -1;
 
-        public ShapeType CurrentTool { get; set; } = ShapeType.Arrow;
-
-        public int SelectedIndex { get; set; } = -1;
-
+        // 必要之惡
         public BindingList<Shape> ShapeList
         {
-            get { return _shapes.ShapeList; }
+            get
+            {
+                return _shapes.ShapeList;
+            }
         }
 
         public Model()
@@ -68,10 +70,10 @@ namespace PowerPoint
         /// </summary>
         public void RemoveSelectedShape()
         {
-            if (SelectedIndex != -1)
+            if (_selectedIndex != -1)
             {
-                _shapes.RemoveAt(SelectedIndex);
-                SelectedIndex = -1;
+                _shapes.RemoveAt(_selectedIndex);
+                _selectedIndex = -1;
                 NotifyShapeListChanged();
             }
         }
@@ -82,7 +84,7 @@ namespace PowerPoint
         /// <param name="shapeType">The type of the shape to select.</param>
         public void SelectTool(ShapeType shapeType)
         {
-            CurrentTool = shapeType;
+            _currentTool = shapeType;
             NotifyCurrentToolChanged();
         }
 
@@ -138,7 +140,51 @@ namespace PowerPoint
         /// <param name="graphics">The IGraphics object used for drawing.</param>
         public void DrawShapes(IGraphics graphics)
         {
-            _state.Draw(graphics, _shapes);
+            _state.Draw(graphics, _shapes, _selectedIndex);
+        }
+
+        /// <summary>
+        /// CreatePreview
+        /// </summary>
+        public Shape CreatePreview(int startX, int startY, int endX, int endY)
+        {
+            return Factory.CreateShape(_currentTool, startX, startY, endX, endY);
+        }
+
+        /// <summary>
+        /// IsSelectedShapeOverlap
+        /// </summary>
+        public bool IsSelectedShapeOverlap(int x, int y)
+        {
+            return _selectedIndex != -1 && ShapeList[_selectedIndex].IsOverlap(x, y);
+        }
+
+        /// <summary>
+        /// MoveSelectedShapeDelta
+        /// </summary>
+        public void MoveSelectedShapeDelta(int dx, int dy)
+        {
+            ShapeList[_selectedIndex].MoveDelta(dx, dy);
+        }
+
+        /// <summary>
+        /// TrySelectShapeIndex
+        /// </summary>
+        public void TrySelectShapeIndex(int x, int y)
+        {
+            if (_selectedIndex != -1)
+            {
+                _selectedIndex = -1;
+                return;
+            }
+            for (int i = ShapeList.Count - 1; i >= 0; i--)
+            {
+                if (ShapeList[i].IsOverlap(x, y))
+                {
+                    _selectedIndex = i;
+                    return;
+                }
+            }
         }
 
         /// <summary>
@@ -146,7 +192,10 @@ namespace PowerPoint
         /// </summary>
         private void NotifyCurrentToolChanged()
         {
-            CurrentToolChanged?.Invoke(CurrentTool);
+            if (CurrentToolChangedHandler != null)
+            {
+                CurrentToolChangedHandler(_currentTool);
+            }
         }
 
         /// <summary>
@@ -154,7 +203,10 @@ namespace PowerPoint
         /// </summary>
         private void NotifyShapeListChanged()
         {
-            ShapeListChanged?.Invoke();
+            if (ShapeListChangedHandler != null)
+            {
+                ShapeListChangedHandler();
+            }
         }
     }
 }

@@ -41,7 +41,7 @@
             _startY = _pressed ? _startY : y;
             _endX = x;
             _endY = y;
-            _preview = _pressed ? Factory.CreateShape(_model.CurrentTool, _startX, _startY, _endX, _endY) : null;
+            _preview = _pressed ? _model.CreatePreview(_startX, _startY, _endX, _endY) : null;
         }
 
         /// <summary>
@@ -62,7 +62,7 @@
         /// <summary>
         /// Draw
         /// </summary>
-        public void Draw(IGraphics graphics, Shapes shapes)
+        public void Draw(IGraphics graphics, Shapes shapes, int selectedIndex)
         {
             shapes.Draw(graphics, -1);
             if (_preview != null)

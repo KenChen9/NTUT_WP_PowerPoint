@@ -10,7 +10,15 @@ namespace PowerPoint
         /// <summary>
         /// Gets the list of shapes using a BindingList for data binding and dynamic updates.
         /// </summary>
-        public BindingList<Shape> ShapeList { get; private set; } = new BindingList<Shape>();
+        private BindingList<Shape> _shapeList = new BindingList<Shape>();
+
+        public BindingList<Shape> ShapeList
+        {
+            get
+            {
+                return _shapeList;
+            }
+        }
 
         /// <summary>
         /// Adds a shape to the Shapes collection based on the provided shape type.

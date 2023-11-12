@@ -32,7 +32,12 @@
         {
             get
             {
-                return "(" + _x1 + ", " + _y1 + "), (" + _x2 + ", " + _y2 + ")";
+                const string FORMAT_PART1 = "(";
+                const string FORMAT_PART2 = ", ";
+                const string FORMAT_PART3 = "), (";
+                const string FORMAT_PART4 = ", ";
+                const string FORMAT_PART5 = ")";
+                return FORMAT_PART1 + _x1 + FORMAT_PART2 + _y1 + FORMAT_PART3 + _x2 + FORMAT_PART4 + _y2 + FORMAT_PART5;
             }
         }
 

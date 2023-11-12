@@ -188,44 +188,45 @@
           <Reviews>
             <Smell>
               <Id>1</Id>
-              <SmellType>A syntax error has been discovered in file C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Model.cs on line 18.</SmellType>
+              <SmellType>ICS(Delegate與Event-3)</SmellType>
+              <HashCode>DelegateAndEvent3.Model.a</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>Model.cs</File>
-              <Line>18</Line>
+              <Line>12</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment />
+              <Comment>ICS(Delegate 與 Event-3) event 的變數命名如一般 class 中的成員變數</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>2</Id>
-              <SmellType>Literal constants(字面常數)-"圓"</SmellType>
-              <HashCode>LiteralConstants.get."圓"</HashCode>
+              <SmellType>ICS(Delegate與Event-3)</SmellType>
+              <HashCode>DelegateAndEvent3.Model.ShapeListChangedHandler</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>17</Line>
+              <File>Model.cs</File>
+              <Line>14</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment />
+              <Comment>ICS(Delegate 與 Event-3) event 的變數命名如一般 class 中的成員變數</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>3</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.Draw.2</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Model.MoveMouse.x</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>40</Line>
+              <File>Model.cs</File>
+              <Line>121</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -235,13 +236,13 @@
             </Smell>
             <Smell>
               <Id>4</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.Draw.2</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Model.MoveMouse.y</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>43</Line>
+              <File>Model.cs</File>
+              <Line>121</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -251,13 +252,13 @@
             </Smell>
             <Smell>
               <Id>5</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.Draw.2</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Model.ReleaseMouse.x</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>44</Line>
+              <File>Model.cs</File>
+              <Line>131</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -267,8 +268,136 @@
             </Smell>
             <Smell>
               <Id>6</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.IsOverlap.2</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Model.ReleaseMouse.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>131</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>7</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Model.IsSelectedShapeOverlap.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>157</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>8</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Model.IsSelectedShapeOverlap.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>157</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>9</Id>
+              <SmellType>Unsuitable naming(名不符實)-dx(dx)</SmellType>
+              <HashCode>UnsuitableNaming.Model.MoveSelectedShapeDelta.dx</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>165</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>10</Id>
+              <SmellType>Unsuitable naming(名不符實)-dy(dy)</SmellType>
+              <HashCode>UnsuitableNaming.Model.MoveSelectedShapeDelta.dy</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>165</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>11</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Model.TrySelectShapeIndex.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>173</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>12</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Model.TrySelectShapeIndex.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>173</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>13</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.Circle.Draw.21IGraphics graphics;bool selected;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>21</Weight>
+              <Project>PowerPoint</Project>
+              <File>Circle.cs</File>
+              <Line>37</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>14</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Circle.IsOverlap.x</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -282,138 +411,10 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>7</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.IsOverlap.2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>63</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>8</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.IsOverlap.2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>64</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>9</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.IsOverlap.2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>65</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>10</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.IsOverlap.2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>66</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>11</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.IsOverlap.2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>66</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>12</Id>
-              <SmellType>Literal constants(字面常數)-4</SmellType>
-              <HashCode>LiteralConstants.Draw.4</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>42</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>13</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Circle.IsOverlap.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>60</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>14</Id>
+              <Id>15</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.Circle.IsOverlap.y</HashCode>
               <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>60</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>15</Id>
-              <SmellType>Unsuitable naming(名不符實)-h(h)</SmellType>
-              <HashCode>UnsuitableNaming.Circle.IsOverlap.h</HashCode>
-              <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>Circle.cs</File>
@@ -427,13 +428,13 @@
             </Smell>
             <Smell>
               <Id>16</Id>
-              <SmellType>Unsuitable naming(名不符實)-k(k)</SmellType>
-              <HashCode>UnsuitableNaming.Circle.IsOverlap.k</HashCode>
-              <Severity>Warning</Severity>
+              <SmellType>Unsuitable naming(名不符實)-h(h)</SmellType>
+              <HashCode>UnsuitableNaming.Circle.IsOverlap.h</HashCode>
+              <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>Circle.cs</File>
-              <Line>63</Line>
+              <Line>66</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -443,13 +444,13 @@
             </Smell>
             <Smell>
               <Id>17</Id>
-              <SmellType>Unsuitable naming(名不符實)-b(b)</SmellType>
-              <HashCode>UnsuitableNaming.Circle.IsOverlap.b</HashCode>
-              <Severity>Red</Severity>
+              <SmellType>Unsuitable naming(名不符實)-k(k)</SmellType>
+              <HashCode>UnsuitableNaming.Circle.IsOverlap.k</HashCode>
+              <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>Circle.cs</File>
-              <Line>65</Line>
+              <Line>67</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -459,13 +460,13 @@
             </Smell>
             <Smell>
               <Id>18</Id>
-              <SmellType>Literal constants(字面常數)-"線"</SmellType>
-              <HashCode>LiteralConstants.CreateShape."線"</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-b(b)</SmellType>
+              <HashCode>UnsuitableNaming.Circle.IsOverlap.b</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Factory.cs</File>
-              <Line>19</Line>
+              <File>Circle.cs</File>
+              <Line>69</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -475,13 +476,13 @@
             </Smell>
             <Smell>
               <Id>19</Id>
-              <SmellType>Literal constants(字面常數)-"矩形"</SmellType>
-              <HashCode>LiteralConstants.CreateShape."矩形"</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
+              <SmellType>Long parameter list(過長參數列)</SmellType>
+              <HashCode>LongParameterList.Factory.CreateShape.ShapeType shapeType;int x1;int y1;int x2;int y2;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>5</Weight>
               <Project>PowerPoint</Project>
               <File>Factory.cs</File>
-              <Line>21</Line>
+              <Line>59</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -491,13 +492,13 @@
             </Smell>
             <Smell>
               <Id>20</Id>
-              <SmellType>Literal constants(字面常數)-"圓"</SmellType>
-              <HashCode>LiteralConstants.CreateShape."圓"</HashCode>
-              <Severity>Red</Severity>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.Line.IsOverlap.x</HashCode>
+              <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Factory.cs</File>
-              <Line>23</Line>
+              <File>Line.cs</File>
+              <Line>61</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -507,13 +508,13 @@
             </Smell>
             <Smell>
               <Id>21</Id>
-              <SmellType>Literal constants(字面常數)-500</SmellType>
-              <HashCode>LiteralConstants.CreateShape.500</HashCode>
-              <Severity>Red</Severity>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.Line.IsOverlap.y</HashCode>
+              <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Factory.cs</File>
-              <Line>38</Line>
+              <File>Line.cs</File>
+              <Line>61</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -523,13 +524,13 @@
             </Smell>
             <Smell>
               <Id>22</Id>
-              <SmellType>Long parameter list(過長參數列)</SmellType>
-              <HashCode>LongParameterList.Factory.CreateShape.ShapeType shapeType;int x1;int y1;int x2;int y2;</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>5</Weight>
+              <SmellType>Unsuitable naming(名不符實)-w(w)</SmellType>
+              <HashCode>UnsuitableNaming.Line.IsOverlap.w</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Factory.cs</File>
-              <Line>56</Line>
+              <File>Line.cs</File>
+              <Line>64</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -539,13 +540,13 @@
             </Smell>
             <Smell>
               <Id>23</Id>
-              <SmellType>Literal constants(字面常數)-"線"</SmellType>
-              <HashCode>LiteralConstants.get."線"</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-m(m)</SmellType>
+              <HashCode>UnsuitableNaming.Line.IsOverlap.m</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>Line.cs</File>
-              <Line>17</Line>
+              <Line>73</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -555,13 +556,13 @@
             </Smell>
             <Smell>
               <Id>24</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.Draw.2</HashCode>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.MyRectangle.Draw.25IGraphics graphics;bool selected;</HashCode>
               <Severity>Warning</Severity>
-              <Weight>1</Weight>
+              <Weight>25</Weight>
               <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>40</Line>
+              <File>MyRectangle.cs</File>
+              <Line>37</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -571,13 +572,13 @@
             </Smell>
             <Smell>
               <Id>25</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.Draw.2</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.MyRectangle.IsOverlap.x</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>43</Line>
+              <File>MyRectangle.cs</File>
+              <Line>66</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -587,13 +588,13 @@
             </Smell>
             <Smell>
               <Id>26</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.Draw.2</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.MyRectangle.IsOverlap.y</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>44</Line>
+              <File>MyRectangle.cs</File>
+              <Line>66</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -603,13 +604,13 @@
             </Smell>
             <Smell>
               <Id>27</Id>
-              <SmellType>Literal constants(字面常數)-4</SmellType>
-              <HashCode>LiteralConstants.Draw.4</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-dx(dx)</SmellType>
+              <HashCode>UnsuitableNaming.Shape.MoveDelta.dx</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>42</Line>
+              <File>Shape.cs</File>
+              <Line>70</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -619,13 +620,13 @@
             </Smell>
             <Smell>
               <Id>28</Id>
-              <SmellType>Literal constants(字面常數)-6</SmellType>
-              <HashCode>LiteralConstants.IsOverlap.6</HashCode>
+              <SmellType>Unsuitable naming(名不符實)-dy(dy)</SmellType>
+              <HashCode>UnsuitableNaming.Shape.MoveDelta.dy</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>61</Line>
+              <File>Shape.cs</File>
+              <Line>70</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -636,12 +637,12 @@
             <Smell>
               <Id>29</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Line.IsOverlap.x</HashCode>
+              <HashCode>UnsuitableNaming.Shape.IsOverlap.x</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>59</Line>
+              <File>Shape.cs</File>
+              <Line>88</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -652,12 +653,12 @@
             <Smell>
               <Id>30</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Line.IsOverlap.y</HashCode>
+              <HashCode>UnsuitableNaming.Shape.IsOverlap.y</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>59</Line>
+              <File>Shape.cs</File>
+              <Line>88</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -667,325 +668,6 @@
             </Smell>
             <Smell>
               <Id>31</Id>
-              <SmellType>Unsuitable naming(名不符實)-w(w)</SmellType>
-              <HashCode>UnsuitableNaming.Line.IsOverlap.w</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>61</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>32</Id>
-              <SmellType>Unsuitable naming(名不符實)-m(m)</SmellType>
-              <HashCode>UnsuitableNaming.Line.IsOverlap.m</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>70</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>33</Id>
-              <SmellType>Literal constants(字面常數)-"矩形"</SmellType>
-              <HashCode>LiteralConstants.get."矩形"</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>MyRectangle.cs</File>
-              <Line>17</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>34</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.Draw.2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>MyRectangle.cs</File>
-              <Line>40</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>35</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.Draw.2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>MyRectangle.cs</File>
-              <Line>47</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>36</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.Draw.2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>MyRectangle.cs</File>
-              <Line>48</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>37</Id>
-              <SmellType>Literal constants(字面常數)-4</SmellType>
-              <HashCode>LiteralConstants.Draw.4</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>MyRectangle.cs</File>
-              <Line>42</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>38</Id>
-              <SmellType>Long method(過長函式)</SmellType>
-              <HashCode>LongMethod.MyRectangle.Draw.24IGraphics graphics;bool selected;</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>24</Weight>
-              <Project>PowerPoint</Project>
-              <File>MyRectangle.cs</File>
-              <Line>36</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>39</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.MyRectangle.IsOverlap.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>MyRectangle.cs</File>
-              <Line>64</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>40</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.MyRectangle.IsOverlap.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>MyRectangle.cs</File>
-              <Line>64</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>41</Id>
-              <SmellType>Literal constants(字面常數)-"("</SmellType>
-              <HashCode>LiteralConstants.get."("</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>35</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>42</Id>
-              <SmellType>Literal constants(字面常數)-", "</SmellType>
-              <HashCode>LiteralConstants.get.", "</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>35</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>43</Id>
-              <SmellType>Literal constants(字面常數)-", "</SmellType>
-              <HashCode>LiteralConstants.get.", "</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>35</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>44</Id>
-              <SmellType>Literal constants(字面常數)-"), ("</SmellType>
-              <HashCode>LiteralConstants.get."), ("</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>35</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>45</Id>
-              <SmellType>Literal constants(字面常數)-")"</SmellType>
-              <HashCode>LiteralConstants.get.")"</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>35</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>46</Id>
-              <SmellType>Unsuitable naming(名不符實)-dx(dx)</SmellType>
-              <HashCode>UnsuitableNaming.Shape.MoveDelta.dx</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>65</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>47</Id>
-              <SmellType>Unsuitable naming(名不符實)-dy(dy)</SmellType>
-              <HashCode>UnsuitableNaming.Shape.MoveDelta.dy</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>65</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>48</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Shape.IsOverlap.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>83</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>49</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Shape.IsOverlap.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>83</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>50</Id>
-              <SmellType>A syntax error has been discovered in file C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Shapes.cs on line 13.</SmellType>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shapes.cs</File>
-              <Line>13</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>51</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.DrawingState.MoveMouse.x</HashCode>
               <Severity>Warning</Severity>
@@ -1001,7 +683,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>52</Id>
+              <Id>32</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.DrawingState.MoveMouse.y</HashCode>
               <Severity>Warning</Severity>
@@ -1017,7 +699,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>53</Id>
+              <Id>33</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.DrawingState.ReleaseMouse.x</HashCode>
               <Severity>Warning</Severity>
@@ -1033,7 +715,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>54</Id>
+              <Id>34</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.DrawingState.ReleaseMouse.y</HashCode>
               <Severity>Warning</Severity>
@@ -1049,7 +731,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>55</Id>
+              <Id>35</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.IState.MoveMouse.x</HashCode>
               <Severity>Warning</Severity>
@@ -1065,7 +747,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>56</Id>
+              <Id>36</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.IState.MoveMouse.y</HashCode>
               <Severity>Warning</Severity>
@@ -1081,7 +763,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>57</Id>
+              <Id>37</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.IState.ReleaseMouse.x</HashCode>
               <Severity>Warning</Severity>
@@ -1097,7 +779,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>58</Id>
+              <Id>38</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.IState.ReleaseMouse.y</HashCode>
               <Severity>Warning</Severity>
@@ -1113,7 +795,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>59</Id>
+              <Id>39</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.PointerState.MoveMouse.x</HashCode>
               <Severity>Warning</Severity>
@@ -1129,7 +811,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>60</Id>
+              <Id>40</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.PointerState.MoveMouse.y</HashCode>
               <Severity>Warning</Severity>
@@ -1145,7 +827,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>61</Id>
+              <Id>41</Id>
               <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
               <HashCode>UnsuitableNaming.PointerState.ReleaseMouse.x</HashCode>
               <Severity>Warning</Severity>
@@ -1161,7 +843,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>62</Id>
+              <Id>42</Id>
               <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
               <HashCode>UnsuitableNaming.PointerState.ReleaseMouse.y</HashCode>
               <Severity>Warning</Severity>
@@ -1177,45 +859,46 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>63</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.PointerState.FindSelectShapeIndex.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointerState.cs</File>
-              <Line>56</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>64</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.PointerState.FindSelectShapeIndex.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointerState.cs</File>
-              <Line>56</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>65</Id>
-              <SmellType>A syntax error has been discovered in file C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\PresentationModel\FormPresentationModel.cs on line 153.</SmellType>
+              <Id>43</Id>
+              <SmellType>ICS(Delegate與Event-3)</SmellType>
+              <HashCode>DelegateAndEvent3.FormPresentationModel.ToolCursorChangedHandler</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>FormPresentationModel.cs</File>
-              <Line>153</Line>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-3) event 的變數命名如一般 class 中的成員變數</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>44</Id>
+              <SmellType>ICS(Delegate與Event-3)</SmellType>
+              <HashCode>DelegateAndEvent3.FormPresentationModel.ShapeListChangedHandler</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>16</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-3) event 的變數命名如一般 class 中的成員變數</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>45</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.FormPresentationModel.MoveMouse.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>90</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -1224,7 +907,55 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>66</Id>
+              <Id>46</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.FormPresentationModel.MoveMouse.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>90</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>47</Id>
+              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
+              <HashCode>UnsuitableNaming.FormPresentationModel.ReleaseMouse.x</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>98</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>48</Id>
+              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
+              <HashCode>UnsuitableNaming.FormPresentationModel.ReleaseMouse.y</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>FormPresentationModel.cs</File>
+              <Line>98</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>49</Id>
               <SmellType>Unsuitable naming(名不符實)-_infomationColumn(infomation)</SmellType>
               <HashCode>UnsuitableNaming.MainForm._infomationColumn._infomationColumn</HashCode>
               <Severity>Red</Severity>
@@ -1240,7 +971,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>67</Id>
+              <Id>50</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.IGraphics.DrawLine.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</HashCode>
               <Severity>Red</Severity>
@@ -1256,7 +987,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>68</Id>
+              <Id>51</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.IGraphics.DrawRectangle.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</HashCode>
               <Severity>Red</Severity>
@@ -1272,7 +1003,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>69</Id>
+              <Id>52</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.IGraphics.DrawCircle.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</HashCode>
               <Severity>Red</Severity>
@@ -1288,7 +1019,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>70</Id>
+              <Id>53</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.WindowsFormsGraphics.DrawLine.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</HashCode>
               <Severity>Red</Severity>
@@ -1304,7 +1035,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>71</Id>
+              <Id>54</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.WindowsFormsGraphics.DrawRectangle.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</HashCode>
               <Severity>Red</Severity>
@@ -1320,7 +1051,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>72</Id>
+              <Id>55</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.WindowsFormsGraphics.DrawCircle.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</HashCode>
               <Severity>Red</Severity>
@@ -1336,105 +1067,25 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>73</Id>
+              <Id>56</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>27 目前物件 PowerPoint.PointerState，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedIndex 以及 PowerPoint.Model.ShapeList 以及 PowerPoint.Model.SelectedIndex</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\State\PointerState.cs</File>
-              <Line>27</Line>
-              <StartLine>27</StartLine>
-              <StartCol>16</StartCol>
-              <EndLine>27</EndLine>
-              <EndCol>112</EndCol>
-              <Comment>目前物件 PowerPoint.PointerState，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedIndex 以及 PowerPoint.Model.ShapeList 以及 PowerPoint.Model.SelectedIndex</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>74</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>30 目前物件 PowerPoint.PointerState，使用物件的方法或屬性次數：3次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：5次，使用到的方法或屬性為以下：PowerPoint.Model.ShapeList 以及 PowerPoint.Model.SelectedIndex 以及 PowerPoint.Model.SelectedIndex 以及 PowerPoint.Model.ShapeList 以及 PowerPoint.Model.SelectedIndex</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\State\PointerState.cs</File>
-              <Line>30</Line>
-              <StartLine>29</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>30</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.PointerState，使用物件的方法或屬性次數：3次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：5次，使用到的方法或屬性為以下：PowerPoint.Model.ShapeList 以及 PowerPoint.Model.SelectedIndex 以及 PowerPoint.Model.SelectedIndex 以及 PowerPoint.Model.ShapeList 以及 PowerPoint.Model.SelectedIndex</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>75</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>59 目前物件 PowerPoint.PointerState，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：PowerPoint.Model.ShapeList 以及 PowerPoint.Model.ShapeList 以及 PowerPoint.Model.ShapeList</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\State\PointerState.cs</File>
-              <Line>59</Line>
-              <StartLine>59</StartLine>
-              <StartCol>20</StartCol>
-              <EndLine>59</EndLine>
-              <EndCol>55</EndCol>
-              <Comment>目前物件 PowerPoint.PointerState，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：PowerPoint.Model.ShapeList 以及 PowerPoint.Model.ShapeList 以及 PowerPoint.Model.ShapeList</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>76</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>62 目前物件 PowerPoint.PointerState，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Model.ShapeList 以及 PowerPoint.Model.ShapeList 以及 PowerPoint.Model.ShapeList 以及 PowerPoint.Model.ShapeList</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\State\PointerState.cs</File>
-              <Line>62</Line>
-              <StartLine>61</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>62</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.PointerState，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Model.ShapeList 以及 PowerPoint.Model.ShapeList 以及 PowerPoint.Model.ShapeList 以及 PowerPoint.Model.ShapeList</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>77</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>24 目前物件 PowerPoint.Shapes，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.Factory，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Factory.CreateShape(string) 以及 PowerPoint.Factory.CreateShape(string)</HashCode>
+              <HashCode>32 目前物件 PowerPoint.Shapes，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.Factory，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Factory.CreateShape(string) 以及 PowerPoint.Factory.CreateShape(string)</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Shapes.cs</File>
-              <Line>24</Line>
-              <StartLine>23</StartLine>
+              <Line>32</Line>
+              <StartLine>31</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>24</EndLine>
+              <EndLine>32</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Shapes，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.Factory，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Factory.CreateShape(string) 以及 PowerPoint.Factory.CreateShape(string)</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>78</Id>
+              <Id>57</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>43 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\MyRectangle.cs</File>
-              <Line>43</Line>
-              <StartLine>42</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>43</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>79</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>44 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>44 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -1444,13 +1095,13 @@
               <StartCol>0</StartCol>
               <EndLine>44</EndLine>
               <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2</Comment>
+              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>80</Id>
+              <Id>58</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>45 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</HashCode>
+              <HashCode>45 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -1460,13 +1111,13 @@
               <StartCol>0</StartCol>
               <EndLine>45</EndLine>
               <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</Comment>
+              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>81</Id>
+              <Id>59</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>46 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>46 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -1476,77 +1127,61 @@
               <StartCol>0</StartCol>
               <EndLine>46</EndLine>
               <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</Comment>
+              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>82</Id>
+              <Id>60</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>46 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\MyRectangle.cs</File>
-              <Line>46</Line>
-              <StartLine>46</StartLine>
-              <StartCol>20</StartCol>
-              <EndLine>46</EndLine>
-              <EndCol>45</EndCol>
-              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>83</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>47 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
-              <Severity>Warning</Severity>
+              <HashCode>47 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</HashCode>
+              <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\MyRectangle.cs</File>
               <Line>47</Line>
-              <StartLine>47</StartLine>
-              <StartCol>20</StartCol>
+              <StartLine>46</StartLine>
+              <StartCol>0</StartCol>
               <EndLine>47</EndLine>
-              <EndCol>45</EndCol>
-              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>84</Id>
+              <Id>61</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>49 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</HashCode>
-              <Severity>Red</Severity>
+              <HashCode>48 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\MyRectangle.cs</File>
+              <Line>48</Line>
+              <StartLine>48</StartLine>
+              <StartCol>20</StartCol>
+              <EndLine>48</EndLine>
+              <EndCol>47</EndCol>
+              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>62</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>49 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\MyRectangle.cs</File>
               <Line>49</Line>
-              <StartLine>48</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>49</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>85</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>50 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\MyRectangle.cs</File>
-              <Line>50</Line>
               <StartLine>49</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>50</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</Comment>
+              <StartCol>20</StartCol>
+              <EndLine>49</EndLine>
+              <EndCol>47</EndCol>
+              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>86</Id>
+              <Id>63</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>51 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>51 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -1556,13 +1191,13 @@
               <StartCol>0</StartCol>
               <EndLine>51</EndLine>
               <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>87</Id>
+              <Id>64</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>52 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>52 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -1572,93 +1207,93 @@
               <StartCol>0</StartCol>
               <EndLine>52</EndLine>
               <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>88</Id>
+              <Id>65</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>66 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>53 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\MyRectangle.cs</File>
-              <Line>66</Line>
-              <StartLine>65</StartLine>
+              <Line>53</Line>
+              <StartLine>52</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>66</EndLine>
+              <EndLine>53</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>66</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>54 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\MyRectangle.cs</File>
+              <Line>54</Line>
+              <StartLine>53</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>54</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>67</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>68 目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\MyRectangle.cs</File>
+              <Line>68</Line>
+              <StartLine>67</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>68</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.MyRectangle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>89</Id>
+              <Id>68</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>42 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
+              <HashCode>44 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
-              <Line>42</Line>
-              <StartLine>42</StartLine>
+              <Line>44</Line>
+              <StartLine>44</StartLine>
               <StartCol>20</StartCol>
-              <EndLine>42</EndLine>
-              <EndCol>45</EndCol>
+              <EndLine>44</EndLine>
+              <EndCol>47</EndCol>
               <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>90</Id>
+              <Id>69</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>43 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>45 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
-              <Line>43</Line>
-              <StartLine>43</StartLine>
+              <Line>45</Line>
+              <StartLine>45</StartLine>
               <StartCol>20</StartCol>
-              <EndLine>43</EndLine>
-              <EndCol>45</EndCol>
+              <EndLine>45</EndLine>
+              <EndCol>47</EndCol>
               <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>91</Id>
+              <Id>70</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>45 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
-              <Line>45</Line>
-              <StartLine>44</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>45</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>92</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>46 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
-              <Line>46</Line>
-              <StartLine>45</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>46</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>93</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>47 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>47 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -1668,13 +1303,13 @@
               <StartCol>0</StartCol>
               <EndLine>47</EndLine>
               <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>94</Id>
+              <Id>71</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>48 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>48 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -1684,157 +1319,157 @@
               <StartCol>0</StartCol>
               <EndLine>48</EndLine>
               <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>95</Id>
+              <Id>72</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>61 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
-              <Line>61</Line>
-              <StartLine>61</StartLine>
-              <StartCol>19</StartCol>
-              <EndLine>61</EndLine>
-              <EndCol>38</EndCol>
-              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>96</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>62 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
-              <Line>62</Line>
-              <StartLine>62</StartLine>
-              <StartCol>19</StartCol>
-              <EndLine>62</EndLine>
-              <EndCol>38</EndCol>
-              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>97</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>63 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
-              <Line>63</Line>
-              <StartLine>63</StartLine>
-              <StartCol>19</StartCol>
-              <EndLine>63</EndLine>
-              <EndCol>46</EndCol>
-              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>98</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>64 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
-              <Line>64</Line>
-              <StartLine>64</StartLine>
-              <StartCol>19</StartCol>
-              <EndLine>64</EndLine>
-              <EndCol>46</EndCol>
-              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>99</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>66 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：8次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>49 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
-              <Line>66</Line>
-              <StartLine>65</StartLine>
+              <Line>49</Line>
+              <StartLine>48</StartLine>
               <StartCol>0</StartCol>
+              <EndLine>49</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>73</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>50 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
+              <Line>50</Line>
+              <StartLine>49</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>50</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>74</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>65 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
+              <Line>65</Line>
+              <StartLine>65</StartLine>
+              <StartCol>19</StartCol>
+              <EndLine>65</EndLine>
+              <EndCol>40</EndCol>
+              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>75</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>66 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
+              <Line>66</Line>
+              <StartLine>66</StartLine>
+              <StartCol>19</StartCol>
               <EndLine>66</EndLine>
+              <EndCol>40</EndCol>
+              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>76</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>67 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
+              <Line>67</Line>
+              <StartLine>67</StartLine>
+              <StartCol>19</StartCol>
+              <EndLine>67</EndLine>
+              <EndCol>48</EndCol>
+              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>77</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>68 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
+              <Line>68</Line>
+              <StartLine>68</StartLine>
+              <StartCol>19</StartCol>
+              <EndLine>68</EndLine>
+              <EndCol>48</EndCol>
+              <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>78</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>70 目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：8次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Circle.cs</File>
+              <Line>70</Line>
+              <StartLine>69</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>70</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Circle，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：8次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>100</Id>
+              <Id>79</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>42 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
+              <HashCode>44 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
-              <Line>42</Line>
-              <StartLine>42</StartLine>
+              <Line>44</Line>
+              <StartLine>44</StartLine>
               <StartCol>20</StartCol>
-              <EndLine>42</EndLine>
-              <EndCol>45</EndCol>
+              <EndLine>44</EndLine>
+              <EndCol>47</EndCol>
               <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>101</Id>
+              <Id>80</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>43 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>45 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
-              <Line>43</Line>
-              <StartLine>43</StartLine>
+              <Line>45</Line>
+              <StartLine>45</StartLine>
               <StartCol>20</StartCol>
-              <EndLine>43</EndLine>
-              <EndCol>45</EndCol>
+              <EndLine>45</EndLine>
+              <EndCol>47</EndCol>
               <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>102</Id>
+              <Id>81</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>45 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
-              <Line>45</Line>
-              <StartLine>44</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>45</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>103</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>46 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
-              <Line>46</Line>
-              <StartLine>45</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>46</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>104</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>47 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：8次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>47 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -1844,109 +1479,109 @@
               <StartCol>0</StartCol>
               <EndLine>47</EndLine>
               <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>82</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>48 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
+              <Line>48</Line>
+              <StartLine>47</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>48</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>83</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>49 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：8次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
+              <Line>49</Line>
+              <StartLine>48</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>49</EndLine>
+              <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：8次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>105</Id>
+              <Id>84</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>61 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
+              <HashCode>64 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
-              <Line>61</Line>
-              <StartLine>61</StartLine>
+              <Line>64</Line>
+              <StartLine>64</StartLine>
               <StartCol>16</StartCol>
-              <EndLine>61</EndLine>
+              <EndLine>64</EndLine>
               <EndCol>26</EndCol>
               <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>106</Id>
+              <Id>85</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>64 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
+              <HashCode>67 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
-              <Line>64</Line>
-              <StartLine>63</StartLine>
+              <Line>67</Line>
+              <StartLine>66</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>64</EndLine>
+              <EndLine>67</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>107</Id>
+              <Id>86</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>65 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
+              <HashCode>68 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
-              <Line>65</Line>
-              <StartLine>65</StartLine>
+              <Line>68</Line>
+              <StartLine>68</StartLine>
               <StartCol>16</StartCol>
-              <EndLine>65</EndLine>
+              <EndLine>68</EndLine>
               <EndCol>26</EndCol>
               <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>108</Id>
+              <Id>87</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>68 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
-              <Line>68</Line>
-              <StartLine>67</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>68</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>109</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>69 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
-              <Line>69</Line>
-              <StartLine>69</StartLine>
-              <StartCol>19</StartCol>
-              <EndLine>69</EndLine>
-              <EndCol>56</EndCol>
-              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>110</Id>
-              <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>71 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x1</HashCode>
+              <HashCode>71 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
               <Line>71</Line>
-              <StartLine>71</StartLine>
-              <StartCol>19</StartCol>
+              <StartLine>70</StartLine>
+              <StartCol>0</StartCol>
               <EndLine>71</EndLine>
-              <EndCol>46</EndCol>
-              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x1</Comment>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>111</Id>
+              <Id>88</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>72 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</HashCode>
+              <HashCode>72 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
@@ -1955,38 +1590,70 @@
               <StartLine>72</StartLine>
               <StartCol>19</StartCol>
               <EndLine>72</EndLine>
-              <EndCol>51</EndCol>
-              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</Comment>
+              <EndCol>56</EndCol>
+              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>112</Id>
+              <Id>89</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>73 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</HashCode>
+              <HashCode>74 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x1</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
-              <Line>73</Line>
-              <StartLine>73</StartLine>
+              <Line>74</Line>
+              <StartLine>74</StartLine>
               <StartCol>19</StartCol>
-              <EndLine>73</EndLine>
-              <EndCol>51</EndCol>
-              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</Comment>
+              <EndLine>74</EndLine>
+              <EndCol>46</EndCol>
+              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x1</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>113</Id>
+              <Id>90</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>75 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：12次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x1</HashCode>
+              <HashCode>75 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
               <Line>75</Line>
-              <StartLine>74</StartLine>
-              <StartCol>0</StartCol>
+              <StartLine>75</StartLine>
+              <StartCol>19</StartCol>
               <EndLine>75</EndLine>
+              <EndCol>51</EndCol>
+              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>91</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>76 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
+              <Line>76</Line>
+              <StartLine>76</StartLine>
+              <StartCol>19</StartCol>
+              <EndLine>76</EndLine>
+              <EndCol>51</EndCol>
+              <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：6次，使用到的方法或屬性為以下：PowerPoint.Shape._y2 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>92</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>78 目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：12次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>C:\Users\User\source\repos\NTUT\WindowsProgramming\PowerPoint\PowerPoint\Model\Shape\Line.cs</File>
+              <Line>78</Line>
+              <StartLine>77</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>78</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Line，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Shape，使用物件方法或屬性次數：12次，使用到的方法或屬性為以下：PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._y2 以及 PowerPoint.Shape._y1 以及 PowerPoint.Shape._x2 以及 PowerPoint.Shape._x1 以及 PowerPoint.Shape._x1</Comment>
               <Auto>false</Auto>
@@ -1994,7 +1661,6 @@
           </Reviews>
           <HashCodeIgnoreList />
           <HashCodeRequestIgnoreList>
-            <string>LongMethod.MyRectangle.Draw.24IGraphics graphics;bool selected;</string>
             <string>LongParameterList.IGraphics.DrawRectangle.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</string>
             <string>LongParameterList.IGraphics.DrawCircle.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</string>
             <string>LongParameterList.IGraphics.DrawLine.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</string>
@@ -2002,7 +1668,6 @@
             <string>LongParameterList.WindowsFormsGraphics.DrawRectangle.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</string>
             <string>LongParameterList.Factory.CreateShape.ShapeType shapeType;int x1;int y1;int x2;int y2;</string>
             <string>LongParameterList.WindowsFormsGraphics.DrawLine.ShapeColor shapeColor;int penWidth;int x1;int y1;int x2;int y2;</string>
-            <string xsi:nil="true" />
           </HashCodeRequestIgnoreList>
           <AnalysisFileManager>
             <AnalysisFiles>
@@ -2118,7 +1783,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1304</ProductionLoc>
+          <ProductionLoc>1772</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>

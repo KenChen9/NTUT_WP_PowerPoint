@@ -14,7 +14,8 @@ namespace PowerPoint
         {
             get
             {
-                return "矩形";
+                const string RECTANGLE = "矩形";
+                return RECTANGLE;
             }
         }
 
@@ -37,19 +38,20 @@ namespace PowerPoint
         {
             if (selected)
             {
-                int penWidth = 2;
-                graphics.DrawRectangle(ShapeColor.Red, penWidth, _x1, _y1, _x2, _y2);
-                int smallCircleRadius = 4;
-                graphics.DrawCircle(ShapeColor.Red, penWidth, _x1 - smallCircleRadius, _y1 - smallCircleRadius, _x1 + smallCircleRadius, _y1 + smallCircleRadius);
-                graphics.DrawCircle(ShapeColor.Red, penWidth, _x1 - smallCircleRadius, _y2 - smallCircleRadius, _x1 + smallCircleRadius, _y2 + smallCircleRadius);
-                graphics.DrawCircle(ShapeColor.Red, penWidth, _x2 - smallCircleRadius, _y1 - smallCircleRadius, _x2 + smallCircleRadius, _y1 + smallCircleRadius);
-                graphics.DrawCircle(ShapeColor.Red, penWidth, _x2 - smallCircleRadius, _y2 - smallCircleRadius, _x2 + smallCircleRadius, _y2 + smallCircleRadius);
-                int centerX = (_x1 + _x2) / 2;
-                int centerY = (_y1 + _y2) / 2;
-                graphics.DrawCircle(ShapeColor.Red, penWidth, centerX - smallCircleRadius, _y1 - smallCircleRadius, centerX + smallCircleRadius, _y1 + smallCircleRadius);
-                graphics.DrawCircle(ShapeColor.Red, penWidth, centerX - smallCircleRadius, _y2 - smallCircleRadius, centerX + smallCircleRadius, _y2 + smallCircleRadius);
-                graphics.DrawCircle(ShapeColor.Red, penWidth, _x1 - smallCircleRadius, centerY - smallCircleRadius, _x1 + smallCircleRadius, centerY + smallCircleRadius);
-                graphics.DrawCircle(ShapeColor.Red, penWidth, _x2 - smallCircleRadius, centerY - smallCircleRadius, _x2 + smallCircleRadius, centerY + smallCircleRadius);
+                const int PEN_WIDTH = 2;
+                graphics.DrawRectangle(ShapeColor.Red, PEN_WIDTH, _x1, _y1, _x2, _y2);
+                const int SMALL_CIRCLE_RADIUS = 4;
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x1 - SMALL_CIRCLE_RADIUS, _y1 - SMALL_CIRCLE_RADIUS, _x1 + SMALL_CIRCLE_RADIUS, _y1 + SMALL_CIRCLE_RADIUS);
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x1 - SMALL_CIRCLE_RADIUS, _y2 - SMALL_CIRCLE_RADIUS, _x1 + SMALL_CIRCLE_RADIUS, _y2 + SMALL_CIRCLE_RADIUS);
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x2 - SMALL_CIRCLE_RADIUS, _y1 - SMALL_CIRCLE_RADIUS, _x2 + SMALL_CIRCLE_RADIUS, _y1 + SMALL_CIRCLE_RADIUS);
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x2 - SMALL_CIRCLE_RADIUS, _y2 - SMALL_CIRCLE_RADIUS, _x2 + SMALL_CIRCLE_RADIUS, _y2 + SMALL_CIRCLE_RADIUS);
+                const int TWO = 2;
+                int centerX = (_x1 + _x2) / TWO;
+                int centerY = (_y1 + _y2) / TWO;
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, centerX - SMALL_CIRCLE_RADIUS, _y1 - SMALL_CIRCLE_RADIUS, centerX + SMALL_CIRCLE_RADIUS, _y1 + SMALL_CIRCLE_RADIUS);
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, centerX - SMALL_CIRCLE_RADIUS, _y2 - SMALL_CIRCLE_RADIUS, centerX + SMALL_CIRCLE_RADIUS, _y2 + SMALL_CIRCLE_RADIUS);
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x1 - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS, _x1 + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS);
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x2 - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS, _x2 + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS);
             }
             else
             {

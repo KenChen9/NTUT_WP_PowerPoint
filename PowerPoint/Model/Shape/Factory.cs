@@ -14,13 +14,16 @@ namespace PowerPoint
         /// <returns>A Shape object based on the specified shape type, or null if the type is not recognized.</returns>
         public static Shape CreateShape(string shapeType)
         {
+            const string LINE = "線";
+            const string RECTANGLE = "矩形";
+            const string CIRCLE = "圓";
             switch (shapeType)
             {
-                case "線":
+                case LINE:
                     return CreateShape(ShapeType.Line);
-                case "矩形":
+                case RECTANGLE:
                     return CreateShape(ShapeType.Rectangle);
-                case "圓":
+                case CIRCLE:
                     return CreateShape(ShapeType.Circle);
                 default:
                     return null;
@@ -34,13 +37,13 @@ namespace PowerPoint
         /// <returns>A Shape object with random coordinates based on the specified shape type.</returns>
         public static Shape CreateShape(ShapeType shapeType)
         {
-            int randomMin = 0;
-            int randomMax = 500;
+            const int RANDOM_MIN = 0;
+            const int RANDOM_MAX = 500;
             Random random = new Random();
-            int x1 = random.Next(randomMin, randomMax);
-            int y1 = random.Next(randomMin, randomMax);
-            int x2 = random.Next(randomMin, randomMax);
-            int y2 = random.Next(randomMin, randomMax);
+            int x1 = random.Next(RANDOM_MIN, RANDOM_MAX);
+            int y1 = random.Next(RANDOM_MIN, RANDOM_MAX);
+            int x2 = random.Next(RANDOM_MIN, RANDOM_MAX);
+            int y2 = random.Next(RANDOM_MIN, RANDOM_MAX);
             return CreateShape(shapeType, x1, y1, x2, y2);
         }
 

@@ -25,9 +25,9 @@
         /// </summary>
         public void MoveMouse(int x, int y)
         {
-            if (_pressed && _model.SelectedIndex != -1 && _model.ShapeList[_model.SelectedIndex].IsOverlap(x, y))
+            if (_pressed && _model.IsSelectedShapeOverlap(x, y))
             {
-                _model.ShapeList[_model.SelectedIndex].MoveDelta(x - _lastMouseX, y - _lastMouseY);
+                _model.MoveSelectedShapeDelta(x - _lastMouseX, y - _lastMouseY);
             }
             _lastMouseX = x;
             _lastMouseY = y;
@@ -39,30 +39,15 @@
         public void ReleaseMouse(int x, int y)
         {
             _pressed = false;
-            _model.SelectedIndex = _model.SelectedIndex == -1 ? FindSelectShapeIndex(x, y) : -1;
+            _model.TrySelectShapeIndex(x, y);
         }
 
         /// <summary>
         /// Draw
         /// </summary>
-        public void Draw(IGraphics graphics, Shapes shapes)
+        public void Draw(IGraphics graphics, Shapes shapes, int selectedIndex)
         {
-            shapes.Draw(graphics, _model.SelectedIndex);
-        }
-
-        /// <summary>
-        /// FindSelectShapeIndex
-        /// </summary>
-        private int FindSelectShapeIndex(int x, int y)
-        {
-            for (int i = _model.ShapeList.Count - 1; i >= 0; i--)
-            {
-                if (_model.ShapeList[i].IsOverlap(x, y))
-                {
-                    return i;
-                }
-            }
-            return -1;
+            shapes.Draw(graphics, selectedIndex);
         }
     }
 }

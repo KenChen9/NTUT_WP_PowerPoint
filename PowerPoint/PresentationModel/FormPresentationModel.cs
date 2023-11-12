@@ -10,10 +10,10 @@ namespace PowerPoint
     /// </summary>
     public class FormPresentationModel
     {
-        public delegate void ToolCursorChangedHandler(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor);
-        public event ToolCursorChangedHandler ToolCursorChanged;
-        public delegate void ShapeListChangedHandler();
-        public event ShapeListChangedHandler ShapeListChanged;
+        public delegate void ToolCursorChangedEventHandler(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor);
+        public event ToolCursorChangedEventHandler ToolCursorChangedHandler;
+        public delegate void ShapeListChangedEventHandler();
+        public event ShapeListChangedEventHandler ShapeListChangedHandler;
         private Model _model;
         private ShapeType _currentTool = ShapeType.Arrow;
         private Cursor _currentCursor = Cursors.Arrow;
@@ -33,8 +33,8 @@ namespace PowerPoint
         public FormPresentationModel(Model model)
         {
             _model = model;
-            _model.CurrentToolChanged += UpdateCurrentTool;
-            _model.ShapeListChanged += UpdateDrawingPanel;
+            _model.CurrentToolChangedHandler += UpdateCurrentTool;
+            _model.ShapeListChangedHandler += UpdateDrawingPanel;
         }
 
         /// <summary>
@@ -143,14 +143,15 @@ namespace PowerPoint
         /// </summary>
         private void NotifyToolCursorChanged()
         {
-            Dictionary<ShapeType, bool> toolStatus = new Dictionary<ShapeType, bool>
+            Dictionary<ShapeType, bool> toolStatus = new Dictionary<ShapeType, bool>();
+            toolStatus.Add(ShapeType.Line, _currentTool == ShapeType.Line);
+            toolStatus.Add(ShapeType.Rectangle, _currentTool == ShapeType.Rectangle);
+            toolStatus.Add(ShapeType.Circle, _currentTool == ShapeType.Circle);
+            toolStatus.Add(ShapeType.Arrow, _currentTool == ShapeType.Arrow);
+            if (ToolCursorChangedHandler != null)
             {
-                { ShapeType.Line, _currentTool == ShapeType.Line },
-                { ShapeType.Rectangle, _currentTool == ShapeType.Rectangle },
-                { ShapeType.Circle, _currentTool == ShapeType.Circle },
-                { ShapeType.Arrow, _currentTool == ShapeType.Arrow }
-            };
-            ToolCursorChanged?.Invoke(toolStatus, _currentCursor);
+                ToolCursorChangedHandler(toolStatus, _currentCursor);
+            }
         }
 
         /// <summary>
@@ -158,7 +159,11 @@ namespace PowerPoint
         /// </summary>
         private void NotifyShapeListChanged()
         {
-            ShapeListChanged?.Invoke();
+            if (ShapeListChangedHandler != null)
+            {
+                ShapeListChangedHandler();
+            }
+            
         }
 
         /// <summary>

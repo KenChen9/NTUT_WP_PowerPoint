@@ -14,7 +14,8 @@ namespace PowerPoint
         {
             get
             {
-                return "線";
+                const string LINE = "線";
+                return LINE;
             }
         }
 
@@ -37,19 +38,20 @@ namespace PowerPoint
         {
             if (selected)
             {
-                int penWidth = 2;
-                graphics.DrawLine(ShapeColor.Red, penWidth, _x1, _y1, _x2, _y2);
-                int smallCircleRadius = 4;
-                int centerX = (_x1 + _x2) / 2;
-                int centerY = (_y1 + _y2) / 2;
-                graphics.DrawCircle(ShapeColor.Red, penWidth, _x1 - smallCircleRadius, _y1 - smallCircleRadius, _x1 + smallCircleRadius, _y1 + smallCircleRadius);
-                graphics.DrawCircle(ShapeColor.Red, penWidth, _x2 - smallCircleRadius, _y2 - smallCircleRadius, _x2 + smallCircleRadius, _y2 + smallCircleRadius);
-                graphics.DrawCircle(ShapeColor.Red, penWidth, centerX - smallCircleRadius, centerY - smallCircleRadius, centerX + smallCircleRadius, centerY + smallCircleRadius);
+                const int PEN_WIDTH = 2;
+                graphics.DrawLine(ShapeColor.Red, PEN_WIDTH, _x1, _y1, _x2, _y2);
+                const int SMALL_CIRCLE_RADIUS = 4;
+                const int TWO = 2;
+                int centerX = (_x1 + _x2) / TWO;
+                int centerY = (_y1 + _y2) / TWO;
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x1 - SMALL_CIRCLE_RADIUS, _y1 - SMALL_CIRCLE_RADIUS, _x1 + SMALL_CIRCLE_RADIUS, _y1 + SMALL_CIRCLE_RADIUS);
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, _x2 - SMALL_CIRCLE_RADIUS, _y2 - SMALL_CIRCLE_RADIUS, _x2 + SMALL_CIRCLE_RADIUS, _y2 + SMALL_CIRCLE_RADIUS);
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, centerX - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS, centerX + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS);
             }
             else
             {
-                int penWidth = 1;
-                graphics.DrawLine(ShapeColor.Black, penWidth, _x1, _y1, _x2, _y2);
+                const int PEN_WIDTH = 1;
+                graphics.DrawLine(ShapeColor.Black, PEN_WIDTH, _x1, _y1, _x2, _y2);
             }
         }
 
@@ -58,7 +60,8 @@ namespace PowerPoint
         /// </summary>
         public override bool IsOverlap(int x, int y)
         {
-            double w = 6;
+            const int LINE_WIDTH = 6;
+            double w = LINE_WIDTH;
             if (_x1 == _x2)
             {
                 return _x1 - w <= x && x <= _x2 + w && Math.Min(_y1, _y2) <= y && y <= Math.Max(_y1, _y2);
