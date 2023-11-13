@@ -41,29 +41,13 @@ namespace PowerPoint
             {
                 const int PEN_WIDTH = 2;
                 graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
-                DrawSurroundingCircles(graphics);
+                graphics.DrawCircleSupportCircle(ShapeColor.Red, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
             }
             else
             {
                 const int PEN_WIDTH = 1;
                 graphics.DrawCircle(ShapeColor.Black, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
             }
-        }
-
-        /// <summary>
-        /// DrawSurroundingCircles
-        /// </summary>
-        private void DrawSurroundingCircles(IGraphics graphics)
-        {
-            const int PEN_WIDTH = 2;
-            const int SMALL_CIRCLE_RADIUS = 4;
-            const int TWO = 2;
-            int centerX = (_x1 + _x2) / TWO;
-            int centerY = (_y1 + _y2) / TWO;
-            graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, _y1 - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, _y1 + SMALL_CIRCLE_RADIUS));
-            graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, _y2 - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, _y2 + SMALL_CIRCLE_RADIUS));
-            graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(_x1 - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(_x1 + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
-            graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(_x2 - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(_x2 + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
         }
 
         /// <summary>

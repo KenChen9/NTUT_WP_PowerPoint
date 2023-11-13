@@ -36,5 +36,20 @@ namespace PowerPoint
         /// <param name="x2">X-coordinate of a point on the circle.</param>
         /// <param name="y2">Y-coordinate of a point on the circle.</param>
         void DrawCircle(ShapeColor shapeColor, int penWidth, Point point1, Point point2);
+
+        /// <summary>
+        /// DrawLineSupportCircles
+        /// </summary>
+        void DrawLineSupportCircles(ShapeColor shapeColor, int penWidth, Point point1, Point point2);
+
+        /// <summary>
+        /// DrawRectangleSupportCircles
+        /// </summary>
+        void DrawRectangleSupportCircles(ShapeColor shapeColor, int penWidth, Point point1, Point point2);
+
+        /// <summary>
+        /// DrawCircleSupportCircle
+        /// </summary>
+        void DrawCircleSupportCircle(ShapeColor shapeColor, int penWidth, Point point1, Point point2);
     }
 }

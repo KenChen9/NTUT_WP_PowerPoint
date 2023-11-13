@@ -86,5 +86,55 @@ namespace PowerPoint
                 }
             }
         }
+
+        /// <summary>
+        /// DrawLineSupportCircles
+        /// </summary>
+        public void DrawLineSupportCircles(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
+        {
+            const int SMALL_CIRCLE_RADIUS = 4;
+            const int TWO = 2;
+            int centerX = (point1.X + point2.X) / TWO;
+            int centerY = (point1.Y + point2.Y) / TWO;
+            DrawCircle(ShapeColor.Red, penWidth, new Point(point1.X - SMALL_CIRCLE_RADIUS, point1.Y - SMALL_CIRCLE_RADIUS), new Point(point1.X + SMALL_CIRCLE_RADIUS, point1.Y + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, penWidth, new Point(point2.X - SMALL_CIRCLE_RADIUS, point2.Y - SMALL_CIRCLE_RADIUS), new Point(point2.X + SMALL_CIRCLE_RADIUS, point2.Y + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, penWidth, new Point(centerX - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
+        }
+
+        /// <summary>
+        /// DrawRectangleSupportCircles
+        /// </summary>
+        public void DrawRectangleSupportCircles(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
+        {
+            const int PEN_WIDTH = 2;
+            const int SMALL_CIRCLE_RADIUS = 4;
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point1.X - SMALL_CIRCLE_RADIUS, point1.Y - SMALL_CIRCLE_RADIUS), new Point(point1.X + SMALL_CIRCLE_RADIUS, point1.Y + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point1.X - SMALL_CIRCLE_RADIUS, point2.Y - SMALL_CIRCLE_RADIUS), new Point(point1.X + SMALL_CIRCLE_RADIUS, point2.Y + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point2.X - SMALL_CIRCLE_RADIUS, point1.Y - SMALL_CIRCLE_RADIUS), new Point(point2.X + SMALL_CIRCLE_RADIUS, point1.Y + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point2.X - SMALL_CIRCLE_RADIUS, point2.Y - SMALL_CIRCLE_RADIUS), new Point(point2.X + SMALL_CIRCLE_RADIUS, point2.Y + SMALL_CIRCLE_RADIUS));
+            const int TWO = 2;
+            int centerX = (point1.X + point2.X) / TWO;
+            int centerY = (point1.Y + point2.Y) / TWO;
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, point1.Y - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, point1.Y + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, point2.Y - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, point2.Y + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point1.X - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(point1.X + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point2.X - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(point2.X + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
+        }
+
+        /// <summary>
+        /// DrawCircleSupportCircle
+        /// </summary>
+        public void DrawCircleSupportCircle(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
+        {
+            const int PEN_WIDTH = 2;
+            const int SMALL_CIRCLE_RADIUS = 4;
+            const int TWO = 2;
+            int centerX = (point1.X + point2.X) / TWO;
+            int centerY = (point1.Y + point2.Y) / TWO;
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, point1.Y - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, point1.Y + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, point2.Y - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, point2.Y + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point1.X - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(point1.X + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
+            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point2.X - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(point2.X + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
+        }
     }
 }
