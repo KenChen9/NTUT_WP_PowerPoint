@@ -188,6 +188,15 @@ namespace PowerPoint
         }
 
         /// <summary>
+        /// ClearAllShapes
+        /// </summary>
+        public void ClearAllShapes()
+        {
+            _shapes.ClearAll();
+            NotifyShapeListChanged();
+        }
+
+        /// <summary>
         /// Notifies subscribers about changes in the current selected tool.
         /// </summary>
         private void NotifyCurrentToolChanged()

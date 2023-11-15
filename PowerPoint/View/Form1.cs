@@ -181,6 +181,15 @@ namespace PowerPoint
         }
 
         /// <summary>
+        /// ClearAllShapes
+        /// </summary>
+        private void ClearAllShapes(object sender, EventArgs e)
+        {
+            _formPresentationModel.ClearAllShapes();
+            UpdateSlide();
+        }
+
+        /// <summary>
         /// Update the status of tools and cursor.
         /// </summary>
         /// <param name="toolStatus"></param>

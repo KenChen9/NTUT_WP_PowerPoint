@@ -34,6 +34,9 @@ namespace PowerPoint
             this._shapeSelectionBox = new System.Windows.Forms.ComboBox();
             this._addShapeButton = new System.Windows.Forms.Button();
             this._dataGridView = new System.Windows.Forms.DataGridView();
+            this._deleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this._shapeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._locationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._menuStrip = new System.Windows.Forms.MenuStrip();
             this._manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,9 +47,7 @@ namespace PowerPoint
             this._arrowTool = new System.Windows.Forms.ToolStripButton();
             this._slidePanel = new System.Windows.Forms.Panel();
             this._slide1 = new System.Windows.Forms.Button();
-            this._deleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this._shapeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._locationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._clearAllButton = new System.Windows.Forms.Button();
             this._dataGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView)).BeginInit();
             this._menuStrip.SuspendLayout();
@@ -58,12 +59,15 @@ namespace PowerPoint
             // 
             this._dataGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this._dataGroup.Controls.Add(this._clearAllButton);
             this._dataGroup.Controls.Add(this._shapeSelectionBox);
             this._dataGroup.Controls.Add(this._addShapeButton);
             this._dataGroup.Controls.Add(this._dataGridView);
-            this._dataGroup.Location = new System.Drawing.Point(722, 52);
+            this._dataGroup.Location = new System.Drawing.Point(963, 65);
+            this._dataGroup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._dataGroup.Name = "_dataGroup";
-            this._dataGroup.Size = new System.Drawing.Size(250, 397);
+            this._dataGroup.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._dataGroup.Size = new System.Drawing.Size(333, 496);
             this._dataGroup.TabIndex = 0;
             this._dataGroup.TabStop = false;
             this._dataGroup.Text = "資料顯示";
@@ -79,18 +83,20 @@ namespace PowerPoint
             "線",
             "矩形",
             "圓"});
-            this._shapeSelectionBox.Location = new System.Drawing.Point(72, 32);
+            this._shapeSelectionBox.Location = new System.Drawing.Point(184, 40);
+            this._shapeSelectionBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._shapeSelectionBox.Name = "_shapeSelectionBox";
-            this._shapeSelectionBox.Size = new System.Drawing.Size(172, 20);
+            this._shapeSelectionBox.Size = new System.Drawing.Size(140, 23);
             this._shapeSelectionBox.TabIndex = 4;
             // 
             // _addShapeButton
             // 
             this._addShapeButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this._addShapeButton.Location = new System.Drawing.Point(6, 21);
+            this._addShapeButton.Location = new System.Drawing.Point(96, 26);
+            this._addShapeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._addShapeButton.Name = "_addShapeButton";
-            this._addShapeButton.Size = new System.Drawing.Size(60, 40);
+            this._addShapeButton.Size = new System.Drawing.Size(80, 50);
             this._addShapeButton.TabIndex = 3;
             this._addShapeButton.Text = "新增";
             this._addShapeButton.UseVisualStyleBackColor = true;
@@ -110,14 +116,39 @@ namespace PowerPoint
             this._deleteColumn,
             this._shapeColumn,
             this._locationColumn});
-            this._dataGridView.Location = new System.Drawing.Point(6, 67);
+            this._dataGridView.Location = new System.Drawing.Point(8, 84);
+            this._dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._dataGridView.Name = "_dataGridView";
             this._dataGridView.ReadOnly = true;
             this._dataGridView.RowHeadersVisible = false;
             this._dataGridView.RowTemplate.Height = 24;
-            this._dataGridView.Size = new System.Drawing.Size(238, 324);
+            this._dataGridView.Size = new System.Drawing.Size(317, 405);
             this._dataGridView.TabIndex = 3;
             this._dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickDataGridCell);
+            // 
+            // _deleteColumn
+            // 
+            this._deleteColumn.HeaderText = "刪除";
+            this._deleteColumn.Name = "_deleteColumn";
+            this._deleteColumn.ReadOnly = true;
+            this._deleteColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this._deleteColumn.Width = 40;
+            // 
+            // _shapeColumn
+            // 
+            this._shapeColumn.HeaderText = "形狀";
+            this._shapeColumn.Name = "_shapeColumn";
+            this._shapeColumn.ReadOnly = true;
+            this._shapeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this._shapeColumn.Width = 40;
+            // 
+            // _locationColumn
+            // 
+            this._locationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this._locationColumn.HeaderText = "資訊";
+            this._locationColumn.Name = "_locationColumn";
+            this._locationColumn.ReadOnly = true;
+            this._locationColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // _menuStrip
             // 
@@ -125,7 +156,8 @@ namespace PowerPoint
             this._manualToolStripMenuItem});
             this._menuStrip.Location = new System.Drawing.Point(0, 0);
             this._menuStrip.Name = "_menuStrip";
-            this._menuStrip.Size = new System.Drawing.Size(984, 24);
+            this._menuStrip.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this._menuStrip.Size = new System.Drawing.Size(1312, 24);
             this._menuStrip.TabIndex = 1;
             this._menuStrip.Text = "menuStrip1";
             // 
@@ -152,7 +184,7 @@ namespace PowerPoint
             this._arrowTool});
             this._toolStrip.Location = new System.Drawing.Point(0, 24);
             this._toolStrip.Name = "_toolStrip";
-            this._toolStrip.Size = new System.Drawing.Size(984, 25);
+            this._toolStrip.Size = new System.Drawing.Size(1312, 25);
             this._toolStrip.TabIndex = 2;
             this._toolStrip.Text = "toolStrip1";
             // 
@@ -202,55 +234,46 @@ namespace PowerPoint
             | System.Windows.Forms.AnchorStyles.Left)));
             this._slidePanel.BackColor = System.Drawing.Color.Silver;
             this._slidePanel.Controls.Add(this._slide1);
-            this._slidePanel.Location = new System.Drawing.Point(12, 52);
+            this._slidePanel.Location = new System.Drawing.Point(16, 65);
+            this._slidePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._slidePanel.Name = "_slidePanel";
-            this._slidePanel.Size = new System.Drawing.Size(150, 397);
+            this._slidePanel.Size = new System.Drawing.Size(200, 496);
             this._slidePanel.TabIndex = 3;
             // 
             // _slide1
             // 
             this._slide1.BackColor = System.Drawing.Color.White;
-            this._slide1.Location = new System.Drawing.Point(10, 10);
-            this._slide1.Margin = new System.Windows.Forms.Padding(10);
+            this._slide1.Location = new System.Drawing.Point(13, 12);
+            this._slide1.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this._slide1.Name = "_slide1";
-            this._slide1.Size = new System.Drawing.Size(130, 80);
+            this._slide1.Size = new System.Drawing.Size(173, 100);
             this._slide1.TabIndex = 0;
             this._slide1.UseVisualStyleBackColor = false;
             // 
-            // _deleteColumn
+            // _clearAllButton
             // 
-            this._deleteColumn.HeaderText = "刪除";
-            this._deleteColumn.Name = "_deleteColumn";
-            this._deleteColumn.ReadOnly = true;
-            this._deleteColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this._deleteColumn.Width = 40;
-            // 
-            // _shapeColumn
-            // 
-            this._shapeColumn.HeaderText = "形狀";
-            this._shapeColumn.Name = "_shapeColumn";
-            this._shapeColumn.ReadOnly = true;
-            this._shapeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this._shapeColumn.Width = 40;
-            // 
-            // _locationColumn
-            // 
-            this._locationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this._locationColumn.HeaderText = "資訊";
-            this._locationColumn.Name = "_locationColumn";
-            this._locationColumn.ReadOnly = true;
-            this._locationColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this._clearAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._clearAllButton.Location = new System.Drawing.Point(8, 25);
+            this._clearAllButton.Margin = new System.Windows.Forms.Padding(4);
+            this._clearAllButton.Name = "_clearAllButton";
+            this._clearAllButton.Size = new System.Drawing.Size(80, 50);
+            this._clearAllButton.TabIndex = 5;
+            this._clearAllButton.Text = "清空";
+            this._clearAllButton.UseVisualStyleBackColor = true;
+            this._clearAllButton.Click += new System.EventHandler(this.ClearAllShapes);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.ClientSize = new System.Drawing.Size(1312, 576);
             this.Controls.Add(this._slidePanel);
             this.Controls.Add(this._toolStrip);
             this.Controls.Add(this._dataGroup);
             this.Controls.Add(this._menuStrip);
             this.MainMenuStrip = this._menuStrip;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "PowerPoint";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DoKeyDown);
@@ -285,6 +308,7 @@ namespace PowerPoint
         private System.Windows.Forms.DataGridViewButtonColumn _deleteColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _shapeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _locationColumn;
+        private System.Windows.Forms.Button _clearAllButton;
     }
 }
 

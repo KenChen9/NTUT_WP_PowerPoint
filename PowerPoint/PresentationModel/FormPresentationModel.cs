@@ -139,6 +139,14 @@ namespace PowerPoint
         }
 
         /// <summary>
+        /// ClearAllShapes
+        /// </summary>
+        public void ClearAllShapes()
+        {
+            _model.ClearAllShapes();
+        }
+
+        /// <summary>
         /// NotifyToolCursorChanged
         /// </summary>
         private void NotifyToolCursorChanged()
@@ -163,7 +171,6 @@ namespace PowerPoint
             {
                 ShapeListChanged();
             }
-            
         }
 
         /// <summary>

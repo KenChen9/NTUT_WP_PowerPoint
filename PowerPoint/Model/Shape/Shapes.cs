@@ -52,6 +52,14 @@ namespace PowerPoint
         }
 
         /// <summary>
+        /// ClearAll
+        /// </summary>
+        public void ClearAll()
+        {
+            ShapeList.Clear();
+        }
+
+        /// <summary>
         /// Draws all shapes using the specified graphics object, highlighting the shape at the specified index in red.
         /// </summary>
         /// <param name="graphics">The IGraphics object used for drawing.</param>
