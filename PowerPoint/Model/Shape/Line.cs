@@ -28,7 +28,7 @@ namespace PowerPoint
             {
                 const int PEN_WIDTH = 2;
                 graphics.DrawLine(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
-                graphics.DrawLineSupportCircles(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
+                graphics.DrawLineFrame(PEN_WIDTH, Point1, Point2);
             }
             else
             {

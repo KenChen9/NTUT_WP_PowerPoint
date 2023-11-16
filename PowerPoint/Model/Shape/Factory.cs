@@ -47,7 +47,7 @@ namespace PowerPoint
             switch (shapeType)
             {
                 case ShapeType.Line:
-                    return new Line(GetTopLeftPoint(point1, point2), GetBottomRightPoint(point1, point2));
+                    return new Line(point1, point2);
                 case ShapeType.Rectangle:
                     return new MyRectangle(GetTopLeftPoint(point1, point2), GetBottomRightPoint(point1, point2));
                 case ShapeType.Circle:

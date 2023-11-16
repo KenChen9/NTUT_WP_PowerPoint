@@ -1,19 +1,13 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace PowerPoint
 {
-    /// <summary>
-    /// Graphics class for drawing shapes using Windows Forms Graphics object.
-    /// </summary>
     public class WindowsFormsGraphics : IGraphics
     {
         private Graphics _graphics;
 
-        /// <summary>
-        /// Initializes a new instance of the WindowsFormsGraphics class with the specified Graphics object.
-        /// </summary>
-        /// <param name="graphics">The Graphics object used for drawing.</param>
         public WindowsFormsGraphics(Graphics graphics)
         {
             _graphics = graphics;
@@ -22,19 +16,41 @@ namespace PowerPoint
         /// <summary>
         /// Get the expected color pen by ShapeColor enum.
         /// </summary>
-        /// <param name="shapeColor">The expected color.</param>
-        /// <returns>The pen by color.</returns>
-        private Pen GetPen(ShapeColor shapeColor, int width)
+        private Pen GetPen(ShapeColor shapeColor, int penWidth)
         {
             switch (shapeColor)
             {
                 case ShapeColor.Black:
-                    return new Pen(Color.Black, width);
+                    return new Pen(Color.Black, penWidth);
                 case ShapeColor.Red:
-                    return new Pen(Color.Red, width);
+                    return new Pen(Color.Red, penWidth);
                 default:
                     return null;
             }
+        }
+
+        /// <summary>
+        /// GetTopLeftPoint
+        /// </summary>
+        private Point GetTopLeftPoint(Point point1, Point point2)
+        {
+            return new Point(Math.Min(point1.X, point2.X), Math.Min(point1.Y, point2.Y));
+        }
+
+        /// <summary>
+        /// GetBottomRightPoint
+        /// </summary>
+        private Size GetTwoPointsRectangleSize(Point point1, Point point2)
+        {
+            return new Size(Math.Abs(point1.X - point2.X), Math.Abs(point1.Y - point2.Y));
+        }
+
+        /// <summary>
+        /// GetLocationRectangle
+        /// </summary>
+        private Rectangle GetLocationRectangle(Point point1, Point point2)
+        {
+            return new Rectangle(GetTopLeftPoint(point1, point2), GetTwoPointsRectangleSize(point1, point2));
         }
 
         /// <summary>
@@ -46,7 +62,7 @@ namespace PowerPoint
             {
                 if (pen != null)
                 {
-                    _graphics.DrawLine(pen, point1.X, point1.Y, point2.X, point2.Y);
+                    _graphics.DrawLine(pen, point1, point2);
                 }
             }
         }
@@ -60,11 +76,7 @@ namespace PowerPoint
             {
                 if (pen != null)
                 {
-                    int topLeftX = Math.Min(point1.X, point2.X);
-                    int topLeftY = Math.Min(point1.Y, point2.Y);
-                    int shapeWidth = Math.Abs(point1.X - point2.X);
-                    int shapeHeight = Math.Abs(point1.Y - point2.Y);
-                    _graphics.DrawRectangle(pen, topLeftX, topLeftY, shapeWidth, shapeHeight);
+                    _graphics.DrawRectangle(pen, GetLocationRectangle(point1, point2));
                 }
             }
         }
@@ -74,67 +86,104 @@ namespace PowerPoint
         /// </summary>
         public void DrawCircle(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
         {
+            DrawCircle(shapeColor, penWidth, GetLocationRectangle(point1, point2));
+        }
+
+        /// <summary>
+        /// Draws a circle with the specified shape color and coordinates.
+        /// </summary>
+        public void DrawCircle(ShapeColor shapeColor, int penWidth, Rectangle location)
+        {
             using (Pen pen = GetPen(shapeColor, penWidth))
             {
                 if (pen != null)
                 {
-                    int topLeftX = Math.Min(point1.X, point2.X);
-                    int topLeftY = Math.Min(point1.Y, point2.Y);
-                    int shapeWidth = Math.Abs(point1.X - point2.X);
-                    int shapeHeight = Math.Abs(point1.Y - point2.Y);
-                    _graphics.DrawEllipse(pen, topLeftX, topLeftY, shapeWidth, shapeHeight);
+                    _graphics.DrawEllipse(pen, location);
                 }
             }
         }
 
         /// <summary>
+        /// GetSupportCircleLocationPoint
+        /// </summary>
+        private Rectangle GetSupportCircleLocationRectangle(Point center, int radius)
+        {
+            int diameter = radius + radius;
+            return new Rectangle(center.X - radius, center.Y - radius, diameter, diameter);
+        }
+
+        /// <summary>
+        /// DrawSupportCircle
+        /// </summary>
+        private void DrawSupportCircle(Point center, int penWidth)
+        {
+            const int SUPPORT_CIRCLE_RADIUS = 4;
+            DrawCircle(ShapeColor.Red, penWidth, GetSupportCircleLocationRectangle(center, SUPPORT_CIRCLE_RADIUS));
+        }
+
+        /// <summary>
+        /// DrawDottedLine
+        /// </summary>
+        private void DrawDottedLine(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
+        {
+            using (Pen pen = GetPen(shapeColor, penWidth))
+            {
+                if (pen != null)
+                {
+                    pen.DashStyle = DashStyle.Dot;
+                    _graphics.DrawLine(pen, point1, point2);
+                }
+            }
+        }
+
+        /// <summary>
+        /// DrawSupportLine
+        /// </summary>
+        private void DrawSupportLine(Point point1, Point point2, int penWidth)
+        {
+            DrawDottedLine(ShapeColor.Red, penWidth, point1, point2);
+        }
+
+        /// <summary>
         /// DrawLineSupportCircles
         /// </summary>
-        public void DrawLineSupportCircles(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
+        public void DrawLineFrame(int penWidth, Point point1, Point point2)
         {
-            const int SMALL_CIRCLE_RADIUS = 4;
             const int TWO = 2;
-            int centerX = (point1.X + point2.X) / TWO;
-            int centerY = (point1.Y + point2.Y) / TWO;
-            DrawCircle(ShapeColor.Red, penWidth, new Point(point1.X - SMALL_CIRCLE_RADIUS, point1.Y - SMALL_CIRCLE_RADIUS), new Point(point1.X + SMALL_CIRCLE_RADIUS, point1.Y + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, penWidth, new Point(point2.X - SMALL_CIRCLE_RADIUS, point2.Y - SMALL_CIRCLE_RADIUS), new Point(point2.X + SMALL_CIRCLE_RADIUS, point2.Y + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, penWidth, new Point(centerX - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
+            Point center = new Point((point1.X + point2.X) / TWO, (point1.Y + point2.Y) / TWO);
+            DrawSupportCircle(center, penWidth);
+            DrawSupportCircle(point1, penWidth);
+            DrawSupportCircle(point2, penWidth);
         }
 
         /// <summary>
         /// DrawRectangleSupportCircles
         /// </summary>
-        public void DrawRectangleSupportCircles(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
+        public void DrawRectangleFrame(int penWidth, Point point1, Point point2)
         {
-            const int PEN_WIDTH = 2;
-            const int SMALL_CIRCLE_RADIUS = 4;
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point1.X - SMALL_CIRCLE_RADIUS, point1.Y - SMALL_CIRCLE_RADIUS), new Point(point1.X + SMALL_CIRCLE_RADIUS, point1.Y + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point1.X - SMALL_CIRCLE_RADIUS, point2.Y - SMALL_CIRCLE_RADIUS), new Point(point1.X + SMALL_CIRCLE_RADIUS, point2.Y + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point2.X - SMALL_CIRCLE_RADIUS, point1.Y - SMALL_CIRCLE_RADIUS), new Point(point2.X + SMALL_CIRCLE_RADIUS, point1.Y + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point2.X - SMALL_CIRCLE_RADIUS, point2.Y - SMALL_CIRCLE_RADIUS), new Point(point2.X + SMALL_CIRCLE_RADIUS, point2.Y + SMALL_CIRCLE_RADIUS));
-            const int TWO = 2;
-            int centerX = (point1.X + point2.X) / TWO;
-            int centerY = (point1.Y + point2.Y) / TWO;
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, point1.Y - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, point1.Y + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, point2.Y - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, point2.Y + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point1.X - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(point1.X + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point2.X - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(point2.X + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
+            Point topRight = new Point(point2.X, point1.Y);
+            Point bottomLeft = new Point(point1.X, point2.Y);
+            DrawSupportCircle(topRight, penWidth);
+            DrawSupportCircle(bottomLeft, penWidth);
+            DrawSupportCircle(point1, penWidth);
+            DrawSupportCircle(point2, penWidth);
         }
 
         /// <summary>
         /// DrawCircleSupportCircle
         /// </summary>
-        public void DrawCircleSupportCircles(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
+        public void DrawCircleFrame(int penWidth, Point point1, Point point2)
         {
-            const int PEN_WIDTH = 2;
-            const int SMALL_CIRCLE_RADIUS = 4;
-            const int TWO = 2;
-            int centerX = (point1.X + point2.X) / TWO;
-            int centerY = (point1.Y + point2.Y) / TWO;
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, point1.Y - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, point1.Y + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(centerX - SMALL_CIRCLE_RADIUS, point2.Y - SMALL_CIRCLE_RADIUS), new Point(centerX + SMALL_CIRCLE_RADIUS, point2.Y + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point1.X - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(point1.X + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
-            DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(point2.X - SMALL_CIRCLE_RADIUS, centerY - SMALL_CIRCLE_RADIUS), new Point(point2.X + SMALL_CIRCLE_RADIUS, centerY + SMALL_CIRCLE_RADIUS));
+            Point topRight = new Point(point2.X, point1.Y);
+            Point bottomLeft = new Point(point1.X, point2.Y);
+            DrawSupportLine(point1, topRight, penWidth);
+            DrawSupportLine(topRight, point2, penWidth);
+            DrawSupportLine(point2, bottomLeft, penWidth);
+            DrawSupportLine(bottomLeft, point1, penWidth);
+            DrawSupportCircle(topRight, penWidth);
+            DrawSupportCircle(bottomLeft, penWidth);
+            DrawSupportCircle(point1, penWidth);
+            DrawSupportCircle(point2, penWidth);
         }
     }
 }

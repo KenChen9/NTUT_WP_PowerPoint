@@ -44,7 +44,7 @@ namespace PowerPoint
             {
                 const int PEN_WIDTH = 2;
                 graphics.DrawRectangle(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
-                graphics.DrawRectangleSupportCircles(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
+                graphics.DrawRectangleFrame(PEN_WIDTH, Point1, Point2);
             }
             else
             {

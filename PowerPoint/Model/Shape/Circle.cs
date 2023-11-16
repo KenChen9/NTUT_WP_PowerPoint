@@ -44,7 +44,7 @@ namespace PowerPoint
             {
                 const int PEN_WIDTH = 2;
                 graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
-                graphics.DrawCircleSupportCircles(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
+                graphics.DrawCircleFrame(PEN_WIDTH, Point1, Point2);
             }
             else
             {
