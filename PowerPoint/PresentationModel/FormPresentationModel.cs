@@ -18,6 +18,7 @@ namespace PowerPoint
         private ShapeType _currentTool = ShapeType.Arrow;
         private Cursor _currentCursor = Cursors.Arrow;
 
+        // 必要之惡
         public BindingList<Shape> ShapeList
         {
             get
