@@ -56,9 +56,9 @@ namespace PowerPoint
         /// <summary>
         /// IsOverlap
         /// </summary>
-        public override bool IsOverlap(int cursorX, int cursorY)
+        public override bool IsOverlap(Point cursorPoint)
         {
-            return Point1.X <= cursorX && cursorX <= Point2.X && Point1.Y <= cursorY && cursorY <= Point2.Y;
+            return Point1.X <= cursorPoint.X && cursorPoint.X <= Point2.X && Point1.Y <= cursorPoint.Y && cursorPoint.Y <= Point2.Y;
         }
     }
 }

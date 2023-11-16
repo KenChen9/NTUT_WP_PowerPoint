@@ -1,22 +1,15 @@
-﻿namespace PowerPoint
+﻿using System.Drawing;
+
+namespace PowerPoint
 {
-    /// <summary>
-    /// Represents the drawing state of the application.
-    /// </summary>
     public class DrawingState : IState
     {
         private Model _model;
-        private int _startX = 0;
-        private int _startY = 0;
-        private int _endX = 0;
-        private int _endY = 0;
+        private Point _startPoint = new Point(0, 0);
+        private Point _endPoint = new Point(0, 0);
         private bool _pressed = false;
         private Shape _preview = null;
 
-        /// <summary>
-        /// Initializes a new instance of the DrawingState class with the specified model.
-        /// </summary>
-        /// <param name="model">The Model instance associated with the drawing state.</param>
         public DrawingState(Model model)
         {
             _model = model;
@@ -25,7 +18,7 @@
         /// <summary>
         /// Handles the mouse press event.
         /// </summary>
-        public void PressMouse()
+        public void PressMouse(Point cursorPoint)
         {
             _pressed = true;
         }
@@ -33,21 +26,17 @@
         /// <summary>
         /// Handles the mouse move event.
         /// </summary>
-        /// <param name="x">X-coordinate of the mouse position.</param>
-        /// <param name="y">Y-coordinate of the mouse position.</param>
-        public void MoveMouse(int cursorX, int cursorY)
+        public void MoveMouse(Point cursorPoint)
         {
-            _startX = _pressed ? _startX : cursorX;
-            _startY = _pressed ? _startY : cursorY;
-            _endX = cursorX;
-            _endY = cursorY;
-            _preview = _pressed ? _model.CreatePreview(_startX, _startY, _endX, _endY) : null;
+            _startPoint = _pressed ? _startPoint : cursorPoint;
+            _endPoint = _pressed ? cursorPoint : _endPoint;
+            _preview = _pressed ? _model.CreatePreview(_startPoint, _endPoint) : null;
         }
 
         /// <summary>
         /// Handles the mouse release event.
         /// </summary>
-        public void ReleaseMouse(int cursorX, int cursorY)
+        public void ReleaseMouse(Point cursorPoint)
         {
             _pressed = false;
             if (_preview != null)
@@ -62,9 +51,8 @@
         /// <summary>
         /// Draw
         /// </summary>
-        public void Draw(IGraphics graphics, Shapes shapes, int selectedIndex)
+        public void Draw(IGraphics graphics)
         {
-            shapes.Draw(graphics, -1);
             if (_preview != null)
             {
                 _preview.Draw(graphics, false);

@@ -107,9 +107,9 @@ namespace PowerPoint
         /// <summary>
         /// Handles the press mouse event based on the current state.
         /// </summary>
-        public void PressMouse()
+        public void PressMouse(Point cursorPoint)
         {
-            _state.PressMouse();
+            _state.PressMouse(cursorPoint);
             NotifyCurrentToolChanged();
         }
 
@@ -118,9 +118,9 @@ namespace PowerPoint
         /// </summary>
         /// <param name="x">The X-coordinate of the mouse position.</param>
         /// <param name="y">The Y-coordinate of the mouse position.</param>
-        public void MoveMouse(int cursorX, int cursorY)
+        public void MoveMouse(Point cursorPoint)
         {
-            _state.MoveMouse(cursorX, cursorY);
+            _state.MoveMouse(cursorPoint);
             NotifyCurrentToolChanged();
             NotifyShapeListChanged();
         }
@@ -128,9 +128,9 @@ namespace PowerPoint
         /// <summary>
         /// Handles the release mouse event based on the current state and updates the shape list.
         /// </summary>
-        public void ReleaseMouse(int cursorX, int cursorY)
+        public void ReleaseMouse(Point cursorPoint)
         {
-            _state.ReleaseMouse(cursorX, cursorY);
+            _state.ReleaseMouse(cursorPoint);
             NotifyCurrentToolChanged();
         }
 
@@ -140,51 +140,48 @@ namespace PowerPoint
         /// <param name="graphics">The IGraphics object used for drawing.</param>
         public void DrawShapes(IGraphics graphics)
         {
-            _state.Draw(graphics, _shapes, _selectedIndex);
+            _shapes.Draw(graphics, _selectedIndex);
+            _state.Draw(graphics);
         }
 
         /// <summary>
         /// CreatePreview
         /// </summary>
-        public Shape CreatePreview(int startX, int startY, int endX, int endY)
+        public Shape CreatePreview(Point startPoint, Point endPoint)
         {
-            return Factory.CreateShape(_currentTool, new Point(startX, startY), new Point(endX, endY));
+            return Factory.CreateShape(_currentTool, startPoint, endPoint);
         }
 
         /// <summary>
         /// IsSelectedShapeOverlap
         /// </summary>
-        public bool IsSelectedShapeOverlap(int cursorX, int cursorY)
+        public bool IsSelectedShapeOverlap(Point cursorPoint)
         {
-            return _selectedIndex != -1 && ShapeList[_selectedIndex].IsOverlap(cursorX, cursorY);
+            return _selectedIndex != -1 && ShapeList[_selectedIndex].IsOverlap(cursorPoint);
         }
 
         /// <summary>
         /// MoveSelectedShapeDelta
         /// </summary>
-        public void MoveSelectedShapeDelta(int deltaX, int deltaY)
+        public void MoveSelectedShapeDelta(Point deltaDirection)
         {
-            ShapeList[_selectedIndex].MoveDelta(deltaX, deltaY);
+            ShapeList[_selectedIndex].MoveDelta(deltaDirection);
         }
 
         /// <summary>
         /// TrySelectShapeIndex
         /// </summary>
-        public void TrySelectShapeIndex(int cursorX, int cursorY)
+        public void SelectShapeIndex(Point cursorPoint)
         {
-            if (_selectedIndex != -1)
-            {
-                _selectedIndex = -1;
-                return;
-            }
             for (int i = ShapeList.Count - 1; i >= 0; i--)
             {
-                if (ShapeList[i].IsOverlap(cursorX, cursorY))
+                if (ShapeList[i].IsOverlap(cursorPoint))
                 {
                     _selectedIndex = i;
                     return;
                 }
             }
+            _selectedIndex = -1;
         }
 
         /// <summary>

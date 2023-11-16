@@ -1,30 +1,27 @@
-﻿namespace PowerPoint
+﻿using System.Drawing;
+
+namespace PowerPoint
 {
-    /// <summary>
-    /// Interface representing the state of the application based on user interaction.
-    /// </summary>
     public interface IState
     {
         /// <summary>
         /// Handles the mouse press event.
         /// </summary>
-        void PressMouse();
+        void PressMouse(Point cursorPoint);
 
         /// <summary>
         /// Handles the mouse move event.
         /// </summary>
-        /// <param name="x">X-coordinate of the mouse position.</param>
-        /// <param name="y">Y-coordinate of the mouse position.</param>
-        void MoveMouse(int cursorX, int cursorY);
+        void MoveMouse(Point cursorPoint);
 
         /// <summary>
         /// Handles the mouse release event.
         /// </summary>
-        void ReleaseMouse(int cursorX, int cursorY);
+        void ReleaseMouse(Point cursorPoint);
 
         /// <summary>
         /// Draw
         /// </summary>
-        void Draw(IGraphics graphics, Shapes shapes, int selectedIndex);
+        void Draw(IGraphics graphics);
     }
 }

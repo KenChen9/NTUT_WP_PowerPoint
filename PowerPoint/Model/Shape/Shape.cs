@@ -46,10 +46,10 @@ namespace PowerPoint
         /// <summary>
         /// MoveDelta
         /// </summary>
-        public void MoveDelta(int deltaX, int deltaY)
+        public void MoveDelta(Point deltaDirection)
         {
-            Point1 = new Point(Point1.X + deltaX, Point1.Y + deltaY);
-            Point2 = new Point(Point2.X + deltaX, Point2.Y + deltaY);
+            Point1 = new Point(Point1.X + deltaDirection.X, Point1.Y + deltaDirection.Y);
+            Point2 = new Point(Point2.X + deltaDirection.X, Point2.Y + deltaDirection.Y);
         }
 
         /// <summary>
@@ -60,6 +60,6 @@ namespace PowerPoint
         /// <summary>
         /// IsOverlap
         /// </summary>
-        public abstract bool IsOverlap(int cursorX, int cursorY);
+        public abstract bool IsOverlap(Point cursorPoint);
     }
 }

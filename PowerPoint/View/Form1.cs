@@ -114,7 +114,7 @@ namespace PowerPoint
         /// <param name="e">The event argument.</param>
         private void DoMouseDownOnPanel(object sender, MouseEventArgs e)
         {
-            _formPresentationModel.PressMouse();
+            _formPresentationModel.PressMouse(e.Location);
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace PowerPoint
         /// <param name="e">The event argument.</param>
         private void DoMouseUpOnPanel(object sender, MouseEventArgs e)
         {
-            _formPresentationModel.ReleaseMouse(e.X, e.Y);
+            _formPresentationModel.ReleaseMouse(e.Location);
             UpdateSlide();
         }
 
@@ -135,7 +135,7 @@ namespace PowerPoint
         /// <param name="e">The event argument.</param>
         private void DoMouseMoveOnPanel(object sender, MouseEventArgs e)
         {
-            _formPresentationModel.MoveMouse(e.X, e.Y);
+            _formPresentationModel.MoveMouse(e.Location);
         }
 
         /// <summary>

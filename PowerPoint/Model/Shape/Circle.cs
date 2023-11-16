@@ -56,7 +56,7 @@ namespace PowerPoint
         /// <summary>
         /// IsOverlap
         /// </summary>
-        public override bool IsOverlap(int cursorX, int cursorY)
+        public override bool IsOverlap(Point cursorPoint)
         {
             const int ONE = 1;
             const int TWO = 2;
@@ -64,7 +64,7 @@ namespace PowerPoint
             double centerY = (Point1.Y + Point2.Y) / TWO;
             double horizontalRadius = Math.Abs(Point1.X - Point2.X) / TWO;
             double verticalRadius = Math.Abs(Point1.Y - Point2.Y) / TWO;
-            return Math.Pow((cursorX - centerX) / horizontalRadius, TWO) + Math.Pow((cursorY - centerY) / verticalRadius, TWO) <= ONE;
+            return Math.Pow((cursorPoint.X - centerX) / horizontalRadius, TWO) + Math.Pow((cursorPoint.Y - centerY) / verticalRadius, TWO) <= ONE;
         }
     }
 }

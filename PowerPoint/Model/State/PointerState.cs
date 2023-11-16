@@ -1,10 +1,11 @@
-﻿namespace PowerPoint
+﻿using System.Drawing;
+
+namespace PowerPoint
 {
     public class PointerState : IState
     {
         private Model _model;
-        private int _lastMouseX = 0;
-        private int _lastMouseY = 0;
+        private Point _lastMousePoint = new Point(0, 0);
         private bool _pressed = false;
 
         public PointerState(Model model)
@@ -15,39 +16,38 @@
         /// <summary>
         /// PressMouse
         /// </summary>
-        public void PressMouse()
+        public void PressMouse(Point cursorPoint)
         {
             _pressed = true;
+            _model.SelectShapeIndex(cursorPoint);
         }
 
         /// <summary>
         /// MoveMouse
         /// </summary>
-        public void MoveMouse(int cursorX, int cursorY)
+        public void MoveMouse(Point cursorPoint)
         {
-            if (_pressed && _model.IsSelectedShapeOverlap(cursorX, cursorY))
+            if (_pressed && _model.IsSelectedShapeOverlap(cursorPoint))
             {
-                _model.MoveSelectedShapeDelta(cursorX - _lastMouseX, cursorY - _lastMouseY);
+                _model.MoveSelectedShapeDelta(new Point(cursorPoint.X - _lastMousePoint.X, cursorPoint.Y - _lastMousePoint.Y));
             }
-            _lastMouseX = cursorX;
-            _lastMouseY = cursorY;
+            _lastMousePoint = cursorPoint;
         }
 
         /// <summary>
         /// ReleaseMouse
         /// </summary>
-        public void ReleaseMouse(int cursorX, int cursorY)
+        public void ReleaseMouse(Point cursorPoint)
         {
             _pressed = false;
-            _model.TrySelectShapeIndex(cursorX, cursorY);
         }
 
         /// <summary>
         /// Draw
         /// </summary>
-        public void Draw(IGraphics graphics, Shapes shapes, int selectedIndex)
+        public void Draw(IGraphics graphics)
         {
-            shapes.Draw(graphics, selectedIndex);
+            
         }
     }
 }

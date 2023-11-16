@@ -78,9 +78,9 @@ namespace PowerPoint
         /// <summary>
         /// Handles the mouse press event.
         /// </summary>
-        public void PressMouse()
+        public void PressMouse(Point cursorPoint)
         {
-            _model.PressMouse();
+            _model.PressMouse(cursorPoint);
         }
 
         /// <summary>
@@ -88,18 +88,18 @@ namespace PowerPoint
         /// </summary>
         /// <param name="x">X-coordinate of the mouse position.</param>
         /// <param name="y">Y-coordinate of the mouse position.</param>
-        public void MoveMouse(int cursorX, int cursorY)
+        public void MoveMouse(Point cursorPoint)
         {
-            _model.MoveMouse(cursorX, cursorY);
+            _model.MoveMouse(cursorPoint);
         }
 
         /// <summary>
         /// Handles the mouse release event.
         /// </summary>
-        public void ReleaseMouse(int cursorX, int cursorY)
+        public void ReleaseMouse(Point cursorPoint)
         {
             _currentCursor = Cursors.Arrow;
-            _model.ReleaseMouse(cursorX, cursorY);
+            _model.ReleaseMouse(cursorPoint);
             NotifyToolCursorChanged();
         }
 
