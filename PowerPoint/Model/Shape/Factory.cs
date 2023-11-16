@@ -3,28 +3,23 @@ using System.Drawing;
 
 namespace PowerPoint
 {
-    /// <summary>
-    /// Factory class responsible for creating different types of shapes in a PowerPoint presentation.
-    /// </summary>
     public static class Factory
     {
         /// <summary>
         /// Creates a shape based on the provided shape type string.
         /// </summary>
-        /// <param name="shapeType">String representation of the shape type (線, 矩形, or 圓).</param>
-        /// <returns>A Shape object based on the specified shape type, or null if the type is not recognized.</returns>
         public static Shape CreateShape(string shapeType)
         {
-            const string LINE = "線";
-            const string RECTANGLE = "矩形";
-            const string CIRCLE = "圓";
+            const string LINE_NAME = "線";
+            const string RECTANGLE_NAME = "矩形";
+            const string CIRCLE_NAME = "圓";
             switch (shapeType)
             {
-                case LINE:
+                case LINE_NAME:
                     return CreateShape(ShapeType.Line);
-                case RECTANGLE:
+                case RECTANGLE_NAME:
                     return CreateShape(ShapeType.Rectangle);
-                case CIRCLE:
+                case CIRCLE_NAME:
                     return CreateShape(ShapeType.Circle);
                 default:
                     return null;
@@ -34,46 +29,48 @@ namespace PowerPoint
         /// <summary>
         /// Creates a shape with random coordinates based on the specified shape type.
         /// </summary>
-        /// <param name="shapeType">Type of the shape to create.</param>
-        /// <returns>A Shape object with random coordinates based on the specified shape type.</returns>
         public static Shape CreateShape(ShapeType shapeType)
         {
             const int RANDOM_MIN = 0;
             const int RANDOM_MAX = 500;
             Random random = new Random();
-            int x1 = random.Next(RANDOM_MIN, RANDOM_MAX);
-            int y1 = random.Next(RANDOM_MIN, RANDOM_MAX);
-            int x2 = random.Next(RANDOM_MIN, RANDOM_MAX);
-            int y2 = random.Next(RANDOM_MIN, RANDOM_MAX);
-            return CreateShape(shapeType, new Point(x1, y1), new Point(x2, y2));
+            Point point1 = new Point(random.Next(RANDOM_MIN, RANDOM_MAX), random.Next(RANDOM_MIN, RANDOM_MAX));
+            Point point2 = new Point(random.Next(RANDOM_MIN, RANDOM_MAX), random.Next(RANDOM_MIN, RANDOM_MAX));
+            return CreateShape(shapeType, point1, point2);
         }
 
         /// <summary>
         /// Creates a shape with specified coordinates based on the specified shape type.
         /// </summary>
-        /// <param name="shapeType">Type of the shape to create.</param>
-        /// <param name="x1">X-coordinate of the starting point.</param>
-        /// <param name="y1">Y-coordinate of the starting point.</param>
-        /// <param name="x2">X-coordinate of the ending point.</param>
-        /// <param name="y2">Y-coordinate of the ending point.</param>
-        /// <returns>A Shape object with specified coordinates based on the specified shape type.</returns>
         public static Shape CreateShape(ShapeType shapeType, Point point1, Point point2)
         {
-            int topLeftX = Math.Min(point1.X, point2.X);
-            int topLeftY = Math.Min(point1.Y, point2.Y);
-            int bottomRightX = Math.Max(point1.X, point2.X);
-            int bottomRightY = Math.Max(point1.Y, point2.Y);
             switch (shapeType)
             {
                 case ShapeType.Line:
-                    return new Line(point1.X, point1.Y, point2.X, point2.Y);
+                    return new Line(GetTopLeftPoint(point1, point2), GetBottomRightPoint(point1, point2));
                 case ShapeType.Rectangle:
-                    return new MyRectangle(topLeftX, topLeftY, bottomRightX, bottomRightY);
+                    return new MyRectangle(GetTopLeftPoint(point1, point2), GetBottomRightPoint(point1, point2));
                 case ShapeType.Circle:
-                    return new Circle(topLeftX, topLeftY, bottomRightX, bottomRightY);
+                    return new Circle(GetTopLeftPoint(point1, point2), GetBottomRightPoint(point1, point2));
                 default:
                     return null;
             }
+        }
+
+        /// <summary>
+        /// GetTopLeftPoint
+        /// </summary>
+        private static Point GetTopLeftPoint(Point point1, Point point2)
+        {
+            return new Point(Math.Min(point1.X, point2.X), Math.Min(point1.Y, point2.Y));
+        }
+
+        /// <summary>
+        /// GetBottomRightPoint
+        /// </summary>
+        private static Point GetBottomRightPoint(Point point1, Point point2)
+        {
+            return new Point(Math.Max(point1.X, point2.X), Math.Max(point1.Y, point2.Y));
         }
     }
 }

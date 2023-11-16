@@ -3,33 +3,36 @@ using System.Drawing;
 
 namespace PowerPoint
 {
-    /// <summary>
-    /// Represents a circle shape in a PowerPoint presentation.
-    /// </summary>
     public class Circle : Shape
     {
-        /// <summary>
-        /// Gets the name of the circle shape, which is "圓".
-        /// </summary>
         public override string Name
         {
             get
             {
-                const string CIRCLE = "圓";
-                return CIRCLE;
+                const string CIRCLE_NAME = "圓";
+                return CIRCLE_NAME;
             }
         }
 
-        /// <summary>
-        /// Initializes a new instance of the Circle class with specified coordinates.
-        /// </summary>
-        /// <param name="x1">The x-coordinate of the starting point.</param>
-        /// <param name="y1">The y-coordinate of the starting point.</param>
-        /// <param name="x2">The x-coordinate of the ending point.</param>
-        /// <param name="y2">The y-coordinate of the ending point.</param>
-        public Circle(int x1, int y1, int x2, int y2) : base(x1, y1, x2, y2)
+        public Circle(Point point1, Point point2) : base(GetTopLeftPoint(point1, point2), GetBottomRightPoint(point1, point2))
         {
-            // Constructor logic, if any.
+
+        }
+
+        /// <summary>
+        /// GetTopLeftPoint
+        /// </summary>
+        private static Point GetTopLeftPoint(Point point1, Point point2)
+        {
+            return new Point(Math.Min(point1.X, point2.X), Math.Min(point1.Y, point2.Y));
+        }
+
+        /// <summary>
+        /// GetBottomRightPoint
+        /// </summary>
+        private static Point GetBottomRightPoint(Point point1, Point point2)
+        {
+            return new Point(Math.Max(point1.X, point2.X), Math.Max(point1.Y, point2.Y));
         }
 
         /// <summary>
@@ -40,13 +43,13 @@ namespace PowerPoint
             if (selected)
             {
                 const int PEN_WIDTH = 2;
-                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
-                graphics.DrawCircleSupportCircle(ShapeColor.Red, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
+                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
+                graphics.DrawCircleSupportCircles(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
             }
             else
             {
                 const int PEN_WIDTH = 1;
-                graphics.DrawCircle(ShapeColor.Black, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
+                graphics.DrawCircle(ShapeColor.Black, PEN_WIDTH, Point1, Point2);
             }
         }
 
@@ -57,10 +60,10 @@ namespace PowerPoint
         {
             const int ONE = 1;
             const int TWO = 2;
-            double centerX = (_x1 + _x2) / TWO;
-            double centerY = (_y1 + _y2) / TWO;
-            double horizontalRadius = Math.Abs(_x1 - _x2) / TWO;
-            double verticalRadius = Math.Abs(_y1 - _y2) / TWO;
+            double centerX = (Point1.X + Point2.X) / TWO;
+            double centerY = (Point1.Y + Point2.Y) / TWO;
+            double horizontalRadius = Math.Abs(Point1.X - Point2.X) / TWO;
+            double verticalRadius = Math.Abs(Point1.Y - Point2.Y) / TWO;
             return Math.Pow((cursorX - centerX) / horizontalRadius, TWO) + Math.Pow((cursorY - centerY) / verticalRadius, TWO) <= ONE;
         }
     }

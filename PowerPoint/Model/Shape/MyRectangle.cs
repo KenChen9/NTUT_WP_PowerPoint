@@ -3,33 +3,36 @@ using System.Drawing;
 
 namespace PowerPoint
 {
-    /// <summary>
-    /// Represents a rectangle shape in a PowerPoint presentation.
-    /// </summary>
     public class MyRectangle : Shape
     {
-        /// <summary>
-        /// Gets the name of the rectangle shape, which is "矩形".
-        /// </summary>
         public override string Name
         {
             get
             {
-                const string RECTANGLE = "矩形";
-                return RECTANGLE;
+                const string RECTANGLE_NAME = "矩形";
+                return RECTANGLE_NAME;
             }
         }
 
-        /// <summary>
-        /// Initializes a new instance of the MyRectangle class with specified coordinates.
-        /// </summary>
-        /// <param name="x1">The x-coordinate of the top-left corner.</param>
-        /// <param name="y1">The y-coordinate of the top-left corner.</param>
-        /// <param name="x2">The x-coordinate of the bottom-right corner.</param>
-        /// <param name="y2">The y-coordinate of the bottom-right corner.</param>
-        public MyRectangle(int x1, int y1, int x2, int y2) : base(x1, y1, x2, y2)
+        public MyRectangle(Point point1, Point point2) : base(GetTopLeftPoint(point1, point2), GetBottomRightPoint(point1, point2))
         {
-            // Constructor logic, if any.
+            
+        }
+
+        /// <summary>
+        /// GetTopLeftPoint
+        /// </summary>
+        private static Point GetTopLeftPoint(Point point1, Point point2)
+        {
+            return new Point(Math.Min(point1.X, point2.X), Math.Min(point1.Y, point2.Y));
+        }
+
+        /// <summary>
+        /// GetBottomRightPoint
+        /// </summary>
+        private static Point GetBottomRightPoint(Point point1, Point point2)
+        {
+            return new Point(Math.Max(point1.X, point2.X), Math.Max(point1.Y, point2.Y));
         }
 
         /// <summary>
@@ -40,13 +43,13 @@ namespace PowerPoint
             if (selected)
             {
                 const int PEN_WIDTH = 2;
-                graphics.DrawRectangle(ShapeColor.Red, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
-                graphics.DrawRectangleSupportCircles(ShapeColor.Red, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
+                graphics.DrawRectangle(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
+                graphics.DrawRectangleSupportCircles(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
             }
             else
             {
                 int penWidth = 1;
-                graphics.DrawRectangle(ShapeColor.Black, penWidth, new Point(_x1, _y1), new Point(_x2, _y2));
+                graphics.DrawRectangle(ShapeColor.Black, penWidth, Point1, Point2);
             }
         }
 
@@ -55,7 +58,7 @@ namespace PowerPoint
         /// </summary>
         public override bool IsOverlap(int cursorX, int cursorY)
         {
-            return _x1 <= cursorX && cursorX <= _x2 && _y1 <= cursorY && cursorY <= _y2;
+            return Point1.X <= cursorX && cursorX <= Point2.X && Point1.Y <= cursorY && cursorY <= Point2.Y;
         }
     }
 }

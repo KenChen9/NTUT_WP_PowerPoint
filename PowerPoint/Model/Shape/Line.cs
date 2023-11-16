@@ -3,33 +3,20 @@ using System.Drawing;
 
 namespace PowerPoint
 {
-    /// <summary>
-    /// Represents a line shape in a PowerPoint presentation.
-    /// </summary>
     public class Line : Shape
     {
-        /// <summary>
-        /// Gets the name of the line shape, which is "線".
-        /// </summary>
         public override string Name
         {
             get
             {
-                const string LINE = "線";
-                return LINE;
+                const string LINE_NAME = "線";
+                return LINE_NAME;
             }
         }
 
-        /// <summary>
-        /// Initializes a new instance of the Line class with specified coordinates.
-        /// </summary>
-        /// <param name="x1">The x-coordinate of the starting point.</param>
-        /// <param name="y1">The y-coordinate of the starting point.</param>
-        /// <param name="x2">The x-coordinate of the ending point.</param>
-        /// <param name="y2">The y-coordinate of the ending point.</param>
-        public Line(int x1, int y1, int x2, int y2) : base(x1, y1, x2, y2)
+        public Line(Point point1, Point point2) : base(point1, point2)
         {
-            // Constructor logic, if any.
+            
         }
 
         /// <summary>
@@ -40,13 +27,13 @@ namespace PowerPoint
             if (selected)
             {
                 const int PEN_WIDTH = 2;
-                graphics.DrawLine(ShapeColor.Red, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
-                graphics.DrawLineSupportCircles(ShapeColor.Red, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
+                graphics.DrawLine(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
+                graphics.DrawLineSupportCircles(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
             }
             else
             {
                 const int PEN_WIDTH = 1;
-                graphics.DrawLine(ShapeColor.Black, PEN_WIDTH, new Point(_x1, _y1), new Point(_x2, _y2));
+                graphics.DrawLine(ShapeColor.Black, PEN_WIDTH, Point1, Point2);
             }
         }
 
@@ -56,21 +43,20 @@ namespace PowerPoint
         public override bool IsOverlap(int cursorX, int cursorY)
         {
             const int LINE_WIDTH = 6;
-            double lineWidth = LINE_WIDTH;
-            if (_x1 == _x2)
+            if (Point1.X == Point2.X)
             {
-                return _x1 - lineWidth <= cursorX && cursorX <= _x2 + lineWidth && Math.Min(_y1, _y2) <= cursorY && cursorY <= Math.Max(_y1, _y2);
+                return Point1.X - LINE_WIDTH <= cursorX && cursorX <= Point2.X + LINE_WIDTH && Math.Min(Point1.Y, Point2.Y) <= cursorY && cursorY <= Math.Max(Point1.Y, Point2.Y);
             }
-            if (_y1 == _y2)
+            if (Point1.Y == Point2.Y)
             {
-                return _y1 - lineWidth <= cursorY && cursorY <= _y2 + lineWidth && Math.Min(_x1, _x2) <= cursorX && cursorX <= Math.Max(_x1, _x2);
+                return Point1.Y - LINE_WIDTH <= cursorY && cursorY <= Point2.Y + LINE_WIDTH && Math.Min(Point1.X, Point2.X) <= cursorX && cursorX <= Math.Max(Point1.X, Point2.X);
             }
-            double slope = (double)(_y2 - _y1) / (_x2 - _x1);
-            lineWidth /= Math.Cos(Math.Atan(slope));
-            double yLine = _y1 + slope * (cursorX - _x1);
-            double yEdgeLine1 = _y1 - (cursorX - _x1) / slope;
-            double yEdgeLine2 = _y2 - (cursorX - _x2) / slope;
-            return yLine - lineWidth <= cursorY && cursorY <= yLine + lineWidth && Math.Min(yEdgeLine1, yEdgeLine2) <= cursorY && cursorY <= Math.Max(yEdgeLine1, yEdgeLine2);
+            double slope = (double)(Point2.Y - Point1.Y) / (Point2.X - Point1.X);
+            double rotatedLineWidth = LINE_WIDTH / Math.Cos(Math.Atan(slope));
+            double yLine = Point1.Y + slope * (cursorX - Point1.X);
+            double yEdgeLine1 = Point1.Y - (cursorX - Point1.X) / slope;
+            double yEdgeLine2 = Point2.Y - (cursorX - Point2.X) / slope;
+            return yLine - rotatedLineWidth <= cursorY && cursorY <= yLine + rotatedLineWidth && Math.Min(yEdgeLine1, yEdgeLine2) <= cursorY && cursorY <= Math.Max(yEdgeLine1, yEdgeLine2);
         }
     }
 }

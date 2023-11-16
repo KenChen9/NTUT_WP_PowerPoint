@@ -50,6 +50,6 @@ namespace PowerPoint
         /// <summary>
         /// DrawCircleSupportCircle
         /// </summary>
-        void DrawCircleSupportCircle(ShapeColor shapeColor, int penWidth, Point point1, Point point2);
+        void DrawCircleSupportCircles(ShapeColor shapeColor, int penWidth, Point point1, Point point2);
     }
 }

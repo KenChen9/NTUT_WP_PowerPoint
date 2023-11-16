@@ -124,7 +124,7 @@ namespace PowerPoint
         /// <summary>
         /// DrawCircleSupportCircle
         /// </summary>
-        public void DrawCircleSupportCircle(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
+        public void DrawCircleSupportCircles(ShapeColor shapeColor, int penWidth, Point point1, Point point2)
         {
             const int PEN_WIDTH = 2;
             const int SMALL_CIRCLE_RADIUS = 4;

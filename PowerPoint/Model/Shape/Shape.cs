@@ -1,33 +1,29 @@
-﻿namespace PowerPoint
+﻿using System.Drawing;
+
+namespace PowerPoint
 {
     /// <summary>
     /// Abstract base class representing a shape in a PowerPoint presentation.
     /// </summary>
     public abstract class Shape
     {
-        /// <summary>
-        /// X-coordinate of the first point defining the shape.
-        /// </summary>
-        protected int _x1;
+        protected Point Point1
+        {
+            get;
+            set; 
+        }
 
-        /// <summary>
-        /// Y-coordinate of the first point defining the shape.
-        /// </summary>
-        protected int _y1;
+        protected Point Point2
+        {
+            get;
+            set; 
+        }
 
-        /// <summary>
-        /// X-coordinate of the second point defining the shape.
-        /// </summary>
-        protected int _x2;
+        public abstract string Name
+        {
+            get;
+        }
 
-        /// <summary>
-        /// Y-coordinate of the second point defining the shape.
-        /// </summary>
-        protected int _y2;
-
-        /// <summary>
-        /// Gets the information about the shape's coordinates in the format "(x1, y1), (x2, y2)".
-        /// </summary>
         public string Information
         {
             get
@@ -37,31 +33,14 @@
                 const string FORMAT_PART3 = "), (";
                 const string FORMAT_PART4 = ", ";
                 const string FORMAT_PART5 = ")";
-                return FORMAT_PART1 + _x1 + FORMAT_PART2 + _y1 + FORMAT_PART3 + _x2 + FORMAT_PART4 + _y2 + FORMAT_PART5;
+                return FORMAT_PART1 + Point1.X + FORMAT_PART2 + Point1.Y + FORMAT_PART3 + Point2.X + FORMAT_PART4 + Point2.Y + FORMAT_PART5;
             }
         }
 
-        /// <summary>
-        /// Gets the name of the shape.
-        /// </summary>
-        public abstract string Name
+        protected Shape(Point point1, Point point2)
         {
-            get;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Shape class with specified coordinates.
-        /// </summary>
-        /// <param name="x1">X-coordinate of the first point.</param>
-        /// <param name="y1">Y-coordinate of the first point.</param>
-        /// <param name="x2">X-coordinate of the second point.</param>
-        /// <param name="y2">Y-coordinate of the second point.</param>
-        protected Shape(int x1, int y1, int x2, int y2)
-        {
-            _x1 = x1;
-            _y1 = y1;
-            _x2 = x2;
-            _y2 = y2;
+            Point1 = point1;
+            Point2 = point2;
         }
 
         /// <summary>
@@ -69,17 +48,13 @@
         /// </summary>
         public void MoveDelta(int deltaX, int deltaY)
         {
-            _x1 += deltaX;
-            _y1 += deltaY;
-            _x2 += deltaX;
-            _y2 += deltaY;
+            Point1 = new Point(Point1.X + deltaX, Point1.Y + deltaY);
+            Point2 = new Point(Point2.X + deltaX, Point2.Y + deltaY);
         }
 
         /// <summary>
         /// Draws the shape using the specified graphics object and shape color.
         /// </summary>
-        /// <param name="graphics">The IGraphics object used for drawing.</param>
-        /// <param name="shapeColor">The color of the shape.</param>
         public abstract void Draw(IGraphics graphics, bool selected);
 
         /// <summary>
