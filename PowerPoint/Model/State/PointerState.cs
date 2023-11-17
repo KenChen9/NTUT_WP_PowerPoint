@@ -19,6 +19,7 @@ namespace PowerPoint
         public void PressMouse(Point cursorPoint)
         {
             _pressed = true;
+            _model.TryResizeSelectedShape(cursorPoint);
             _model.SelectShapeIndex(cursorPoint);
         }
 

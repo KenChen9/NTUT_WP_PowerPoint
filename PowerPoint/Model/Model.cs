@@ -157,7 +157,7 @@ namespace PowerPoint
         /// </summary>
         public bool IsSelectedShapeOverlap(Point cursorPoint)
         {
-            return _selectedIndex != -1 && ShapeList[_selectedIndex].IsOverlap(cursorPoint);
+            return _selectedIndex != -1 && _shapes.IsShapeOverlap(_selectedIndex, cursorPoint);
         }
 
         /// <summary>
@@ -165,7 +165,18 @@ namespace PowerPoint
         /// </summary>
         public void MoveSelectedShapeDelta(Point deltaDirection)
         {
-            ShapeList[_selectedIndex].MoveDelta(deltaDirection);
+            _shapes.MoveShapeDelta(_selectedIndex, deltaDirection);
+        }
+
+        /// <summary>
+        /// TryResizeSelectedShape
+        /// </summary>
+        public void TryResizeSelectedShape(Point cursorPoint)
+        {
+            if (_selectedIndex != -1 && _shapes.IsShapeSupportPointOverlap(_selectedIndex, cursorPoint))
+            {
+                _shapes.ResizeShape(_selectedIndex, cursorPoint);
+            }
         }
 
         /// <summary>
@@ -173,15 +184,7 @@ namespace PowerPoint
         /// </summary>
         public void SelectShapeIndex(Point cursorPoint)
         {
-            for (int i = ShapeList.Count - 1; i >= 0; i--)
-            {
-                if (ShapeList[i].IsOverlap(cursorPoint))
-                {
-                    _selectedIndex = i;
-                    return;
-                }
-            }
-            _selectedIndex = -1;
+            _selectedIndex = _shapes.SelectShapeIndex(cursorPoint);
         }
 
         /// <summary>

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
 
 namespace PowerPoint
 {
@@ -48,6 +49,53 @@ namespace PowerPoint
         public void ClearAll()
         {
             _shapeList.Clear();
+        }
+
+        /// <summary>
+        /// IsShapeOverlap
+        /// </summary>
+        public bool IsShapeOverlap(int selectedIndex, Point cursorPoint)
+        {
+            return _shapeList[selectedIndex].IsOverlap(cursorPoint);
+        }
+
+        /// <summary>
+        /// IsShapeSupportPointOverlap
+        /// </summary>
+        public bool IsShapeSupportPointOverlap(int selectedIndex, Point cursorPoint)
+        {
+
+        }
+
+        /// <summary>
+        /// ResizeShape
+        /// </summary>
+        public void ResizeShape(int selectedIndex, Point cursorPoint)
+        {
+            _shapeList[selectedIndex].Resize(cursorPoint);
+        }
+
+        /// <summary>
+        /// MoveShapeDelta
+        /// </summary>
+        public void MoveShapeDelta(int selectedIndex, Point deltaDirection)
+        {
+            _shapeList[selectedIndex].MoveDelta(deltaDirection);
+        }
+
+        /// <summary>
+        /// SelectShapeIndex
+        /// </summary>
+        public int SelectShapeIndex(Point cursorPoint)
+        {
+            for (int i = _shapeList.Count - 1; i >= 0; i--)
+            {
+                if (_shapeList[i].IsOverlap(cursorPoint))
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         /// <summary>

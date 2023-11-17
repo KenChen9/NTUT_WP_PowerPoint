@@ -149,9 +149,12 @@ namespace PowerPoint
         /// </summary>
         public void DrawLineFrame(int penWidth, Point point1, Point point2)
         {
-            const int TWO = 2;
-            Point center = new Point((point1.X + point2.X) / TWO, (point1.Y + point2.Y) / TWO);
-            DrawSupportCircle(center, penWidth);
+            Point topRight = new Point(point2.X, point1.Y);
+            Point bottomLeft = new Point(point1.X, point2.Y);
+            DrawSupportLine(point1, topRight, penWidth);
+            DrawSupportLine(topRight, point2, penWidth);
+            DrawSupportLine(point2, bottomLeft, penWidth);
+            DrawSupportLine(bottomLeft, point1, penWidth);
             DrawSupportCircle(point1, penWidth);
             DrawSupportCircle(point2, penWidth);
         }
@@ -161,11 +164,6 @@ namespace PowerPoint
         /// </summary>
         public void DrawRectangleFrame(int penWidth, Point point1, Point point2)
         {
-            Point topRight = new Point(point2.X, point1.Y);
-            Point bottomLeft = new Point(point1.X, point2.Y);
-            DrawSupportCircle(topRight, penWidth);
-            DrawSupportCircle(bottomLeft, penWidth);
-            DrawSupportCircle(point1, penWidth);
             DrawSupportCircle(point2, penWidth);
         }
 
@@ -180,9 +178,6 @@ namespace PowerPoint
             DrawSupportLine(topRight, point2, penWidth);
             DrawSupportLine(point2, bottomLeft, penWidth);
             DrawSupportLine(bottomLeft, point1, penWidth);
-            DrawSupportCircle(topRight, penWidth);
-            DrawSupportCircle(bottomLeft, penWidth);
-            DrawSupportCircle(point1, penWidth);
             DrawSupportCircle(point2, penWidth);
         }
     }

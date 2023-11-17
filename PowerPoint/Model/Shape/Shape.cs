@@ -39,8 +39,7 @@ namespace PowerPoint
 
         protected Shape(Point point1, Point point2)
         {
-            Point1 = point1;
-            Point2 = point2;
+            Resize(point1, point2);
         }
 
         /// <summary>
@@ -50,6 +49,14 @@ namespace PowerPoint
         {
             Point1 = new Point(Point1.X + deltaDirection.X, Point1.Y + deltaDirection.Y);
             Point2 = new Point(Point2.X + deltaDirection.X, Point2.Y + deltaDirection.Y);
+        }
+
+        /// <summary>
+        /// Transform
+        /// </summary>
+        public void Resize(Point point)
+        {
+            Point2 = point;
         }
 
         /// <summary>
