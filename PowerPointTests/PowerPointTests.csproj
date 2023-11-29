@@ -57,8 +57,11 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Model\Shape\CircleTests.cs" />
+    <Compile Include="Model\Shape\FactoryTests.cs" />
     <Compile Include="Model\Shape\LineTests.cs" />
     <Compile Include="Model\Shape\MyRectangleTests.cs" />
+    <Compile Include="Model\Shape\ShapesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\TestGraphics.cs" />
   </ItemGroup>

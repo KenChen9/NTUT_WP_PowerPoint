@@ -81,20 +81,23 @@ namespace PowerPoint.Tests
         [TestMethod()]
         public void FindSupportCircleOverlapIndexTest()
         {
-            Line line = new Line(new Point(3, 4), new Point(5, 6));
             {
+                Line line = new Line(new Point(3, 4), new Point(5, 6));
                 int supportCircleOverlapIndex = line.FindSupportCircleOverlapIndex(new Point(3, 4));
                 Assert.AreEqual(1, supportCircleOverlapIndex);
             }
             {
+                Line line = new Line(new Point(3, 4), new Point(5, 6));
                 int supportCircleOverlapIndex = line.FindSupportCircleOverlapIndex(new Point(5, 6));
                 Assert.AreEqual(1, supportCircleOverlapIndex);
             }
             {
+                Line line = new Line(new Point(3, 4), new Point(5, 6));
                 int supportCircleOverlapIndex = line.FindSupportCircleOverlapIndex(new Point(9, 10));
                 Assert.AreEqual(2, supportCircleOverlapIndex);
             }
             {
+                Line line = new Line(new Point(3, 4), new Point(5, 6));
                 int supportCircleOverlapIndex = line.FindSupportCircleOverlapIndex(new Point(0, 10));
                 Assert.AreEqual(-1, supportCircleOverlapIndex);
             }
