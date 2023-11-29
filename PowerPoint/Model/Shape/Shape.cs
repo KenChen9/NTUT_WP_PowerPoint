@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace PowerPoint
 {
@@ -39,7 +40,8 @@ namespace PowerPoint
 
         protected Shape(Point point1, Point point2)
         {
-            Resize(point1, point2);
+            Point1 = point1;
+            Point2 = point2;
         }
 
         /// <summary>
@@ -54,9 +56,25 @@ namespace PowerPoint
         /// <summary>
         /// Transform
         /// </summary>
-        public void Resize(Point point)
+        public void Resize(int supportCircleIndex, Point point)
         {
-            Point2 = point;
+            switch (supportCircleIndex)
+            {
+                case 1:
+                    Point1 = point;
+                    break;
+                case 2:
+                    Point2 = point;
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// GetTwoPointDistance
+        /// </summary>
+        protected static double GetTwoPointDistance(Point point1, Point point2)
+        {
+            return Math.Sqrt(Math.Pow(point1.X - point2.X, 2) + Math.Pow(point1.Y - point2.Y, 2));
         }
 
         /// <summary>
@@ -68,5 +86,10 @@ namespace PowerPoint
         /// IsOverlap
         /// </summary>
         public abstract bool IsOverlap(Point cursorPoint);
+
+        /// <summary>
+        /// FindSupportCircleOverlapIndex
+        /// </summary>
+        public abstract int FindSupportCircleOverlapIndex(Point cursorPoint);
     }
 }

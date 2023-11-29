@@ -61,6 +61,7 @@ namespace PowerPoint
             if (rowIndex >= 0 && columnIndex == 0)
             {
                 _shapes.RemoveAt(rowIndex);
+                _selectedIndex = -1;
             }
             NotifyShapeListChanged();
         }
@@ -153,29 +154,32 @@ namespace PowerPoint
         }
 
         /// <summary>
-        /// IsSelectedShapeOverlap
+        /// FindShapeSupportCircleOverlapIndex
         /// </summary>
-        public bool IsSelectedShapeOverlap(Point cursorPoint)
+        public int FindShapeSupportCircleOverlapIndex(Point cursorPoint)
         {
-            return _selectedIndex != -1 && _shapes.IsShapeOverlap(_selectedIndex, cursorPoint);
+            return _selectedIndex != -1 ? _shapes.FindShapeSupportCircleOverlapIndex(_selectedIndex, cursorPoint) : -1;
         }
 
         /// <summary>
         /// MoveSelectedShapeDelta
         /// </summary>
-        public void MoveSelectedShapeDelta(Point deltaDirection)
+        public void TryMoveSelectedShapeDelta(Point cursorPoint, Point deltaDirection)
         {
-            _shapes.MoveShapeDelta(_selectedIndex, deltaDirection);
+            if (_selectedIndex != -1 && _shapes.IsShapeOverlap(_selectedIndex, cursorPoint))
+            {
+                _shapes.MoveShapeDelta(_selectedIndex, deltaDirection);
+            }
         }
 
         /// <summary>
         /// TryResizeSelectedShape
         /// </summary>
-        public void TryResizeSelectedShape(Point cursorPoint)
+        public void TryResizeSelectedShape(int supportCircleOverlapIndex, Point cursorPoint)
         {
-            if (_selectedIndex != -1 && _shapes.IsShapeSupportPointOverlap(_selectedIndex, cursorPoint))
+            if (_selectedIndex != -1)
             {
-                _shapes.ResizeShape(_selectedIndex, cursorPoint);
+                _shapes.ResizeShape(_selectedIndex, supportCircleOverlapIndex, cursorPoint);
             }
         }
 

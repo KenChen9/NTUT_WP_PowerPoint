@@ -54,6 +54,15 @@ namespace PowerPoint
         }
 
         /// <summary>
+        /// IsNearSupportCircle
+        /// </summary>
+        private bool IsNearSupportCircle(Point cursorPoint)
+        {
+            const int CLOSENESS_TOLERANCE = 6;
+            return GetTwoPointDistance(cursorPoint, Point1) <= CLOSENESS_TOLERANCE || GetTwoPointDistance(cursorPoint, Point2) <= CLOSENESS_TOLERANCE;
+        }
+
+        /// <summary>
         /// IsOverlap
         /// </summary>
         public override bool IsOverlap(Point cursorPoint)
@@ -64,7 +73,19 @@ namespace PowerPoint
             double centerY = (Point1.Y + Point2.Y) / TWO;
             double horizontalRadius = Math.Abs(Point1.X - Point2.X) / TWO;
             double verticalRadius = Math.Abs(Point1.Y - Point2.Y) / TWO;
-            return Math.Pow((cursorPoint.X - centerX) / horizontalRadius, TWO) + Math.Pow((cursorPoint.Y - centerY) / verticalRadius, TWO) <= ONE;
+            bool insideCircle = Math.Pow((cursorPoint.X - centerX) / horizontalRadius, TWO) + Math.Pow((cursorPoint.Y - centerY) / verticalRadius, TWO) <= ONE;
+            return insideCircle || IsNearSupportCircle(cursorPoint);
+
+        }
+
+        /// <summary>
+        /// FindSupportCircleOverlapIndex
+        /// </summary>
+        public override int FindSupportCircleOverlapIndex(Point cursorPoint)
+        {
+            const int SUPPORT_CIRCLE_INDEX2 = 2;
+            const int CLOSENESS_TOLERANCE = 6;
+            return GetTwoPointDistance(cursorPoint, Point2) <= CLOSENESS_TOLERANCE ? SUPPORT_CIRCLE_INDEX2 : -1;
         }
     }
 }

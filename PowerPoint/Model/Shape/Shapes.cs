@@ -62,17 +62,17 @@ namespace PowerPoint
         /// <summary>
         /// IsShapeSupportPointOverlap
         /// </summary>
-        public bool IsShapeSupportPointOverlap(int selectedIndex, Point cursorPoint)
+        public int FindShapeSupportCircleOverlapIndex(int selectedIndex, Point cursorPoint)
         {
-
+            return _shapeList[selectedIndex].FindSupportCircleOverlapIndex(cursorPoint);
         }
 
         /// <summary>
         /// ResizeShape
         /// </summary>
-        public void ResizeShape(int selectedIndex, Point cursorPoint)
+        public void ResizeShape(int selectedIndex, int supportCircleOverlapIndex, Point cursorPoint)
         {
-            _shapeList[selectedIndex].Resize(cursorPoint);
+            _shapeList[selectedIndex].Resize(supportCircleOverlapIndex, cursorPoint);
         }
 
         /// <summary>

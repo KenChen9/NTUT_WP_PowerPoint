@@ -48,8 +48,8 @@ namespace PowerPoint
             }
             else
             {
-                int penWidth = 1;
-                graphics.DrawRectangle(ShapeColor.Black, penWidth, Point1, Point2);
+                const int PEN_WIDTH = 1;
+                graphics.DrawRectangle(ShapeColor.Black, PEN_WIDTH, Point1, Point2);
             }
         }
 
@@ -59,6 +59,15 @@ namespace PowerPoint
         public override bool IsOverlap(Point cursorPoint)
         {
             return Point1.X <= cursorPoint.X && cursorPoint.X <= Point2.X && Point1.Y <= cursorPoint.Y && cursorPoint.Y <= Point2.Y;
+        }
+
+        /// <summary>
+        /// FindSupportCircleOverlapIndex
+        /// </summary>
+        public override int FindSupportCircleOverlapIndex(Point cursorPoint)
+        {
+            const int SUPPORT_CIRCLE_INDEX2 = 2;
+            return GetTwoPointDistance(cursorPoint, Point2) <= 6 ? SUPPORT_CIRCLE_INDEX2 : -1;
         }
     }
 }

@@ -38,6 +38,15 @@ namespace PowerPoint
         }
 
         /// <summary>
+        /// IsNearSupportCircle
+        /// </summary>
+        private bool IsNearSupportCircle(Point cursorPoint)
+        {
+            const int CLOSENESS_TOLERANCE = 6;
+            return GetTwoPointDistance(cursorPoint, Point1) <= CLOSENESS_TOLERANCE || GetTwoPointDistance(cursorPoint, Point2) <= CLOSENESS_TOLERANCE;
+        }
+
+        /// <summary>
         /// IsOverlap
         /// </summary>
         public override bool IsOverlap(Point cursorPoint)
@@ -56,7 +65,26 @@ namespace PowerPoint
             double yLine = Point1.Y + slope * (cursorPoint.X - Point1.X);
             double yEdgeLine1 = Point1.Y - (cursorPoint.X - Point1.X) / slope;
             double yEdgeLine2 = Point2.Y - (cursorPoint.X - Point2.X) / slope;
-            return yLine - rotatedLineWidth <= cursorPoint.Y && cursorPoint.Y <= yLine + rotatedLineWidth && Math.Min(yEdgeLine1, yEdgeLine2) <= cursorPoint.Y && cursorPoint.Y <= Math.Max(yEdgeLine1, yEdgeLine2);
+            bool onLine = yLine - rotatedLineWidth <= cursorPoint.Y && cursorPoint.Y <= yLine + rotatedLineWidth && Math.Min(yEdgeLine1, yEdgeLine2) <= cursorPoint.Y && cursorPoint.Y <= Math.Max(yEdgeLine1, yEdgeLine2);
+            return onLine || IsNearSupportCircle(cursorPoint);
+        }
+
+        /// <summary>
+        /// FindSupportCircleOverlapIndex
+        /// </summary>
+        public override int FindSupportCircleOverlapIndex(Point cursorPoint)
+        {
+            const int SUPPORT_CIRCLE_INDEX1 = 1;
+            const int SUPPORT_CIRCLE_INDEX2 = 2;
+            if (GetTwoPointDistance(cursorPoint, Point1) <= 6)
+            {
+                return SUPPORT_CIRCLE_INDEX1;
+            }
+            if (GetTwoPointDistance(cursorPoint, Point2) <= 6)
+            {
+                return SUPPORT_CIRCLE_INDEX2;
+            }
+            return -1;
         }
     }
 }

@@ -19,7 +19,6 @@ namespace PowerPoint
         public void PressMouse(Point cursorPoint)
         {
             _pressed = true;
-            _model.TryResizeSelectedShape(cursorPoint);
             _model.SelectShapeIndex(cursorPoint);
         }
 
@@ -28,9 +27,18 @@ namespace PowerPoint
         /// </summary>
         public void MoveMouse(Point cursorPoint)
         {
-            if (_pressed && _model.IsSelectedShapeOverlap(cursorPoint))
+            if (_pressed)
             {
-                _model.MoveSelectedShapeDelta(new Point(cursorPoint.X - _lastMousePoint.X, cursorPoint.Y - _lastMousePoint.Y));
+                int supportCircleOverlapIndex = _model.FindShapeSupportCircleOverlapIndex(cursorPoint);
+                if (supportCircleOverlapIndex != -1)
+                {
+                    _model.TryResizeSelectedShape(supportCircleOverlapIndex, cursorPoint);
+                }
+                else
+                {
+                    Point deltaDirection = new Point(cursorPoint.X - _lastMousePoint.X, cursorPoint.Y - _lastMousePoint.Y);
+                    _model.TryMoveSelectedShapeDelta(cursorPoint, deltaDirection);
+                }
             }
             _lastMousePoint = cursorPoint;
         }
