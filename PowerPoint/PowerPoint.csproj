@@ -50,6 +50,7 @@
     <Compile Include="Model\Command\AddCommand.cs" />
     <Compile Include="Model\Command\ICommand.cs" />
     <Compile Include="Model\Shape\Circle.cs" />
+    <Compile Include="Model\Shape\MyPoint.cs" />
     <Compile Include="Model\State\DrawingState.cs" />
     <Compile Include="Model\Shape\Factory.cs" />
     <Compile Include="Model\State\IState.cs" />

@@ -8,13 +8,13 @@ namespace PowerPoint
     /// </summary>
     public abstract class Shape
     {
-        protected Point Point1
+        protected Point First
         {
             get;
             set; 
         }
 
-        protected Point Point2
+        protected Point Second
         {
             get;
             set; 
@@ -34,14 +34,14 @@ namespace PowerPoint
                 const string FORMAT_PART3 = "), (";
                 const string FORMAT_PART4 = ", ";
                 const string FORMAT_PART5 = ")";
-                return FORMAT_PART1 + Point1.X + FORMAT_PART2 + Point1.Y + FORMAT_PART3 + Point2.X + FORMAT_PART4 + Point2.Y + FORMAT_PART5;
+                return FORMAT_PART1 + First.X + FORMAT_PART2 + First.Y + FORMAT_PART3 + Second.X + FORMAT_PART4 + Second.Y + FORMAT_PART5;
             }
         }
 
         protected Shape(Point point1, Point point2)
         {
-            Point1 = point1;
-            Point2 = point2;
+            First = point1;
+            Second = point2;
         }
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace PowerPoint
         /// </summary>
         public void MoveDelta(Point deltaDirection)
         {
-            Point1 = new Point(Point1.X + deltaDirection.X, Point1.Y + deltaDirection.Y);
-            Point2 = new Point(Point2.X + deltaDirection.X, Point2.Y + deltaDirection.Y);
+            First = new Point(First.X + deltaDirection.X, First.Y + deltaDirection.Y);
+            Second = new Point(Second.X + deltaDirection.X, Second.Y + deltaDirection.Y);
         }
 
         /// <summary>
@@ -61,10 +61,10 @@ namespace PowerPoint
             switch (supportCircleIndex)
             {
                 case 1:
-                    Point1 = point;
+                    First = point;
                     break;
                 case 2:
-                    Point2 = point;
+                    Second = point;
                     break;
             }
         }
