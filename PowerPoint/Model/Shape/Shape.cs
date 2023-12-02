@@ -1,23 +1,24 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Diagnostics;
 
 namespace PowerPoint
 {
-    /// <summary>
-    /// Abstract base class representing a shape in a PowerPoint presentation.
-    /// </summary>
     public abstract class Shape
     {
-        protected Point First
+        protected MyPoint First
         {
             get;
             set; 
         }
 
-        protected Point Second
+        protected MyPoint Second
         {
             get;
             set; 
+        }
+
+        public string Information
+        {
+            get => $"{First.Information}, {Second.Information}";
         }
 
         public abstract string Name
@@ -25,71 +26,44 @@ namespace PowerPoint
             get;
         }
 
-        public string Information
+        protected Shape(MyPoint first, MyPoint second)
         {
-            get
-            {
-                const string FORMAT_PART1 = "(";
-                const string FORMAT_PART2 = ", ";
-                const string FORMAT_PART3 = "), (";
-                const string FORMAT_PART4 = ", ";
-                const string FORMAT_PART5 = ")";
-                return FORMAT_PART1 + First.X + FORMAT_PART2 + First.Y + FORMAT_PART3 + Second.X + FORMAT_PART4 + Second.Y + FORMAT_PART5;
-            }
+            Debug.Assert(first != null);
+            Debug.Assert(second != null);
+            First = first;
+            Second = second;
         }
 
-        protected Shape(Point point1, Point point2)
+        protected Shape(Shape other)
         {
-            First = point1;
-            Second = point2;
+            Debug.Assert(other != null);
+            First = other.First;
+            Second = other.Second;
         }
 
-        /// <summary>
-        /// MoveDelta
-        /// </summary>
-        public void MoveDelta(Point deltaDirection)
+        // Comment
+        public Shape Move(MyPoint first)
         {
-            First = new Point(First.X + deltaDirection.X, First.Y + deltaDirection.Y);
-            Second = new Point(Second.X + deltaDirection.X, Second.Y + deltaDirection.Y);
+            Debug.Assert(first != null);
+            return Offset(first - First);
         }
 
-        /// <summary>
-        /// Transform
-        /// </summary>
-        public void Resize(int supportCircleIndex, Point point)
-        {
-            switch (supportCircleIndex)
-            {
-                case 1:
-                    First = point;
-                    break;
-                case 2:
-                    Second = point;
-                    break;
-            }
-        }
+        // Comment
+        public abstract Shape Clone();
 
-        /// <summary>
-        /// GetTwoPointDistance
-        /// </summary>
-        protected static double GetTwoPointDistance(Point point1, Point point2)
-        {
-            return Math.Sqrt(Math.Pow(point1.X - point2.X, 2) + Math.Pow(point1.Y - point2.Y, 2));
-        }
+        // Comment
+        public abstract Shape Offset(MyPoint delta);
 
-        /// <summary>
-        /// Draws the shape using the specified graphics object and shape color.
-        /// </summary>
+        // Comment
+        public abstract Shape Scale(MyPoint scalar);
+
+        // Comment
+        public abstract Shape Resize(MyPoint point, MyPoint destination);
+
+        // Comment
         public abstract void Draw(IGraphics graphics, bool selected);
 
-        /// <summary>
-        /// IsOverlap
-        /// </summary>
-        public abstract bool IsOverlap(Point cursorPoint);
-
-        /// <summary>
-        /// FindSupportCircleOverlapIndex
-        /// </summary>
-        public abstract int FindSupportCircleOverlapIndex(Point cursorPoint);
+        // Comment
+        public abstract bool IsOverlap(MyPoint cursorPoint);
     }
 }
