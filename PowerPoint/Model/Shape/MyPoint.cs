@@ -27,17 +27,20 @@ namespace PowerPoint
             _y = other._y;
         }
 
+        // Comment
         public MyPoint Clone()
         {
             return new MyPoint(this);
         }
 
+        // Comment
         public MyPoint MultiplyElementwise(MyPoint other)
         {
             Debug.Assert(other != null);
             return new MyPoint(_x * other._x, _y * other._y);
         }
 
+        // Comment
         public bool IsNear(MyPoint other)
         {
             Debug.Assert(other != null);

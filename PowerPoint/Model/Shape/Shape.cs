@@ -61,9 +61,9 @@ namespace PowerPoint
         public abstract Shape Resize(MyPoint point, MyPoint destination);
 
         // Comment
-        public abstract void Draw(IGraphics graphics, bool selected);
+        public abstract bool IsOverlap(MyPoint other);
 
         // Comment
-        public abstract bool IsOverlap(MyPoint cursorPoint);
+        public abstract void Draw(IGraphics graphics, bool selected);
     }
 }
