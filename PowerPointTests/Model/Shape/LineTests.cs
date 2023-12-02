@@ -67,15 +67,32 @@ namespace PowerPoint.Tests
             Assert.AreEqual(1, graphics.PenWidth);
             Assert.AreEqual(new Point(3, 4), graphics.Point1);
             Assert.AreEqual(new Point(5, 6), graphics.Point2);
+            line.Draw(graphics, true);
+            Assert.AreEqual(ShapeColor.Red, graphics.ShapeColor);
+            Assert.AreEqual(2, graphics.PenWidth);
+            Assert.AreEqual(new Point(3, 4), graphics.Point1);
+            Assert.AreEqual(new Point(5, 6), graphics.Point2);
         }
 
         [TestMethod()]
         public void IsOverlapTest()
         {
-            Line line = new Line(new Point(3, 4), new Point(5, 6));
-            Assert.IsTrue(line.IsOverlap(new Point(1, 2)));
-            Assert.IsTrue(line.IsOverlap(new Point(0, 0)));
-            Assert.IsFalse(line.IsOverlap(new Point(0, 10)));
+            {
+                Line line = new Line(new Point(3, 4), new Point(5, 6));
+                Assert.IsTrue(line.IsOverlap(new Point(1, 2)));
+                Assert.IsTrue(line.IsOverlap(new Point(0, 0)));
+                Assert.IsFalse(line.IsOverlap(new Point(0, 10)));
+            }
+            {
+                Line line = new Line(new Point(7, 8), new Point(7, 10));
+                Assert.IsTrue(line.IsOverlap(new Point(7, 9)));
+                Assert.IsFalse(line.IsOverlap(new Point(7, 20)));
+            }
+            {
+                Line line = new Line(new Point(8, 7), new Point(10, 7));
+                Assert.IsTrue(line.IsOverlap(new Point(9, 7)));
+                Assert.IsFalse(line.IsOverlap(new Point(20, 7)));
+            }
         }
 
         [TestMethod()]

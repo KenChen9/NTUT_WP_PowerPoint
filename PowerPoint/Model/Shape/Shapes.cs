@@ -43,6 +43,14 @@ namespace PowerPoint
             _shapeList.RemoveAt(index);
         }
 
+        public void RemoveLast()
+        {
+            if (_shapeList.Count > 0)
+            {
+                _shapeList.RemoveAt(_shapeList.Count - 1);
+            }
+        }
+
         /// <summary>
         /// ClearAll
         /// </summary>
@@ -72,6 +80,10 @@ namespace PowerPoint
         /// </summary>
         public void ResizeShape(int selectedIndex, int supportCircleOverlapIndex, Point cursorPoint)
         {
+            if (selectedIndex < 0)
+            {
+                return;
+            }
             _shapeList[selectedIndex].Resize(supportCircleOverlapIndex, cursorPoint);
         }
 
@@ -80,6 +92,10 @@ namespace PowerPoint
         /// </summary>
         public void MoveShapeDelta(int selectedIndex, Point deltaDirection)
         {
+            if (selectedIndex < 0)
+            {
+                return;
+            }
             _shapeList[selectedIndex].MoveDelta(deltaDirection);
         }
 

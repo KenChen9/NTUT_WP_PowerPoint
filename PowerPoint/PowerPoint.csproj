@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Command\CommandManager.cs" />
+    <Compile Include="Model\Command\AddCommand.cs" />
+    <Compile Include="Model\Command\ICommand.cs" />
     <Compile Include="Model\Shape\Circle.cs" />
     <Compile Include="Model\State\DrawingState.cs" />
     <Compile Include="Model\Shape\Factory.cs" />

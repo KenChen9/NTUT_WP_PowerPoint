@@ -67,6 +67,11 @@ namespace PowerPoint.Tests
             Assert.AreEqual(1, graphics.PenWidth);
             Assert.AreEqual(new Point(3, 4), graphics.Point1);
             Assert.AreEqual(new Point(5, 6), graphics.Point2);
+            circle.Draw(graphics, true);
+            Assert.AreEqual(ShapeColor.Red, graphics.ShapeColor);
+            Assert.AreEqual(2, graphics.PenWidth);
+            Assert.AreEqual(new Point(3, 4), graphics.Point1);
+            Assert.AreEqual(new Point(5, 6), graphics.Point2);
         }
 
         [TestMethod()]

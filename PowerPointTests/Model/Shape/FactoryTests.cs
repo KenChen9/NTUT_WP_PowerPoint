@@ -18,6 +18,7 @@ namespace PowerPoint.Tests
             Assert.IsInstanceOfType(Factory.CreateShape("線"), typeof(Line));
             Assert.IsInstanceOfType(Factory.CreateShape("矩形"), typeof(MyRectangle));
             Assert.IsInstanceOfType(Factory.CreateShape("圓"), typeof(Circle));
+            Assert.IsNull(Factory.CreateShape("A"));
         }
 
         [TestMethod()]
@@ -26,6 +27,7 @@ namespace PowerPoint.Tests
             Assert.IsInstanceOfType(Factory.CreateShape(ShapeType.Line), typeof(Line));
             Assert.IsInstanceOfType(Factory.CreateShape(ShapeType.Rectangle), typeof(MyRectangle));
             Assert.IsInstanceOfType(Factory.CreateShape(ShapeType.Circle), typeof(Circle));
+            Assert.IsNull(Factory.CreateShape(ShapeType.Arrow));
         }
 
         [TestMethod()]

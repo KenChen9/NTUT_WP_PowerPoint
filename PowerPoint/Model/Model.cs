@@ -66,6 +66,11 @@ namespace PowerPoint
             NotifyShapeListChanged();
         }
 
+        public void RemoveLastShape()
+        {
+            _shapes.RemoveLast();
+        }
+
         /// <summary>
         /// RemoveSelectedShape
         /// </summary>
