@@ -1,6 +1,7 @@
 # NTUT_WP_PowerPoint
 
 ## 需求
+
 1. GUI
 2. MVC
 3. Presentation Model Pattern
@@ -21,6 +22,10 @@
 18. 美觀
 
 最後更新 README 時間：2023/12/4 00:34
+
+## 教授相關
+
+教授看起來很 Chill，滿酷的。
 
 [教授的個人網站](https://woeikaechen.synology.me/wkc/)
 
