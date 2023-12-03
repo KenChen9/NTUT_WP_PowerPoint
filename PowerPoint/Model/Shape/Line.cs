@@ -65,14 +65,18 @@ namespace PowerPoint
         public override bool IsOverlap(MyPoint other)
         {
             Debug.Assert(other != null);
-            throw new NotImplementedException();
+            MyPoint lineSegmentVector = Second - First;
+            MyPoint pointSegmentVector = other - First;
+            bool inside = lineSegmentVector.Length >= pointSegmentVector.Length;
+            bool sameDirection = Math.Abs(lineSegmentVector.Normalize().Dot(pointSegmentVector.Normalize()) - 1) <= .001;
+            return inside && sameDirection;
         }
 
         // Comment
         public override void Draw(IGraphics graphics, bool selected)
         {
             Debug.Assert(graphics != null);
-            throw new NotImplementedException();
+            graphics.DrawLine(selected, First, Second);
         }
     }
 }

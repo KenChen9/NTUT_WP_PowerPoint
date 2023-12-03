@@ -12,6 +12,11 @@ namespace PowerPoint
             get => $"({_x}, {_y})";
         }
 
+        public double Length
+        {
+            get => Math.Sqrt(_x * _x + _y * _y);
+        }
+
         public MyPoint(double x, double y)
         {
             Debug.Assert(x >= 0 && x < 1);
@@ -33,11 +38,22 @@ namespace PowerPoint
             return new MyPoint(this);
         }
 
+        public MyPoint Normalize()
+        {
+            return new MyPoint(_x / Length, _y / Length);
+        }
+
         // Comment
         public MyPoint MultiplyElementwise(MyPoint other)
         {
             Debug.Assert(other != null);
             return new MyPoint(_x * other._x, _y * other._y);
+        }
+
+        public double Dot(MyPoint other)
+        {
+            Debug.Assert(other != null);
+            return _x * other._x + _y * other._y;
         }
 
         // Comment
