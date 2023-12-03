@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Diagnostics;
 
 namespace PowerPoint
 {
@@ -9,83 +8,70 @@ namespace PowerPoint
         {
             get
             {
-                const string CIRCLE_NAME = "圓";
-                return CIRCLE_NAME;
+                const string CIRCLE = "圓";
+                return CIRCLE;
             }
         }
 
-        public Circle(Point point1, Point point2) : base(GetTopLeftPoint(point1, point2), GetBottomRightPoint(point1, point2))
+        public Circle(MyPoint first, MyPoint second) : base(first, second)
         {
-
+            Debug.Assert(first != null);
+            Debug.Assert(second != null);
         }
 
-        /// <summary>
-        /// GetTopLeftPoint
-        /// </summary>
-        private static Point GetTopLeftPoint(Point point1, Point point2)
+        public Circle(Circle other) : base(other)
         {
-            return new Point(Math.Min(point1.X, point2.X), Math.Min(point1.Y, point2.Y));
+            Debug.Assert(other != null);
         }
 
-        /// <summary>
-        /// GetBottomRightPoint
-        /// </summary>
-        private static Point GetBottomRightPoint(Point point1, Point point2)
+        // Comment
+        public override Shape Clone()
         {
-            return new Point(Math.Max(point1.X, point2.X), Math.Max(point1.Y, point2.Y));
+            return new Circle(this);
         }
 
-        /// <summary>
-        /// Draws the circle shape.
-        /// </summary>
+        // Comment
+        public override Shape Offset(MyPoint delta)
+        {
+            Debug.Assert(delta != null);
+            return new Circle(_first + delta, _second + delta);
+        }
+
+        // Comment
+        public override Shape Scale(MyPoint scalar)
+        {
+            Debug.Assert(scalar != null);
+            return new Circle(_first.MultiplyElementwise(scalar), _second.MultiplyElementwise(scalar));
+        }
+
+        // Comment
+        public override Shape Resize(MyPoint point, MyPoint destination)
+        {
+            Debug.Assert(point != null);
+            Debug.Assert(destination != null);
+            if (_first.IsNear(point))
+            {
+                return new Circle(destination, _second);
+            }
+            if (_second.IsNear(point))
+            {
+                return new Circle(_first, destination);
+            }
+            return Clone();
+        }
+
+        // Comment
+        public override bool IsOverlap(MyPoint other)
+        {
+            Debug.Assert(other != null);
+            return other.IsInCircle(_first, _second);
+        }
+
+        // Comment
         public override void Draw(IGraphics graphics, bool selected)
         {
-            if (selected)
-            {
-                const int PEN_WIDTH = 2;
-                graphics.DrawCircle(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
-                graphics.DrawCircleFrame(PEN_WIDTH, Point1, Point2);
-            }
-            else
-            {
-                const int PEN_WIDTH = 1;
-                graphics.DrawCircle(ShapeColor.Black, PEN_WIDTH, Point1, Point2);
-            }
-        }
-
-        /// <summary>
-        /// IsNearSupportCircle
-        /// </summary>
-        private bool IsNearSupportCircle(Point cursorPoint)
-        {
-            const int CLOSENESS_TOLERANCE = 6;
-            return GetTwoPointDistance(cursorPoint, Point1) <= CLOSENESS_TOLERANCE || GetTwoPointDistance(cursorPoint, Point2) <= CLOSENESS_TOLERANCE;
-        }
-
-        /// <summary>
-        /// IsOverlap
-        /// </summary>
-        public override bool IsOverlap(Point cursorPoint)
-        {
-            const int ONE = 1;
-            const int TWO = 2;
-            double centerX = (Point1.X + Point2.X) / TWO;
-            double centerY = (Point1.Y + Point2.Y) / TWO;
-            double horizontalRadius = Math.Abs(Point1.X - Point2.X) / TWO;
-            double verticalRadius = Math.Abs(Point1.Y - Point2.Y) / TWO;
-            bool insideCircle = Math.Pow((cursorPoint.X - centerX) / horizontalRadius, TWO) + Math.Pow((cursorPoint.Y - centerY) / verticalRadius, TWO) <= ONE;
-            return insideCircle || IsNearSupportCircle(cursorPoint);
-
-        }
-
-        /// <summary>
-        /// FindSupportCircleOverlapIndex
-        /// </summary>
-        public override int FindSupportCircleOverlapIndex(Point cursorPoint)
-        {
-            const int SUPPORT_CIRCLE_INDEX2 = 2;
-            const int CLOSENESS_TOLERANCE = 6;
-            return GetTwoPointDistance(cursorPoint, Point2) <= CLOSENESS_TOLERANCE ? SUPPORT_CIRCLE_INDEX2 : -1;
+            Debug.Assert(graphics != null);
+            graphics.DrawCircle(selected, _first, _second);
         }
     }
 }

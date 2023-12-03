@@ -4,21 +4,15 @@ namespace PowerPoint
 {
     public abstract class Shape
     {
-        protected MyPoint First
-        {
-            get;
-            set; 
-        }
-
-        protected MyPoint Second
-        {
-            get;
-            set; 
-        }
+        protected MyPoint _first, _second;
 
         public string Information
         {
-            get => $"{First.Information}, {Second.Information}";
+            get
+            {
+                const string FORMAT_PART = ", ";
+                return _first.Information + FORMAT_PART + _second.Information;
+            }
         }
 
         public abstract string Name
@@ -30,22 +24,20 @@ namespace PowerPoint
         {
             Debug.Assert(first != null);
             Debug.Assert(second != null);
-            First = first;
-            Second = second;
+            _first = first;
+            _second = second;
         }
 
-        protected Shape(Shape other)
+        public Shape(Shape other) : this(other._first.Clone(), other._second.Clone())
         {
             Debug.Assert(other != null);
-            First = other.First;
-            Second = other.Second;
         }
 
         // Comment
         public Shape Move(MyPoint first)
         {
             Debug.Assert(first != null);
-            return Offset(first - First);
+            return Offset(first - _first);
         }
 
         // Comment

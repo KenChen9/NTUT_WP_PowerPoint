@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Diagnostics;
 
 namespace PowerPoint
 {
@@ -9,65 +8,70 @@ namespace PowerPoint
         {
             get
             {
-                const string RECTANGLE_NAME = "矩形";
-                return RECTANGLE_NAME;
+                const string RECTANGLE = "矩形";
+                return RECTANGLE;
             }
         }
 
-        public MyRectangle(Point point1, Point point2) : base(GetTopLeftPoint(point1, point2), GetBottomRightPoint(point1, point2))
+        public MyRectangle(MyPoint first, MyPoint second) : base(first, second)
         {
-            
+            Debug.Assert(first != null);
+            Debug.Assert(second != null);
         }
 
-        /// <summary>
-        /// GetTopLeftPoint
-        /// </summary>
-        private static Point GetTopLeftPoint(Point point1, Point point2)
+        public MyRectangle(MyRectangle other) : base(other)
         {
-            return new Point(Math.Min(point1.X, point2.X), Math.Min(point1.Y, point2.Y));
+            Debug.Assert(other != null);
         }
 
-        /// <summary>
-        /// GetBottomRightPoint
-        /// </summary>
-        private static Point GetBottomRightPoint(Point point1, Point point2)
+        // Comment
+        public override Shape Clone()
         {
-            return new Point(Math.Max(point1.X, point2.X), Math.Max(point1.Y, point2.Y));
+            return new MyRectangle(this);
         }
 
-        /// <summary>
-        /// Draws the rectangle shape.
-        /// </summary>
+        // Comment
+        public override Shape Offset(MyPoint delta)
+        {
+            Debug.Assert(delta != null);
+            return new MyRectangle(_first + delta, _second + delta);
+        }
+
+        // Comment
+        public override Shape Scale(MyPoint scalar)
+        {
+            Debug.Assert(scalar != null);
+            return new MyRectangle(_first.MultiplyElementwise(scalar), _second.MultiplyElementwise(scalar));
+        }
+
+        // Comment
+        public override Shape Resize(MyPoint point, MyPoint destination)
+        {
+            Debug.Assert(point != null);
+            Debug.Assert(destination != null);
+            if (_first.IsNear(point))
+            {
+                return new MyRectangle(destination, _second);
+            }
+            if (_second.IsNear(point))
+            {
+                return new MyRectangle(_first, destination);
+            }
+            return this;
+        }
+
+        // Comment
+        public override bool IsOverlap(MyPoint other)
+        {
+            Debug.Assert(other != null);
+            return other.IsBetweenX(_first, _second) && other.IsBetweenY(_first, _second);
+        }
+
+        // Comment
         public override void Draw(IGraphics graphics, bool selected)
         {
-            if (selected)
-            {
-                const int PEN_WIDTH = 2;
-                graphics.DrawRectangle(ShapeColor.Red, PEN_WIDTH, Point1, Point2);
-                graphics.DrawRectangleFrame(PEN_WIDTH, Point1, Point2);
-            }
-            else
-            {
-                const int PEN_WIDTH = 1;
-                graphics.DrawRectangle(ShapeColor.Black, PEN_WIDTH, Point1, Point2);
-            }
-        }
-
-        /// <summary>
-        /// IsOverlap
-        /// </summary>
-        public override bool IsOverlap(Point cursorPoint)
-        {
-            return Point1.X <= cursorPoint.X && cursorPoint.X <= Point2.X && Point1.Y <= cursorPoint.Y && cursorPoint.Y <= Point2.Y;
-        }
-
-        /// <summary>
-        /// FindSupportCircleOverlapIndex
-        /// </summary>
-        public override int FindSupportCircleOverlapIndex(Point cursorPoint)
-        {
-            const int SUPPORT_CIRCLE_INDEX2 = 2;
-            return GetTwoPointDistance(cursorPoint, Point2) <= 6 ? SUPPORT_CIRCLE_INDEX2 : -1;
+            Debug.Assert(graphics != null);
+            graphics.DrawRectangle(selected, _first, _second);
         }
     }
 }

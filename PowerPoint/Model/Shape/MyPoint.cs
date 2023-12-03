@@ -9,7 +9,13 @@ namespace PowerPoint
 
         public string Information
         {
-            get => $"({_x}, {_y})";
+            get
+            {
+                const string FORMAT_PART1 = "(";
+                const string FORMAT_PART2 = ", ";
+                const string FORMAT_PART3 = ")";
+                return FORMAT_PART1 + _x + FORMAT_PART2 + _y + FORMAT_PART3;
+            }
         }
 
         public double Length
@@ -38,11 +44,6 @@ namespace PowerPoint
             return new MyPoint(this);
         }
 
-        public MyPoint Normalize()
-        {
-            return new MyPoint(_x / Length, _y / Length);
-        }
-
         // Comment
         public MyPoint MultiplyElementwise(MyPoint other)
         {
@@ -50,17 +51,60 @@ namespace PowerPoint
             return new MyPoint(_x * other._x, _y * other._y);
         }
 
-        public double Dot(MyPoint other)
+        // Comment
+        public bool HasSameX(MyPoint other)
         {
             Debug.Assert(other != null);
-            return _x * other._x + _y * other._y;
+            return _x == other._x;
+        }
+
+        // Comment
+        public bool HasSameY(MyPoint other)
+        {
+            Debug.Assert(other != null);
+            return _y == other._y;
+        }
+
+        // Comment
+        public bool IsBetweenX(MyPoint first, MyPoint second)
+        {
+            Debug.Assert(first != null);
+            Debug.Assert(second != null);
+            return Math.Min(first._x, second._x) <= _x && _x <= Math.Max(first._x, second._x);
+        }
+
+        // Comment
+        public bool IsBetweenY(MyPoint first, MyPoint second)
+        {
+            Debug.Assert(first != null);
+            Debug.Assert(second != null);
+            return Math.Min(first._y, second._y) <= _y && _y <= Math.Max(first._y, second._y);
+        }
+
+        // Comment
+        public bool IsOnLine(MyPoint first, MyPoint second)
+        {
+            Debug.Assert(first != null);
+            Debug.Assert(second != null);
+            return (_y - first._y) * (second._x - first._x) == (_x - first._x) * (second._y - first._y);
+        }
+
+        // Comment
+        public bool IsInCircle(MyPoint first, MyPoint second)
+        {
+            Debug.Assert(first != null);
+            Debug.Assert(second != null);
+            throw new NotImplementedException();
         }
 
         // Comment
         public bool IsNear(MyPoint other)
         {
             Debug.Assert(other != null);
-            return Math.Sqrt(Math.Pow(_x - other._x, 2) + Math.Pow(_y - other._y, 2)) <= 6;
+            const double TOLERANCE = 6;
+            double distanceX = _x - other._x;
+            double distanceY = _y - other._y;
+            return Math.Sqrt(distanceX * distanceX + distanceY * distanceY) <= TOLERANCE;
         }
 
         public static MyPoint operator +(MyPoint left, MyPoint right)

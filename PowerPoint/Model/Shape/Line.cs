@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace PowerPoint
 {
@@ -35,14 +34,14 @@ namespace PowerPoint
         public override Shape Offset(MyPoint delta)
         {
             Debug.Assert(delta != null);
-            return new Line(First + delta, Second + delta);
+            return new Line(_first + delta, _second + delta);
         }
 
         // Comment
         public override Shape Scale(MyPoint scalar)
         {
             Debug.Assert(scalar != null);
-            return new Line(First.MultiplyElementwise(scalar), Second.MultiplyElementwise(scalar));
+            return new Line(_first.MultiplyElementwise(scalar), _second.MultiplyElementwise(scalar));
         }
 
         // Comment
@@ -50,33 +49,37 @@ namespace PowerPoint
         {
             Debug.Assert(point != null);
             Debug.Assert(destination != null);
-            if (First.IsNear(point))
+            if (_first.IsNear(point))
             {
-                return new Line(destination, Second);
+                return new Line(destination, _second);
             }
-            if (Second.IsNear(point))
+            if (_second.IsNear(point))
             {
-                return new Line(First, destination);
+                return new Line(_first, destination);
             }
-            return this;
+            return Clone();
         }
 
         // Comment
         public override bool IsOverlap(MyPoint other)
         {
             Debug.Assert(other != null);
-            MyPoint lineSegmentVector = Second - First;
-            MyPoint pointSegmentVector = other - First;
-            bool inside = lineSegmentVector.Length >= pointSegmentVector.Length;
-            bool sameDirection = Math.Abs(lineSegmentVector.Normalize().Dot(pointSegmentVector.Normalize()) - 1) <= .001;
-            return inside && sameDirection;
+            if (_first.HasSameX(_second))
+            {
+                return other.IsBetweenY(_first, _second);
+            }
+            if (_first.HasSameY(_second))
+            {
+                return other.IsBetweenX(_first, _second);
+            }
+            return other.IsOnLine(_first, _second);
         }
 
         // Comment
         public override void Draw(IGraphics graphics, bool selected)
         {
             Debug.Assert(graphics != null);
-            graphics.DrawLine(selected, First, Second);
+            graphics.DrawLine(selected, _first, _second);
         }
     }
 }
