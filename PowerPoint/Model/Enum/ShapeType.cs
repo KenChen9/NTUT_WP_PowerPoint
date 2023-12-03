@@ -2,7 +2,7 @@
 {
     public enum ShapeType
     {
-        Arrow,
+        None,
         Line,
         Rectangle,
         Circle

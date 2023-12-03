@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Drawing;
 using System.Diagnostics;
 
 namespace PowerPoint
 {
     public class MyPoint
     {
+        private const double TOLERANCE_RADIUS = 6;
         private double _x, _y;
 
         public string Information
@@ -36,6 +38,13 @@ namespace PowerPoint
             Debug.Assert(other != null);
             _x = other._x;
             _y = other._y;
+        }
+
+        public MyPoint(Point point, Size drawingPanelSize)
+        {
+            Debug.Assert(point != null);
+            _x = point.X / drawingPanelSize.Width;
+            _y = point.Y / drawingPanelSize.Height;
         }
 
         // Comment
@@ -101,10 +110,39 @@ namespace PowerPoint
         public bool IsNear(MyPoint other)
         {
             Debug.Assert(other != null);
-            const double TOLERANCE = 6;
             double distanceX = _x - other._x;
             double distanceY = _y - other._y;
-            return Math.Sqrt(distanceX * distanceX + distanceY * distanceY) <= TOLERANCE;
+            return Math.Sqrt(distanceX * distanceX + distanceY * distanceY) <= TOLERANCE_RADIUS;
+        }
+
+        // Comment
+        public Point ToPoint()
+        {
+            return new Point((int)Math.Round(_x), (int)Math.Round(_y));
+        }
+
+        // Comment
+        public void Draw(IGraphics graphics)
+        {
+            Debug.Assert(graphics != null);
+            const double ONE = 1;
+            MyPoint corner = new MyPoint(ONE, ONE);
+            graphics.DrawCircle(false, CreateRectangle(-TOLERANCE_RADIUS * corner, TOLERANCE_RADIUS * corner));
+        }
+
+        // Comment
+        public static Rectangle CreateRectangle(MyPoint first, MyPoint second)
+        {
+            Debug.Assert(first != null);
+            Debug.Assert(second != null);
+            return new Rectangle(first.ToPoint(), new Size((second - first).ToPoint()));
+        }
+
+        // Comment
+        public static MyPoint CreateRandom()
+        {
+            Random random = new Random();
+            return new MyPoint(random.NextDouble(), random.NextDouble());
         }
 
         public static MyPoint operator +(MyPoint left, MyPoint right)

@@ -1,62 +1,49 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics;
 
 namespace PowerPoint
 {
     public class PointerState : IState
     {
+        private const int UNAVAILABLE_INDEX = -1;
         private Model _model;
-        private Point _lastMousePoint = new Point(0, 0);
+        private MyPoint _lastMousePoint = new MyPoint(0, 0);
         private bool _pressed = false;
 
         public PointerState(Model model)
         {
+            Debug.Assert(model != null);
             _model = model;
         }
 
-        /// <summary>
-        /// PressMouse
-        /// </summary>
-        public void PressMouse(Point cursorPoint)
+        // Comment
+        public void PressMouse(MyPoint point)
         {
+            Debug.Assert(point != null);
             _pressed = true;
-            _model.SelectShapeIndex(cursorPoint);
+            _model.SelectShapeIndex(point);
         }
 
-        /// <summary>
-        /// MoveMouse
-        /// </summary>
-        public void MoveMouse(Point cursorPoint)
+        // Comment
+        public void MoveMouse(ShapeType currentTool, MyPoint point)
         {
+            Debug.Assert(point != null);
             if (_pressed)
             {
-                int supportCircleOverlapIndex = _model.FindShapeSupportCircleOverlapIndex(cursorPoint);
-                if (supportCircleOverlapIndex != -1)
-                {
-                    _model.TryResizeSelectedShape(supportCircleOverlapIndex, cursorPoint);
-                }
-                else
-                {
-                    Point deltaDirection = new Point(cursorPoint.X - _lastMousePoint.X, cursorPoint.Y - _lastMousePoint.Y);
-                    _model.TryMoveSelectedShapeDelta(cursorPoint, deltaDirection);
-                }
+                _model.ResizeOrOffsetSelectedShape(_lastMousePoint, point, point - _lastMousePoint);
             }
-            _lastMousePoint = cursorPoint;
+            _lastMousePoint = point;
         }
 
-        /// <summary>
-        /// ReleaseMouse
-        /// </summary>
-        public void ReleaseMouse(Point cursorPoint)
+        // Comment
+        public void ReleaseMouse()
         {
             _pressed = false;
         }
 
-        /// <summary>
-        /// Draw
-        /// </summary>
+        // Comment
         public void Draw(IGraphics graphics)
         {
-            
+            Debug.Assert(graphics != null);
         }
     }
 }

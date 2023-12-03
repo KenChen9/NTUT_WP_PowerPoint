@@ -1,29 +1,21 @@
 ﻿using System.ComponentModel;
-using System.Drawing;
+using System.Diagnostics;
 
 namespace PowerPoint
 {
-    /// <summary>
-    /// Represents the main model of the application.
-    /// </summary>
     public class Model
     {
-        public delegate void CurrentToolChangedEventHandler(ShapeType shapeType);
-        public event CurrentToolChangedEventHandler CurrentToolChanged;
-        public delegate void ShapeListChangedEventHandler();
-        public event ShapeListChangedEventHandler ShapeListChanged;
-        private IState _state;
+        public delegate void ShapesChangedEventHandler();
+        public event ShapesChangedEventHandler ShapesChanged;
+        private const int UNAVAILABLE_INDEX = -1;
         private Shapes _shapes = new Shapes();
-        private ShapeType _currentTool = ShapeType.Arrow;
-        private int _selectedIndex = -1;
+        private IState _state;
+        private int _selectedIndex = UNAVAILABLE_INDEX;
 
-        // 必要之惡
+        // 必要之惡，禁止其他部分使用
         public BindingList<Shape> ShapeList
         {
-            get
-            {
-                return _shapes.ShapeList;
-            }
+            get => _shapes.ShapeList;
         }
 
         public Model()
@@ -31,199 +23,140 @@ namespace PowerPoint
             _state = new PointerState(this);
         }
 
-        /// <summary>
-        /// Adds a new shape to the shape list based on the specified shape type.
-        /// </summary>
-        /// <param name="shapeType">The type of the shape to add.</param>
+        // Comment
         public void AddShape(string shapeType)
         {
+            const string LINE = "線";
+            const string RECTANGLE = "矩形";
+            const string CIRCLE = "圓";
+            Debug.Assert(shapeType == LINE || shapeType == RECTANGLE || shapeType == CIRCLE);
             _shapes.Add(shapeType);
-            NotifyShapeListChanged();
+            NotifyShapesChanged();
         }
 
-        /// <summary>
-        /// Adds a shape to the shape list.
-        /// </summary>
-        /// <param name="shape">The shape to add.</param>
+        // Comment
         public void AddShape(Shape shape)
         {
+            Debug.Assert(shape != null);
             _shapes.Add(shape);
-            NotifyShapeListChanged();
+            NotifyShapesChanged();
         }
 
-        /// <summary>
-        /// Removes a shape at the specified row index and column index from the shape list.
-        /// </summary>
-        /// <param name="rowIndex">The row index of the shape to remove.</param>
-        /// <param name="columnIndex">The column index of the shape to remove.</param>
+        // Comment
         public void RemoveShapeAt(int rowIndex, int columnIndex)
         {
+            Debug.Assert(rowIndex >= 0);
+            Debug.Assert(columnIndex == 0);
             if (rowIndex >= 0 && columnIndex == 0)
             {
                 _shapes.RemoveAt(rowIndex);
-                _selectedIndex = -1;
+                _selectedIndex = UNAVAILABLE_INDEX;
             }
-            NotifyShapeListChanged();
+            NotifyShapesChanged();
         }
 
+        // Comment
         public void RemoveLastShape()
         {
             _shapes.RemoveLast();
         }
 
-        /// <summary>
-        /// RemoveSelectedShape
-        /// </summary>
+        // Comment
         public void RemoveSelectedShape()
         {
-            if (_selectedIndex != -1)
-            {
-                _shapes.RemoveAt(_selectedIndex);
-                _selectedIndex = -1;
-                NotifyShapeListChanged();
-            }
+            _shapes.RemoveAt(_selectedIndex);
+            _selectedIndex = UNAVAILABLE_INDEX;
+            NotifyShapesChanged();
         }
 
-        /// <summary>
-        /// Selects the specified shape type as the current drawing tool.
-        /// </summary>
-        /// <param name="shapeType">The type of the shape to select.</param>
-        public void SelectTool(ShapeType shapeType)
+        // Comment
+        public void ClearAllShapes()
         {
-            _currentTool = shapeType;
-            NotifyCurrentToolChanged();
+            _shapes.ClearAll();
+            NotifyShapesChanged();
         }
 
-        /// <summary>
-        /// Sets the model to pointer mode for handling user interactions.
-        /// </summary>
+        // Comment
         public void SetPointerMode()
         {
             _state = new PointerState(this);
         }
 
-        /// <summary>
-        /// Sets the model to drawing mode for handling user interactions.
-        /// </summary>
+        // Comment
         public void SetDrawingMode()
         {
             _state = new DrawingState(this);
         }
 
-        /// <summary>
-        /// Handles the press mouse event based on the current state.
-        /// </summary>
-        public void PressMouse(Point cursorPoint)
+        // Comment
+        public void PressMouse(MyPoint point)
         {
-            _state.PressMouse(cursorPoint);
-            NotifyCurrentToolChanged();
+            Debug.Assert(point != null);
+            _state.PressMouse(point);
         }
 
-        /// <summary>
-        /// Handles the move mouse event based on the current state and updates the shape list.
-        /// </summary>
-        /// <param name="x">The X-coordinate of the mouse position.</param>
-        /// <param name="y">The Y-coordinate of the mouse position.</param>
-        public void MoveMouse(Point cursorPoint)
+        // Comment
+        public void MoveMouse(ShapeType currentTool, MyPoint point)
         {
-            _state.MoveMouse(cursorPoint);
-            NotifyCurrentToolChanged();
-            NotifyShapeListChanged();
+            Debug.Assert(point != null);
+            _state.MoveMouse(currentTool, point);
         }
 
-        /// <summary>
-        /// Handles the release mouse event based on the current state and updates the shape list.
-        /// </summary>
-        public void ReleaseMouse(Point cursorPoint)
+        // Comment
+        public void ReleaseMouse()
         {
-            _state.ReleaseMouse(cursorPoint);
-            NotifyCurrentToolChanged();
+            _state.ReleaseMouse();
         }
 
-        /// <summary>
-        /// Draws shapes on the specified graphics object including the preview shape.
-        /// </summary>
-        /// <param name="graphics">The IGraphics object used for drawing.</param>
+        // Comment
         public void DrawShapes(IGraphics graphics)
         {
+            Debug.Assert(graphics != null);
             _shapes.Draw(graphics, _selectedIndex);
             _state.Draw(graphics);
         }
 
-        /// <summary>
-        /// CreatePreview
-        /// </summary>
-        public Shape CreatePreview(Point startPoint, Point endPoint)
+        // Comment
+        public void SelectShapeIndex(MyPoint point)
         {
-            return Factory.CreateShape(_currentTool, startPoint, endPoint);
+            Debug.Assert(point != null);
+            _selectedIndex = _shapes.SelectShapeIndex(point);
         }
 
-        /// <summary>
-        /// FindShapeSupportCircleOverlapIndex
-        /// </summary>
-        public int FindShapeSupportCircleOverlapIndex(Point cursorPoint)
+        // Comment
+        public void ResizeOrOffsetSelectedShape(MyPoint point, MyPoint destination, MyPoint delta)
         {
-            return _selectedIndex != -1 ? _shapes.FindShapeSupportCircleOverlapIndex(_selectedIndex, cursorPoint) : -1;
-        }
-
-        /// <summary>
-        /// MoveSelectedShapeDelta
-        /// </summary>
-        public void TryMoveSelectedShapeDelta(Point cursorPoint, Point deltaDirection)
-        {
-            if (_selectedIndex != -1 && _shapes.IsShapeOverlap(_selectedIndex, cursorPoint))
+            if (_shapes.IsShapeResizable(_selectedIndex, point))
             {
-                _shapes.MoveShapeDelta(_selectedIndex, deltaDirection);
+                ResizeSelectedShape(point, destination);
+            }
+            else
+            {
+                OffsetSelectedShape(point, delta);
             }
         }
 
-        /// <summary>
-        /// TryResizeSelectedShape
-        /// </summary>
-        public void TryResizeSelectedShape(int supportCircleOverlapIndex, Point cursorPoint)
+        // Comment
+        private void ResizeSelectedShape(MyPoint point, MyPoint destination)
         {
-            if (_selectedIndex != -1)
+            Debug.Assert(point != null);
+            _shapes.ResizeShape(_selectedIndex, point, destination);
+        }
+
+        // Comment
+        private void OffsetSelectedShape(MyPoint point, MyPoint delta)
+        {
+            Debug.Assert(point != null);
+            Debug.Assert(delta != null);
+            _shapes.Offset(_selectedIndex, point, delta);
+        }
+
+        // Comment
+        private void NotifyShapesChanged()
+        {
+            if (ShapesChanged != null)
             {
-                _shapes.ResizeShape(_selectedIndex, supportCircleOverlapIndex, cursorPoint);
-            }
-        }
-
-        /// <summary>
-        /// TrySelectShapeIndex
-        /// </summary>
-        public void SelectShapeIndex(Point cursorPoint)
-        {
-            _selectedIndex = _shapes.SelectShapeIndex(cursorPoint);
-        }
-
-        /// <summary>
-        /// ClearAllShapes
-        /// </summary>
-        public void ClearAllShapes()
-        {
-            _shapes.ClearAll();
-            NotifyShapeListChanged();
-        }
-
-        /// <summary>
-        /// Notifies subscribers about changes in the current selected tool.
-        /// </summary>
-        private void NotifyCurrentToolChanged()
-        {
-            if (CurrentToolChanged != null)
-            {
-                CurrentToolChanged(_currentTool);
-            }
-        }
-
-        /// <summary>
-        /// Notifies subscribers about changes in the shape list.
-        /// </summary>
-        private void NotifyShapeListChanged()
-        {
-            if (ShapeListChanged != null)
-            {
-                ShapeListChanged();
+                ShapesChanged();
             }
         }
     }

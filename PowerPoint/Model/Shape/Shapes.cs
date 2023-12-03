@@ -1,128 +1,103 @@
 ﻿using System.ComponentModel;
-using System.Drawing;
+using System.Linq;
+using System.Diagnostics;
 
 namespace PowerPoint
 {
     public class Shapes
     {
-        private BindingList<Shape> _shapeList = new BindingList<Shape>();
-
-        // 必要之惡
         public BindingList<Shape> ShapeList
         {
-            get
-            {
-                return _shapeList;
-            }
-        }
+            get;
+        } = new BindingList<Shape>();
 
-        /// <summary>
-        /// Adds a shape to the Shapes collection based on the provided shape type.
-        /// </summary>
+        // Comment
         public void Add(string shapeType)
         {
-            Add(Factory.CreateShape(shapeType));
+            const string LINE = "線";
+            const string RECTANGLE = "矩形";
+            const string CIRCLE = "圓";
+            Debug.Assert(shapeType == LINE || shapeType == RECTANGLE || shapeType == CIRCLE);
+            Add(Factory.CreateRandomShape(shapeType));
         }
 
-        /// <summary>
-        /// Adds a specified shape to the Shapes collection.
-        /// </summary>
+        // Comment
         public void Add(Shape shape)
         {
-            if (shape != null)
-            {
-                _shapeList.Add(shape);
-            }
+            Debug.Assert(shape != null);
+            ShapeList.Add(shape);
         }
 
-        /// <summary>
-        /// Removes the shape at the specified index from the Shapes collection.
-        /// </summary>
+        // Comment
         public void RemoveAt(int index)
         {
-            _shapeList.RemoveAt(index);
+            Debug.Assert(0 <= index && index < ShapeList.Count);
+            ShapeList.RemoveAt(index);
         }
 
+        // Comment
         public void RemoveLast()
         {
-            if (_shapeList.Count > 0)
+            if (ShapeList.Count > 0)
             {
-                _shapeList.RemoveAt(_shapeList.Count - 1);
+                ShapeList.RemoveAt(ShapeList.Count - 1);
             }
         }
 
-        /// <summary>
-        /// ClearAll
-        /// </summary>
+        // Comment
         public void ClearAll()
         {
-            _shapeList.Clear();
+            ShapeList.Clear();
         }
 
-        /// <summary>
-        /// IsShapeOverlap
-        /// </summary>
-        public bool IsShapeOverlap(int selectedIndex, Point cursorPoint)
+        // Comment
+        public int SelectShapeIndex(MyPoint point)
         {
-            return _shapeList[selectedIndex].IsOverlap(cursorPoint);
+            Debug.Assert(point != null);
+            return ShapeList.Reverse().ToList().FindIndex(shape => shape.IsOverlap(point));
         }
 
-        /// <summary>
-        /// IsShapeSupportPointOverlap
-        /// </summary>
-        public int FindShapeSupportCircleOverlapIndex(int selectedIndex, Point cursorPoint)
+        // Comment
+        public void ResizeShape(int selectedIndex, MyPoint point, MyPoint destination)
         {
-            return _shapeList[selectedIndex].FindSupportCircleOverlapIndex(cursorPoint);
-        }
-
-        /// <summary>
-        /// ResizeShape
-        /// </summary>
-        public void ResizeShape(int selectedIndex, int supportCircleOverlapIndex, Point cursorPoint)
-        {
-            if (selectedIndex < 0)
+            Debug.Assert(-1 <= selectedIndex && selectedIndex < ShapeList.Count);
+            Debug.Assert(point != null);
+            Debug.Assert(destination != null);
+            if (selectedIndex >= 0)
             {
-                return;
+                ShapeList[selectedIndex].Resize(point, destination);
             }
-            _shapeList[selectedIndex].Resize(supportCircleOverlapIndex, cursorPoint);
         }
 
-        /// <summary>
-        /// MoveShapeDelta
-        /// </summary>
-        public void MoveShapeDelta(int selectedIndex, Point deltaDirection)
+        // Comment
+        public void Offset(int selectedIndex, MyPoint point, MyPoint delta)
         {
-            if (selectedIndex < 0)
+            Debug.Assert(-1 <= selectedIndex && selectedIndex < ShapeList.Count);
+            Debug.Assert(point != null);
+            Debug.Assert(delta != null);
+            if (selectedIndex >= 0 && ShapeList[selectedIndex].IsOverlap(point))
             {
-                return;
+                ShapeList[selectedIndex].Offset(delta);
             }
-            _shapeList[selectedIndex].MoveDelta(deltaDirection);
         }
 
-        /// <summary>
-        /// SelectShapeIndex
-        /// </summary>
-        public int SelectShapeIndex(Point cursorPoint)
-        {
-            for (int i = _shapeList.Count - 1; i >= 0; i--)
-            {
-                if (_shapeList[i].IsOverlap(cursorPoint))
-                {
-                    return i;
-                }
-            }
-            return -1;
-        }
-
-        /// <summary>
-        /// Draws all shapes using the specified graphics object, highlighting the shape at the specified index in red.
-        /// </summary>
+        // Comment
         public void Draw(IGraphics graphics, int selectedIndex)
         {
-            for (int i = 0; i < _shapeList.Count; i++)
+            Debug.Assert(graphics != null);
+            Debug.Assert(-1 <= selectedIndex && selectedIndex < ShapeList.Count);
+            for (int i = 0; i < ShapeList.Count; i++)
             {
-                _shapeList[i].Draw(graphics, i == selectedIndex);
+                ShapeList[i].Draw(graphics, i == selectedIndex);
             }
+        }
+
+        // Comment
+        public bool IsShapeResizable(int selectedIndex, MyPoint point)
+        {
+            Debug.Assert(-1 <= selectedIndex && selectedIndex < ShapeList.Count);
+            Debug.Assert(point != null);
+            return selectedIndex >= 0 && ShapeList[selectedIndex].IsOverlapSupport(point);
         }
     }
 }

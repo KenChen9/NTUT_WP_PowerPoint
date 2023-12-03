@@ -4,34 +4,13 @@ namespace PowerPoint
 {
     public interface IGraphics
     {
-        /// <summary>
-        /// Draws a line with the specified shape color and coordinates.
-        /// </summary>
-        void DrawLine(ShapeColor shapeColor, int penWidth, Point point1, Point point2);
+        // Comment
+        void DrawLine(bool selected, Point first, Point second);
 
-        /// <summary>
-        /// Draws a rectangle with the specified shape color and coordinates.
-        /// </summary>
-        void DrawRectangle(ShapeColor shapeColor, int penWidth, Point point1, Point point2);
+        // Comment
+        void DrawRectangle(bool selected, Rectangle body);
 
-        /// <summary>
-        /// Draws a circle with the specified shape color and coordinates.
-        /// </summary>
-        void DrawCircle(ShapeColor shapeColor, int penWidth, Point point1, Point point2);
-
-        /// <summary>
-        /// DrawLineSupportCircles
-        /// </summary>
-        void DrawLineFrame(int penWidth, Point point1, Point point2);
-
-        /// <summary>
-        /// DrawRectangleSupportCircles
-        /// </summary>
-        void DrawRectangleFrame(int penWidth, Point point1, Point point2);
-
-        /// <summary>
-        /// DrawCircleSupportCircle
-        /// </summary>
-        void DrawCircleFrame(int penWidth, Point point1, Point point2);
+        // Comment
+        void DrawCircle(bool selected, Rectangle body);
     }
 }

@@ -79,7 +79,7 @@ namespace PowerPoint
         public override void Draw(IGraphics graphics, bool selected)
         {
             Debug.Assert(graphics != null);
-            graphics.DrawLine(selected, _first, _second);
+            graphics.DrawLine(selected, _first.ToPoint(), _second.ToPoint());
         }
     }
 }

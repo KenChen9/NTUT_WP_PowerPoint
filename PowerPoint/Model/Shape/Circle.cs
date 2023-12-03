@@ -71,7 +71,7 @@ namespace PowerPoint
         public override void Draw(IGraphics graphics, bool selected)
         {
             Debug.Assert(graphics != null);
-            graphics.DrawCircle(selected, _first, _second);
+            graphics.DrawCircle(selected, MyPoint.CreateRectangle(_first, _second));
         }
     }
 }

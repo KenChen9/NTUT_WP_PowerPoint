@@ -1,195 +1,179 @@
-﻿using System.Collections.Generic;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System.ComponentModel;
-using System.Drawing;
+using System.Diagnostics;
 
 namespace PowerPoint
 {
-    /// <summary>
-    /// Presentation model for the main form of the PowerPoint application.
-    /// </summary>
     public class FormPresentationModel
     {
-        public delegate void ToolCursorChangedEventHandler(Dictionary<ShapeType, bool> toolStatus, Cursor currentCursor);
-        public event ToolCursorChangedEventHandler ToolCursorChanged;
-        public delegate void ShapeListChangedEventHandler();
-        public event ShapeListChangedEventHandler ShapeListChanged;
+        public delegate void ToolsChangedEventHandler(bool lineToolChecked, bool rectangleToolChecked, bool circleToolChecked, bool arrowToolChecked);
+        public event ToolsChangedEventHandler ToolsChanged;
+        public delegate void CursorChangedEventHandler(Cursor currentCursor);
+        public event CursorChangedEventHandler CursorChanged;
+        public delegate void ShapesChangedEventHandler();
+        public event ShapesChangedEventHandler ShapesChanged;
+        public delegate void SlidesChangedEventHandler();
+        public event SlidesChangedEventHandler SlidesChanged;
         private Model _model;
-        private ShapeType _currentTool = ShapeType.Arrow;
         private Cursor _currentCursor = Cursors.Arrow;
+        private ShapeType _currentTool = ShapeType.None;
 
-        // 必要之惡
+        // 必要之惡，禁止其他部分使用
         public BindingList<Shape> ShapeList
         {
-            get
-            {
-                return _model.ShapeList;
-            }
+            get => _model.ShapeList;
         }
 
-        /// <summary>
-        /// Initializes a new instance of the FormPresentationModel class with the specified model.
-        /// </summary>
-        /// <param name="model">The Model instance associated with the presentation model.</param>
         public FormPresentationModel(Model model)
         {
+            Debug.Assert(model != null);
             _model = model;
-            _model.CurrentToolChanged += UpdateCurrentTool;
-            _model.ShapeListChanged += UpdateDrawingPanel;
+            _model.ShapesChanged += UpdateDrawingPanel;
         }
 
-        /// <summary>
-        /// Adds a shape to the model based on the provided shape type.
-        /// </summary>
-        /// <param name="shapeType">String representation of the shape type (線, 矩形, or 圓).</param>
+        // Comment
         public void AddShape(string shapeType)
         {
+            const string LINE = "線";
+            const string RECTANGLE = "矩形";
+            const string CIRCLE = "圓";
+            Debug.Assert(shapeType == LINE || shapeType == RECTANGLE || shapeType == CIRCLE);
             _model.AddShape(shapeType);
         }
 
-        /// <summary>
-        /// Removes a shape from the model at the specified row and column indices.
-        /// </summary>
-        /// <param name="rowIndex">Row index of the shape in the grid.</param>
-        /// <param name="columnIndex">Column index of the shape in the grid.</param>
+        // Comment
         public void RemoveShapeAt(int rowIndex, int columnIndex)
         {
+            Debug.Assert(rowIndex >= 0);
+            Debug.Assert(columnIndex >= 0);
             _model.RemoveShapeAt(rowIndex, columnIndex);
         }
 
-        /// <summary>
-        /// RemoveSelectedShape
-        /// </summary>
+        // Comment
         public void RemoveSelectedShape()
         {
             _model.RemoveSelectedShape();
         }
 
-        /// <summary>
-        /// Selects a drawing tool based on the specified shape type.
-        /// </summary>
-        /// <param name="shapeType">Type of the selected drawing tool (Line, Rectangle, Circle, Arrow).</param>
+        // Comment
         public void SelectTool(ShapeType shapeType)
         {
-            _model.SelectTool(shapeType);
-            NotifyToolCursorChanged();
+            _currentTool = shapeType;
+            NotifyToolsChanged();
         }
 
-        /// <summary>
-        /// Handles the mouse press event.
-        /// </summary>
-        public void PressMouse(Point cursorPoint)
+        // Comment
+        public void UnselectTool()
         {
-            _model.PressMouse(cursorPoint);
+            _currentTool = ShapeType.None;
+            NotifyToolsChanged();
         }
 
-        /// <summary>
-        /// Handles the mouse move event.
-        /// </summary>
-        /// <param name="x">X-coordinate of the mouse position.</param>
-        /// <param name="y">Y-coordinate of the mouse position.</param>
-        public void MoveMouse(Point cursorPoint)
+        // Comment
+        public void PressMouse(MyPoint point)
         {
-            _model.MoveMouse(cursorPoint);
+            Debug.Assert(point != null);
+            _model.PressMouse(point);
         }
 
-        /// <summary>
-        /// Handles the mouse release event.
-        /// </summary>
-        public void ReleaseMouse(Point cursorPoint)
+        // Comment
+        public void MoveMouse(MyPoint point)
+        {
+            Debug.Assert(point != null);
+            _model.MoveMouse(_currentTool, point);
+        }
+
+        // Comment
+        public void ReleaseMouse()
         {
             _currentCursor = Cursors.Arrow;
-            _model.ReleaseMouse(cursorPoint);
-            NotifyToolCursorChanged();
+            _currentTool = ShapeType.None;
+            _model.ReleaseMouse();
+            NotifyToolsChanged();
+            NotifySlidesChanged();
         }
 
-        /// <summary>
-        /// Handles the mouse enter event for the drawing panel.
-        /// </summary>
+        // Comment
         public void EnterPanel()
         {
-            _currentCursor = _currentTool == ShapeType.Arrow ? Cursors.Arrow : Cursors.Cross;
-            if (_currentTool == ShapeType.Arrow)
+            if (_currentTool != ShapeType.None)
             {
-                _model.SetPointerMode();
-            }
-            else
-            {
+                _currentCursor = Cursors.Cross;
                 _model.SetDrawingMode();
             }
-            NotifyToolCursorChanged();
+            NotifyCursorChanged();
+            NotifyToolsChanged();
         }
 
-        /// <summary>
-        /// Handles the mouse leave event for the drawing panel.
-        /// </summary>
+        // Comment
         public void LeavePanel()
         {
             _currentCursor = Cursors.Arrow;
             _model.SetPointerMode();
-            NotifyToolCursorChanged();
+            NotifyCursorChanged();
         }
 
-        /// <summary>
-        /// Draws all shapes using the specified graphics object.
-        /// </summary>
-        /// <param name="graphics">The IGraphics object used for drawing.</param>
+        // Comment
         public void DrawShapes(IGraphics graphics)
         {
+            Debug.Assert(graphics != null);
             _model.DrawShapes(graphics);
         }
 
-        /// <summary>
-        /// ClearAllShapes
-        /// </summary>
+        // Comment
         public void ClearAllShapes()
         {
             _model.ClearAllShapes();
         }
 
-        /// <summary>
-        /// NotifyToolCursorChanged
-        /// </summary>
-        private void NotifyToolCursorChanged()
-        {
-            Dictionary<ShapeType, bool> toolStatus = new Dictionary<ShapeType, bool>();
-            toolStatus.Add(ShapeType.Line, _currentTool == ShapeType.Line);
-            toolStatus.Add(ShapeType.Rectangle, _currentTool == ShapeType.Rectangle);
-            toolStatus.Add(ShapeType.Circle, _currentTool == ShapeType.Circle);
-            toolStatus.Add(ShapeType.Arrow, _currentTool == ShapeType.Arrow);
-            if (ToolCursorChanged != null)
-            {
-                ToolCursorChanged(toolStatus, _currentCursor);
-            }
-        }
-
-        /// <summary>
-        /// NotifyShapeListChanged
-        /// </summary>
-        private void NotifyShapeListChanged()
-        {
-            if (ShapeListChanged != null)
-            {
-                ShapeListChanged();
-            }
-        }
-
-        /// <summary>
-        /// UpdateCurrentTool
-        /// </summary>
-        /// <param name="shapeType">ShapeType</param>
-        private void UpdateCurrentTool(ShapeType shapeType)
-        {
-            _currentTool = shapeType;
-            NotifyToolCursorChanged();
-        }
-
-        /// <summary>
-        /// UpdateDrawingPanel
-        /// </summary>
+        // Comment
         private void UpdateDrawingPanel()
         {
-            NotifyShapeListChanged();
+            NotifyShapesChanged();
+        }
+
+        // Comment
+        private void NotifyToolsChanged()
+        {
+            Debug.Assert(ToolsChanged != null);
+            if (ToolsChanged != null)
+            {
+                bool lineToolChecked = _currentTool == ShapeType.Line;
+                bool ractangleToolChecked = _currentTool == ShapeType.Rectangle;
+                bool circleToolChecked = _currentTool == ShapeType.Circle;
+                bool arrowToolChecked = _currentTool == ShapeType.None;
+                ToolsChanged(lineToolChecked, ractangleToolChecked, circleToolChecked, arrowToolChecked);
+            }
+        }
+
+        // Comment
+        private void NotifyCursorChanged()
+        {
+            Debug.Assert(CursorChanged != null);
+            if (CursorChanged != null)
+            {
+                CursorChanged(_currentCursor);
+            }
+        }
+
+        // Comment
+        private void NotifyShapesChanged()
+        {
+            Debug.Assert(ShapesChanged != null);
+            if (ShapesChanged != null)
+            {
+                ShapesChanged();
+            }
+        }
+
+        // Comment
+        private void NotifySlidesChanged()
+        {
+            Debug.Assert(SlidesChanged != null);
+            if (SlidesChanged != null)
+            {
+                SlidesChanged();
+            }
         }
     }
 }

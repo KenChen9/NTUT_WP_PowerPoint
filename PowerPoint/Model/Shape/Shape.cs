@@ -41,6 +41,13 @@ namespace PowerPoint
         }
 
         // Comment
+        public bool IsOverlapSupport(MyPoint point)
+        {
+            Debug.Assert(point != null);
+            return _first.IsNear(point) || _second.IsNear(point);
+        }
+
+        // Comment
         public abstract Shape Clone();
 
         // Comment

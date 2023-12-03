@@ -1,27 +1,17 @@
-﻿using System.Drawing;
-
-namespace PowerPoint
+﻿namespace PowerPoint
 {
     public interface IState
     {
-        /// <summary>
-        /// Handles the mouse press event.
-        /// </summary>
-        void PressMouse(Point cursorPoint);
+        // Comment
+        void PressMouse(MyPoint cursorPoint);
 
-        /// <summary>
-        /// Handles the mouse move event.
-        /// </summary>
-        void MoveMouse(Point cursorPoint);
+        // Comment
+        void MoveMouse(ShapeType currentTool, MyPoint cursorPoint);
 
-        /// <summary>
-        /// Handles the mouse release event.
-        /// </summary>
-        void ReleaseMouse(Point cursorPoint);
+        // Comment
+        void ReleaseMouse();
 
-        /// <summary>
-        /// Draw
-        /// </summary>
+        // Comment
         void Draw(IGraphics graphics);
     }
 }

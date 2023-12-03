@@ -1,42 +1,46 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics;
 
 namespace PowerPoint
 {
     public class DrawingState : IState
     {
         private Model _model;
-        private Point _startPoint = new Point(0, 0);
-        private Point _endPoint = new Point(0, 0);
-        private bool _pressed = false;
+        private MyPoint _first = new MyPoint(0, 0);
+        private MyPoint _second = new MyPoint(0, 0);
         private Shape _preview = null;
+        private bool _pressed = false;
 
         public DrawingState(Model model)
         {
+            Debug.Assert(model != null);
             _model = model;
         }
 
-        /// <summary>
-        /// Handles the mouse press event.
-        /// </summary>
-        public void PressMouse(Point cursorPoint)
+        // Comment
+        public void PressMouse(MyPoint point)
         {
+            Debug.Assert(point != null);
             _pressed = true;
         }
 
-        /// <summary>
-        /// Handles the mouse move event.
-        /// </summary>
-        public void MoveMouse(Point cursorPoint)
+        // Comment
+        public void MoveMouse(ShapeType currentTool, MyPoint point)
         {
-            _startPoint = _pressed ? _startPoint : cursorPoint;
-            _endPoint = _pressed ? cursorPoint : _endPoint;
-            _preview = _pressed ? _model.CreatePreview(_startPoint, _endPoint) : null;
+            Debug.Assert(point != null);
+            if (_pressed)
+            {
+                _second = point;
+                _preview = Factory.CreateShape(currentTool, _first, _second);
+            }
+            else
+            {
+                _first = point;
+                _preview = null;
+            }
         }
 
-        /// <summary>
-        /// Handles the mouse release event.
-        /// </summary>
-        public void ReleaseMouse(Point cursorPoint)
+        // Comment
+        public void ReleaseMouse()
         {
             _pressed = false;
             if (_preview != null)
@@ -44,16 +48,14 @@ namespace PowerPoint
                 _model.AddShape(_preview);
                 _preview = null;
             }
-            _model.SelectTool(ShapeType.Arrow);
             _model.SetPointerMode();
         }
 
-        /// <summary>
-        /// Draw
-        /// </summary>
+        // Comment
         public void Draw(IGraphics graphics)
         {
-            if (_preview != null)
+            Debug.Assert(graphics != null);
+            if (_pressed)
             {
                 _preview.Draw(graphics, false);
             }
